@@ -1,4 +1,4 @@
-package com.qa.pages;
+package com.qa.inwardlistpages;
 
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -8,17 +8,17 @@ import com.qa.base.TestBase;
 
 public class LoginPage  extends TestBase{
 	
-	@FindBy(xpath= "//input[@placeholder='Enter User Name']")
+	@FindBy(xpath= "//input[@type='text']")
 	WebElement username;
 	
-	@FindBy(xpath= "//input[@placeholder='Enter Password']")
+	@FindBy(xpath= "//input[@type='password']")
 	WebElement password;
 	
-	@FindBy(xpath= "//button[@type='submit']")
+	@FindBy(xpath= "//span[normalize-space()='Login']")
 	WebElement login;
 	
-	@FindBy(xpath= "//center[normalize-space()='Welcome to Home Page']")
-	WebElement welcome_msg;
+	@FindBy(xpath= "//b[normalize-space()='Welcome']")
+	WebElement welcome_usertext;
 	
 	
 
@@ -35,9 +35,9 @@ public class LoginPage  extends TestBase{
 		
 	}
 	
-	public boolean ValidateWelcome_Msg()
+	public boolean ValidateWelcome_Usertext()
 	{
-		return welcome_msg.isDisplayed();
+		return welcome_usertext.isDisplayed();
 		
 	}
 }

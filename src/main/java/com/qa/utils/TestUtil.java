@@ -38,10 +38,10 @@ public class TestUtil extends TestBase {
 	}
 	
 	
-	public void ValidateUserLogin() {
-		driver.findElement(By.xpath("//input[@placeholder='Enter User Name']")).sendKeys(prop.getProperty("username"));
-		driver.findElement(By.xpath("//input[@placeholder='Enter Password']")).sendKeys(prop.getProperty("password"));
-		driver.findElement(By.xpath("//button[@type='submit']")).click();
+	public static void ValidateUserLogin() {
+		driver.findElement(By.xpath("//input[@type='text']")).sendKeys(prop.getProperty("username"));
+		driver.findElement(By.xpath("//input[@type='password']")).sendKeys(prop.getProperty("password"));
+		driver.findElement(By.xpath("//span[normalize-space()='Login']")).click();
 	}
 	
 // It is used for 2nd level menu navigation
@@ -62,9 +62,9 @@ public class TestUtil extends TestBase {
 		public static void navigate_to_menu1(WebElement menu,WebElement submenu) throws InterruptedException
 		{
 			Actions action = new Actions(driver);
-			action.moveToElement(menu).perform();
+			action.moveToElement(menu).click().perform();
 			Thread.sleep(2000);
-			action.moveToElement(submenu).perform();
+			action.moveToElement(submenu).click().perform();
 			Thread.sleep(2000);
 		}
 		
