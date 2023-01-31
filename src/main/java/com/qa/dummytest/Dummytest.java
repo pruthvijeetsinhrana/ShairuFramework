@@ -1,52 +1,24 @@
 package com.qa.dummytest;
 
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.interactions.Actions;
-import org.testng.annotations.BeforeMethod;
-import org.testng.annotations.Test;
+import java.time.Duration;
 
-import com.qa.base.TestBase;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
 import com.qa.utils.TestUtil;
 
-public class Dummytest extends TestBase {
-	
-	
-	
-	@BeforeMethod
-	public void setup()
-	{
-		initialization();
+public class Dummytest {
+	public static WebDriver driver;
+
+	public static void main(String[] args) {
+		driver = new ChromeDriver(); 
+		driver.manage().window().maximize();
+		driver.manage().deleteAllCookies();
+		driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(TestUtil.PAGE_LOAD_TIMEOUT));
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(TestUtil.IMPLICIT_WAIT));
 		
-		
-	}
-	
-	
-	@Test
-	public void TestRun() throws InterruptedException
-	{
-		
-		
-		driver.findElement(By.xpath("//input[@type='text']")).sendKeys(prop.getProperty("username"));
-		driver.findElement(By.xpath("//input[@type='password']")).sendKeys(prop.getProperty("password"));
-		driver.findElement(By.xpath("//span[normalize-space()='Login']")).click();
-		
-		
-		Thread.sleep(2000);
-		
-		
-		driver.findElement(By.xpath("(//span[normalize-space()='Inward List'])[1]")).click();
-		 Thread.sleep(2000);
-		 driver.findElement(By.xpath("(//a[normalize-space()='Job Work Rough List'])[1]")).click();
-		 Thread.sleep(2000);
-		driver.findElement(By.xpath("(//span[@class='btn-text'])[1]")).click();
-		
-		Thread.sleep(1000);
-		
-		driver.findElement(By.xpath("(//input[@type='file'])[1]")).sendKeys("D:\\ShairuFramework\\src\\main\\java\\com\\qa\\dummytest\\dummy.pdf");
-		
+		driver.get("");
+
 	}
 
 }
-		
-

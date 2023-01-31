@@ -4,8 +4,6 @@ import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
-import java.text.SimpleDateFormat;
-import java.util.Date;
 import java.util.Iterator;
 import java.util.Set;
 
@@ -15,13 +13,13 @@ import org.apache.poi.ss.usermodel.Sheet;
 import org.apache.poi.ss.usermodel.Workbook;
 import org.apache.poi.ss.usermodel.WorkbookFactory;
 import org.openqa.selenium.By;
-import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.Select;
+
 import com.qa.base.TestBase;
 
 public class TestUtil extends TestBase {
@@ -48,7 +46,7 @@ public class TestUtil extends TestBase {
 	
 // It is used for 2nd level menu navigation
 	
-	public static void navigate_to_option2(WebElement menu,WebElement submenu,WebElement submenu2) throws InterruptedException
+	public static void navigate_to_menu2(WebElement menu,WebElement submenu,WebElement submenu2) throws InterruptedException
 	{
 		Actions action = new Actions(driver);
 		action.moveToElement(menu).perform();
@@ -61,11 +59,11 @@ public class TestUtil extends TestBase {
 	
 	// It is used for 1st level menu navigation
 	
-		public static void navigate_to_option1(WebElement menu,WebElement submenu) throws InterruptedException
+		public static void navigate_to_menu1(WebElement menu,WebElement submenu) throws InterruptedException
 		{
 			Actions action = new Actions(driver);
 			action.moveToElement(menu).click().perform();
-			Thread.sleep(3000);
+			Thread.sleep(2000);
 			action.moveToElement(submenu).click().perform();
 			Thread.sleep(2000);
 		}
@@ -110,19 +108,10 @@ public class TestUtil extends TestBase {
 	        }
 		}
 		
-		
-		public static void scroll_until() 
-		{
-			JavascriptExecutor js = (JavascriptExecutor) driver;
-			js.executeScript("window.scrollBy(0,450)");
-		}
-		
-		
-		
 		// It is used for uploading file only when type = "file"
-		public static void upload_file(WebElement upload_element,String file_path) 
+		public void upload_file(WebElement upload_element) 
 		{
-			upload_element.sendKeys(file_path);
+			upload_element.sendKeys(prop.getProperty("file_path"));
 		}
 		
 		
@@ -140,17 +129,6 @@ public class TestUtil extends TestBase {
 		{
 			driver.switchTo().frame("mainpanel");
 		}
-		
-		
-		
-		public static  String GetCurrentDate(String Date_format)
-		{
-			Date date = new Date();
-			SimpleDateFormat formatter = new SimpleDateFormat(Date_format);
-		    return formatter.format(date);
-		  
-		}
-		
 		
 		// It is used for taking data from excel sheets
 		public static Object[][] getTestData(String sheetName) {
