@@ -1,7 +1,10 @@
 package com.qa.inwardlistpages;
 
+import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import com.qa.base.TestBase;
@@ -120,7 +123,7 @@ public class JobWorkRoughListPage extends TestBase{
 	@FindBy(xpath= "(//input[@type='text'])[8]")
 	WebElement CertificateNo;
 	
-	@FindBy(xpath= "(//div[contains(@class,'css-13z0ixq')])[1]")
+	@FindBy(xpath= "(//div[@id='react-select-8-placeholder'])[1]")
 	WebElement Origin;
 	
 	@FindBy(xpath= "(//div[@id='react-select-8-option-4'])[1]")
@@ -164,7 +167,7 @@ public class JobWorkRoughListPage extends TestBase{
 	{
 		InwardType_text.isDisplayed();
 		
-	Inwarddate.getText();
+		Inwarddate.getText();
 		
 	
    
@@ -226,7 +229,7 @@ public class JobWorkRoughListPage extends TestBase{
 		
 		
 		
-		save_button1.click();
+		//save_button1.click();
 		try {
 			Thread.sleep(2000);
 		} catch (InterruptedException e) {
@@ -244,13 +247,9 @@ public class JobWorkRoughListPage extends TestBase{
 		
 		
 		
-		try {
-			Thread.sleep(2000);
-		} catch (InterruptedException e1) {
-			// TODO Auto-generated catch block
-			e1.printStackTrace();
-		}
 		
+		
+		 
 		
 		try {
 			TestUtil.navigate_to_option1(Origin,Origin_select);
