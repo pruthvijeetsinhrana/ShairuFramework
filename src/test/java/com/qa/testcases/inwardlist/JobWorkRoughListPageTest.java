@@ -47,6 +47,20 @@ public class JobWorkRoughListPageTest extends TestBase {
 		jobworkroughlistpage.Open_inward_button();
 	}
 	
+	@Test(priority=3)
+	public void Verify_filldata_DocumentDeatils()
+	{
+		jobworkroughlistpage.fill_data_DocumentDetails();
+		
+		
+	}
+	
+	@Test(priority=4)
+	public void  Verify_fill_data_KPCertificateDetails()
+	{
+		jobworkroughlistpage.fill_data_KPCertificateDetails();
+		
+	}
 	
 	
 }
