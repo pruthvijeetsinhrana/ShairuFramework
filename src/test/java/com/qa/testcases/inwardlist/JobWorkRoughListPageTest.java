@@ -63,4 +63,27 @@ public class JobWorkRoughListPageTest extends TestBase {
 	}
 	
 	
+	@Test(priority=5)
+	public void  Verify_fill_data_BillEntryDetails()
+	{
+		jobworkroughlistpage.fill_data_BillEntryDetails();
+		
+	}
+	
+	@Test(priority=6)
+	public void  Verify_fill_data_CorrespondingInvoice()
+	{
+		jobworkroughlistpage.fill_data_CorrespondingInvoice();
+		
+	}
+	
+	
+	@Test(priority=7)
+	public void  Verify_fill_data_MiningInformation()
+	{
+		jobworkroughlistpage.fill_data_MiningInformation();
+		
+	}
+	
+	
 }
