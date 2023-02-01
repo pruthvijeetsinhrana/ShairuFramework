@@ -1,7 +1,5 @@
 package com.qa.inwardlistpages;
 
-import org.openqa.selenium.By;
-import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
@@ -138,6 +136,75 @@ public class JobWorkRoughListPage extends TestBase{
 	@FindBy(xpath= "(//input[@type='file'])[3]")
 	WebElement Certificate;
 	
+	//Bill of Entry Details
+	
+	@FindBy(xpath= "(//input[@placeholder='Select date'])[5]")
+	WebElement BOE_Date;
+	
+	@FindBy(xpath= "(//input[@type='text'])[10]")
+	WebElement BOE_No;
+	
+	@FindBy(xpath= "(//input[@type='text'])[11]")
+	WebElement MAWB_No;
+	
+	@FindBy(xpath= "(//input[@type='text'])[12]")
+	WebElement HAWB_No;
+	
+	@FindBy(xpath= "(//input[@placeholder='Select date'])[6]")
+	WebElement Source_InwardDate;
+	
+	@FindBy(xpath= "(//input[@type='file'])[4]")
+	WebElement BillofEntry_upload;
+	
+	@FindBy(xpath= "(//input[@type='file'])[5]")
+	WebElement Airwaybill_upload;
+	
+	@FindBy(xpath= "(//button[@type='submit'])[2]")
+	WebElement Save_button2;
+	
+	
+	// Corresponding Invoice & KP Information
+	
+	@FindBy(xpath= "(//input[@type='text'])[13]")
+	WebElement Invoice_No;
+	
+	@FindBy(xpath= "(//input[@type='number'])[14]")
+	WebElement Invoice_Weight;
+	
+	@FindBy(xpath= "(//input[@type='file'])[6]")
+	WebElement Invoice;
+	
+	@FindBy(xpath= "(//input[@accept='application/pdf, application/excel, application/vnd.ms-excel, application/x-excel, application/x-msexcel, application/vnd.openxmlformats-officedocument.spreadsheetml.sheet, text/csv'])[1]")
+	WebElement Packing_List;
+	
+	@FindBy(xpath= "(//input[@type='text'])[14]")
+	WebElement KP_Certificate_No;
+	
+	@FindBy(xpath= "(//div[@class=' css-13z0ixq'])[7]")
+	WebElement Origin_invoicesection;
+	
+	@FindBy(xpath= "(//div[@id='react-select-9-option-3'])[1]")
+	WebElement Origin_invoicesection_select;
+	
+	@FindBy(xpath= "(//input[@placeholder='Select date'])[7]")
+	WebElement IssueDate_invoicesection;
+	
+	@FindBy(xpath= "(//input[@placeholder='Select date'])[8]")
+	WebElement ExpiryDate_invoicesection;
+	
+	@FindBy(xpath= "(//input[@type='file'])[8]")
+	WebElement Certificate__invoicesection;
+	
+	//Mining Information Elements
+	
+	@FindBy(css= ".mining_name .css-1d8n9bt")
+	WebElement MiningName;
+	
+	@FindBy(id= "react-select-10-option-1")
+	WebElement MiningName_select;
+	
+	@FindBy(xpath= "(//button[@type='button'])[28]")
+	WebElement row_button1;
 
 	
 	public JobWorkRoughListPage()
@@ -187,7 +254,7 @@ public class JobWorkRoughListPage extends TestBase{
 			e.printStackTrace();
 		}
 		 
-		 DocumentNo.sendKeys(prop.getProperty("Document_No"));
+		 DocumentNo.sendKeys(prop.getProperty("Common_No"));
 		 
 		 try {
 			TestUtil.navigate_to_option1(SenderName,SenderName_select);
@@ -229,7 +296,7 @@ public class JobWorkRoughListPage extends TestBase{
 		
 		
 		
-		//save_button1.click();
+		save_button1.click();
 		try {
 			Thread.sleep(2000);
 		} catch (InterruptedException e) {
@@ -243,7 +310,7 @@ public class JobWorkRoughListPage extends TestBase{
 	{
 		
 		
-		CertificateNo.sendKeys(prop.getProperty("CertificateNo"));
+		CertificateNo.sendKeys(prop.getProperty("Common_No"));
 		
 		
 		
@@ -271,6 +338,93 @@ public class JobWorkRoughListPage extends TestBase{
 		
 	}
 	
+	
+	public void fill_data_BillEntryDetails()
+	{
+		BOE_Date.sendKeys(TestUtil.GetCurrentDate("dd-MM-yyyy"));
+		BOE_Date.sendKeys(Keys.RETURN);
+		
+		 BOE_No.sendKeys(prop.getProperty("Common_No"));
+		
+		 MAWB_No.sendKeys(prop.getProperty("Common_No"));
+		
+		 HAWB_No.sendKeys(prop.getProperty("Common_No"));
+		
+		 Source_InwardDate.sendKeys(TestUtil.GetCurrentDate("dd-MM-yyyy"));
+		 Source_InwardDate.sendKeys(Keys.RETURN);
+		 
+		 TestUtil.upload_file(BillofEntry_upload,prop.getProperty("BillofEntry_path"));
+		 
+		 TestUtil.upload_file(Airwaybill_upload,prop.getProperty("Airwaybill_path"));
+		
+		 Save_button2.click();
+		
+	}
+	
+	
+	public void fill_data_CorrespondingInvoice()
+	{
+		Invoice_No.sendKeys(prop.getProperty("Common_No"));
+		
+		Invoice_Weight.sendKeys(prop.getProperty("Invoice_Weight"));
+		
+		TestUtil.upload_file(Invoice,prop.getProperty("Invoice_path"));
+		
+		TestUtil.upload_file(Packing_List,prop.getProperty("Packing_List_path"));
+		
+		
+		KP_Certificate_No.sendKeys(prop.getProperty("Common_No"));
+		
+		try {
+			TestUtil.navigate_to_option1(Origin_invoicesection,Origin_invoicesection_select);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+
+		
+		IssueDate_invoicesection.sendKeys(TestUtil.GetCurrentDate("dd-MM-yyyy"));
+		IssueDate_invoicesection.sendKeys(Keys.RETURN);
+		
+		ExpiryDate_invoicesection.sendKeys(TestUtil.GetCurrentDate("dd-MM-yyyy"));
+		ExpiryDate_invoicesection.sendKeys(Keys.RETURN);
+		
+		 TestUtil.upload_file(Certificate__invoicesection,prop.getProperty("Certificate__invoicesection_path"));
+		
+		 try {
+			Thread.sleep(2000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
+	
+	
+	public void fill_data_MiningInformation()
+	{
+		
+		try {
+			TestUtil.navigate_to_option1(MiningName,MiningName_select);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		
+
+		
+		row_button1.click();
+		try {
+			Thread.sleep(2000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		
+		
+	}
 	
 	
 	
