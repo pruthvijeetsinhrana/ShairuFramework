@@ -45,6 +45,9 @@ public class Dummytest extends TestBase {
 		
 		driver.findElement(By.xpath("(//input[@type='file'])[1]")).sendKeys("D:\\ShairuFramework\\src\\main\\java\\com\\qa\\dummytest\\dummy.pdf");
 		
+		Thread.sleep(2000);
+		
+		
 	}
 
 }
