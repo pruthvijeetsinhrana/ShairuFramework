@@ -1,10 +1,17 @@
 package com.qa.inwardlistpages;
 
+import java.time.Duration;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+
 import com.qa.base.TestBase;
 import com.qa.utils.TestUtil;
 
@@ -206,6 +213,55 @@ public class JobWorkRoughListPage extends TestBase{
 	@FindBy(xpath= "(//button[@type='button'])[28]")
 	WebElement row_button1;
 
+	
+	//Document line section
+	
+	@FindBy(xpath= "(//input[@class='ant-input ant-input-status-success'])[1]")
+	WebElement KapanNo;
+	
+	
+	@FindBy(xpath= "(//input[@type='text'])[20]")
+	WebElement Pieces;
+	
+	@FindBy(xpath= "(//input[@type='number'])[15]")
+	WebElement Carats;
+	
+	@FindBy(xpath= "(//input[@type='number'])[16]")
+	WebElement Rate;
+	
+	@FindBy(xpath= "(//button[@type='submit'])[3]")
+	WebElement Save_button3;
+	
+	//Jangad Expense Details
+	
+	@FindBy(xpath= "/html/body/div[1]/div/section/section/main/div[4]/div[1]/div/div[2]/button")
+	WebElement row_button_Jangad;
+	
+	@FindBy(xpath= "(//input[@type='text'])[22]")
+	WebElement JangadNo;
+	
+	@FindBy(xpath= "(//div[contains(@class,'css-1d8n9bt')])[11]")
+	WebElement CourierPartyName;
+	
+	@FindBy(xpath= "(//div[@id='react-select-15-option-2'])[1]")
+	WebElement CourierPartyName_select;
+	
+	@FindBy(xpath= "(//input[@type='text'])[24]")
+	WebElement CourierNo;
+	
+	@FindBy(xpath= "(//input[@type='file'])[9]")
+	WebElement CourierDocument;
+	
+	@FindBy(xpath= "/html/body/div[1]/div/section/section/main/div[4]/form/div/div/div/div/div/div/table/tbody/tr[2]/td[7]/div[1]/div/div/div/div/div/div/div[1]")
+	WebElement Expense1;
+	
+	@FindBy(xpath= "(//div[@id='react-select-16-option-1'])[1]")
+	WebElement Expense1_select;
+	
+	
+	
+	
+	
 	
 	public JobWorkRoughListPage()
 	{
@@ -411,6 +467,8 @@ public class JobWorkRoughListPage extends TestBase{
 			e.printStackTrace();
 		}
 		
+		WebDriverWait wait = new WebDriverWait(driver,Duration.ofSeconds(20));
+		wait.until(ExpectedConditions.elementToBeClickable(row_button1));
 		
 
 		
@@ -426,6 +484,72 @@ public class JobWorkRoughListPage extends TestBase{
 		
 	}
 	
+	public void fill_data_DocumentLines()
+	{
+		KapanNo.sendKeys(prop.getProperty("Common_No"));
+		
+		Pieces.sendKeys(prop.getProperty("Pieces"));
+		
+		Carats.sendKeys(prop.getProperty("Pieces"));
+		
+		Rate.sendKeys(prop.getProperty("Rate"));
+		
+		WebDriverWait wait = new WebDriverWait(driver,Duration.ofSeconds(20));
+		wait.until(ExpectedConditions.elementToBeClickable(Save_button3));
+		
+		Save_button3.click();
+		
+		try {
+			Thread.sleep(3000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		
+		
+	}
 	
+	public void fill_data_JangadExpenseDetails()
+	{
+		TestUtil.scroll_until();
+		
+		WebDriverWait wait = new WebDriverWait(driver,Duration.ofSeconds(20));
+		wait.until(ExpectedConditions.elementToBeClickable(row_button_Jangad));
+		
+		
+		row_button_Jangad.click();
+		
+		
+		
+		try {
+			Thread.sleep(2000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		
+		JangadNo.sendKeys(prop.getProperty("Common_No"));
+		
+		
+		try {
+			TestUtil.navigate_to_option1(CourierPartyName,CourierPartyName_select);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		
+		CourierNo.sendKeys(prop.getProperty("Common_No"));
+		
+		
+		 TestUtil.upload_file(CourierDocument,prop.getProperty("CourierDocument_path"));
+		 
+		
+		 
+
+		
+	}
 	
 }

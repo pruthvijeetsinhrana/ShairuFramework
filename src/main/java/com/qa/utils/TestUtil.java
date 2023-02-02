@@ -114,7 +114,7 @@ public class TestUtil extends TestBase {
 		public static void scroll_until() 
 		{
 			JavascriptExecutor js = (JavascriptExecutor) driver;
-			js.executeScript("window.scrollBy(0,450)");
+			js.executeScript("window.scrollBy(0,600)");
 		}
 		
 		
@@ -123,6 +123,14 @@ public class TestUtil extends TestBase {
 		public static void upload_file(WebElement upload_element,String file_path) 
 		{
 			upload_element.sendKeys(file_path);
+		}
+		
+		// It is used for Horizontal scroll clicking on count of click
+		public static void Horizontal_Scroll(WebElement element,int ClickCount) {
+
+			for (int i = 1; i <= ClickCount; i++) {
+				element.click();
+			}
 		}
 		
 		

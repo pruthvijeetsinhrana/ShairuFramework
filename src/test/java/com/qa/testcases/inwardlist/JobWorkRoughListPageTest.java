@@ -85,5 +85,18 @@ public class JobWorkRoughListPageTest extends TestBase {
 		
 	}
 	
+	@Test(priority=8)
+	public void  Verify_fill_data_DocumentLines()
+	{
+		jobworkroughlistpage.fill_data_DocumentLines();
+		
+	}
+	
+	@Test(priority=9)
+	public void  Verify_fill_data_JangadExpenseDetails()
+	{
+		jobworkroughlistpage.fill_data_JangadExpenseDetails();
+		
+	}
 	
 }
