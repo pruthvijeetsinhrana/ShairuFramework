@@ -3,9 +3,11 @@ package com.qa.inwardlistpages;
 import java.time.Duration;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.Dimension;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Action;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
@@ -252,11 +254,22 @@ public class JobWorkRoughListPage extends TestBase{
 		@FindBy(xpath= "(//input[@type='file'])[9]")
 		WebElement CourierDocument;
 		
-		@FindBy(xpath= "/html/body/div[1]/div/section/section/main/div[4]/form/div/div/div/div/div/div/table/tbody/tr[2]/td[7]/div[1]/div/div/div/div/div/div/div[1]")
+		@FindBy(xpath= "(//div[contains(@class,'css-13z0ixq')])[11]")
 		WebElement Expense1;
 		
 		@FindBy(xpath= "(//div[@id='react-select-16-option-1'])[1]")
 		WebElement Expense1_select;
+		
+		@FindBy(xpath= "(//input[@type='number'])[15]")
+		WebElement Expense1_value;
+		
+		@FindBy(xpath= "/html[1]/body[1]/div[1]/div[1]/section[1]/section[1]/main[1]/div[4]/form[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/table[1]/tbody[1]/tr[2]/td[13]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]")
+		WebElement appliedfield;
+		
+		
+		@FindBy(xpath= "(//div[@class='ant-select-item-option-content'])[1]")
+		WebElement appliedfield_select;
+		
 		
 		
 		//navigation to Hide_button
@@ -264,6 +277,9 @@ public class JobWorkRoughListPage extends TestBase{
 		WebElement navigation_hidebutton;
 		
 		
+		
+		@FindBy(xpath= "(//div[@class='ant-table ant-table-bordered ant-table-ping-left ant-table-fixed-column ant-table-scroll-horizontal ant-table-has-fix-right'])[1]")
+		WebElement horizontal_scroll;
 		
 		
 		
@@ -581,7 +597,50 @@ public class JobWorkRoughListPage extends TestBase{
 					e.printStackTrace();
 				}
 			 
+				Expense1_value.sendKeys(prop.getProperty("Expense1_value"));
+				
+				JavascriptExecutor js = (JavascriptExecutor) driver;
+				//Scroll down till the bottom of the page
+				js.executeScript("window.scrollBy(0,document.body.scrollHeight)");
 
+				
+				
+				
+				
+				
+				
+				
+				appliedfield.click();
+				try {
+					Thread.sleep(1000);
+				} catch (InterruptedException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+				Actions action1 = new Actions(driver);
+				action1.moveToElement(appliedfield).click().perform();
+				try {
+					Thread.sleep(3000);
+				} catch (InterruptedException e1) {
+					// TODO Auto-generated catch block
+					e1.printStackTrace();
+				}
+				action1.moveToElement( appliedfield_select).click().perform();
+				try {
+					Thread.sleep(2000);
+				} catch (InterruptedException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+				
+				
+				
+
+				    
+				    
+
+
+				
 			
 		}
 	
