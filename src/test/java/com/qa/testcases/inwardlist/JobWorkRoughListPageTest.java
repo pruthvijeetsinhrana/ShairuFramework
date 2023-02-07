@@ -105,6 +105,15 @@ public class JobWorkRoughListPageTest extends TestBase {
 		
 	}
 	
+	@Test(priority=10)
+	public void  Verify_ValidateConfirmationRecord()
+	{
+		jobworkroughlistpage.ValidateConfirmationRecord();
+		
+	}
+	
+	
+	
 
 	
 	

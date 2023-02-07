@@ -13,6 +13,7 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.Assert;
 
 import com.qa.base.TestBase;
 import com.qa.utils.TestUtil;
@@ -20,6 +21,8 @@ import com.qa.utils.TestUtil;
 public class JobWorkRoughListPage extends TestBase{
 	
 	//Document Info section 
+	
+
 	
 		@FindBy(xpath= "(//span[normalize-space()='Inward List'])[1]")
 		WebElement inwardlist_menu;
@@ -280,6 +283,15 @@ public class JobWorkRoughListPage extends TestBase{
 		
 		@FindBy(xpath= "(//div[@class='ant-table ant-table-bordered ant-table-ping-left ant-table-fixed-column ant-table-scroll-horizontal ant-table-has-fix-right'])[1]")
 		WebElement horizontal_scroll;
+		
+		@FindBy(xpath= "(//span[normalize-space()='Save'])[1]")
+		WebElement Save_finalbutton;
+		
+		//Confirmation Record - record added successfully
+		@FindBy(xpath= "//td[normalize-space()='+text_record+']")
+		WebElement Record_added;
+		
+		
 		
 		
 		
@@ -581,21 +593,16 @@ public class JobWorkRoughListPage extends TestBase{
 			
 			 TestUtil.upload_file(CourierDocument,prop.getProperty("CourierDocument_path"));
 			 
-			 Actions action = new Actions(driver);
-				action.moveToElement(Expense1).click().perform();
+			 
+
 				try {
-					Thread.sleep(3000);
+					TestUtil.navigate_to_option1(Expense1,Expense1_select);
 				} catch (InterruptedException e) {
 					// TODO Auto-generated catch block
 					e.printStackTrace();
 				}
-				action.moveToElement(Expense1_select).click().perform();
-				try {
-					Thread.sleep(2000);
-				} catch (InterruptedException e) {
-					// TODO Auto-generated catch block
-					e.printStackTrace();
-				}
+				
+			
 			 
 				Expense1_value.sendKeys(prop.getProperty("Expense1_value"));
 				
@@ -605,43 +612,49 @@ public class JobWorkRoughListPage extends TestBase{
 
 				
 				
-				
-				
-				
-				
-				
 				appliedfield.click();
+				
 				try {
 					Thread.sleep(1000);
 				} catch (InterruptedException e) {
 					// TODO Auto-generated catch block
 					e.printStackTrace();
 				}
-				Actions action1 = new Actions(driver);
-				action1.moveToElement(appliedfield).click().perform();
+				
 				try {
-					Thread.sleep(3000);
-				} catch (InterruptedException e1) {
-					// TODO Auto-generated catch block
-					e1.printStackTrace();
-				}
-				action1.moveToElement( appliedfield_select).click().perform();
-				try {
-					Thread.sleep(2000);
+					TestUtil.navigate_to_option1(appliedfield,appliedfield_select);
 				} catch (InterruptedException e) {
 					// TODO Auto-generated catch block
 					e.printStackTrace();
 				}
 				
 				
+				try {
+					Thread.sleep(2000);
+				} catch (InterruptedException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+				Save_finalbutton.click();
+				
+				try {
+					Thread.sleep(3000);
+				} catch (InterruptedException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+				
 				
 
-				    
-				    
-
-
-				
+		}
+		
+		public void ValidateConfirmationRecord() //taken from top Init
+		{
+			String text_record = prop.getProperty("Common_No");
 			
+			
+			WebElement Record_added = driver.findElement(By.xpath("//*[contains(text(),'"+text_record+"')]"));
+			Assert.assertEquals(Record_added.getText(),text_record);
 		}
 	
 }

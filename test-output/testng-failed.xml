@@ -6,7 +6,7 @@
       <class name="com.qa.testcases.inwardlist.JobWorkRoughListPageTest">
         <methods>
           <include name="setup"/>
-          <include name="Verify_fill_data_JangadExpenseDetails"/>
+          <include name="Verify_ValidateConfirmationRecord"/>
         </methods>
       </class> <!-- com.qa.testcases.inwardlist.JobWorkRoughListPageTest -->
     </classes>
