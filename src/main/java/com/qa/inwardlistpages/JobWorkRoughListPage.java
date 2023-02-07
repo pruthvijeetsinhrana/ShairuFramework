@@ -1,6 +1,7 @@
 package com.qa.inwardlistpages;
 
 import java.time.Duration;
+import java.util.List;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.Dimension;
@@ -290,6 +291,25 @@ public class JobWorkRoughListPage extends TestBase{
 		//Confirmation Record - record added successfully
 		@FindBy(xpath= "//td[normalize-space()='+text_record+']")
 		WebElement Record_added;
+		
+		//View button
+		@FindBy(xpath= "(//*[name()='svg'])[35]")
+		WebElement view_button;
+		
+		
+		//Edit Functionality 
+		
+		@FindBy(xpath= "(//*[name()='svg'])[36]")
+		WebElement edit_button;
+		
+		
+		// Success msg edit page
+		
+		@FindBy(xpath= "//span[normalize-space()='Record added successfully']")
+		WebElement success_edit_msg;
+		
+		
+		
 		
 		
 		
@@ -655,6 +675,102 @@ public class JobWorkRoughListPage extends TestBase{
 			
 			WebElement Record_added = driver.findElement(By.xpath("//*[contains(text(),'"+text_record+"')]"));
 			Assert.assertEquals(Record_added.getText(),text_record);
+		}
+		
+		public void ValidateDisableFields()
+		{
+			view_button.click();
+			try {
+				Thread.sleep(2000);
+			} catch (InterruptedException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+			List<WebElement> disable_fields = driver.findElements(By.xpath("//input[@disabled]"));
+		      System.out.println("Total number of disable elements on page: " + disable_fields.size());
+			
+		}
+		
+		public void ValidateEditFunctionality()
+		{
+			driver.navigate().back();
+			
+			try {
+				Thread.sleep(1000);
+			} catch (InterruptedException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+			
+			edit_button.click();
+			
+			try {
+				Thread.sleep(2000);
+			} catch (InterruptedException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+			
+			save_button1.click();
+			
+			try {
+				Thread.sleep(2000);
+			} catch (InterruptedException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+			CertificateNo.clear();
+			CertificateNo.sendKeys(prop.getProperty("Common_No_edit"));
+			
+			 BOE_No.clear();
+			 BOE_No.sendKeys(prop.getProperty("Common_No_edit"));
+			 
+			 MAWB_No.clear();	
+			 MAWB_No.sendKeys(prop.getProperty("Common_No_edit"));
+			
+			 HAWB_No.clear();
+			 HAWB_No.sendKeys(prop.getProperty("Common_No_edit"));
+			 
+			 Save_button2.click();
+			 
+			 try {
+					Thread.sleep(2000);
+				} catch (InterruptedException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+			 Invoice_No.clear();
+			 Invoice_No.sendKeys(prop.getProperty("Common_No_edit"));
+			 
+			 try {
+					Thread.sleep(2000);
+				} catch (InterruptedException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+			 
+			 Save_button3.click();
+			 
+			 try {
+					Thread.sleep(2000);
+				} catch (InterruptedException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+			 
+			 Save_finalbutton.click();
+			 
+			 try {
+					Thread.sleep(3000);
+				} catch (InterruptedException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+			 
+			 
+			 Assert.assertTrue(success_edit_msg.isDisplayed());
+			 
+			 
 		}
 	
 }

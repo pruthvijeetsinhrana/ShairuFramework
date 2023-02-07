@@ -112,6 +112,20 @@ public class JobWorkRoughListPageTest extends TestBase {
 		
 	}
 	
+	@Test(priority=11)
+	public void  Verify_ValidateDisableFields()
+	{
+		jobworkroughlistpage.ValidateDisableFields();
+		
+	}
+	
+	
+	@Test(priority=12)
+	public void  Verify_ValidateEditFunctionality()
+	{
+		jobworkroughlistpage.ValidateEditFunctionality();
+		
+	}
 	
 	
 
