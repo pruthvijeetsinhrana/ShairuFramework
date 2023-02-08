@@ -1,65 +1,49 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="12" passed="12" failed="0" skipped="0">
+<testng-results ignored="0" total="8" passed="8" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-02-07T18:33:15 IST" name="Default suite" finished-at="2023-02-07T18:35:37 IST" duration-ms="141960">
+  <suite started-at="2023-02-08T16:22:56 IST" name="Default suite" finished-at="2023-02-08T16:24:22 IST" duration-ms="86068">
     <groups>
     </groups>
-    <test started-at="2023-02-07T18:33:15 IST" name="Default test" finished-at="2023-02-07T18:35:37 IST" duration-ms="141960">
-      <class name="com.qa.testcases.inwardlist.JobWorkRoughListPageTest">
-        <test-method is-config="true" signature="setup()[pri:0, instance:com.qa.testcases.inwardlist.JobWorkRoughListPageTest@3646a422]" started-at="2023-02-07T18:33:15 IST" name="setup" finished-at="2023-02-07T18:33:23 IST" duration-ms="7124" status="PASS">
+    <test started-at="2023-02-08T16:22:56 IST" name="Default test" finished-at="2023-02-08T16:24:22 IST" duration-ms="86068">
+      <class name="com.qa.testcases.inwardlist.JobWorkInspectionPageTest">
+        <test-method is-config="true" signature="setup()[pri:0, instance:com.qa.testcases.inwardlist.JobWorkInspectionPageTest@4145bad8]" started-at="2023-02-08T16:22:56 IST" name="setup" finished-at="2023-02-08T16:23:02 IST" duration-ms="5590" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="Verify_Navigation()[pri:1, instance:com.qa.testcases.inwardlist.JobWorkRoughListPageTest@3646a422]" started-at="2023-02-07T18:33:23 IST" name="Verify_Navigation" finished-at="2023-02-07T18:33:29 IST" duration-ms="6540" status="PASS">
+        <test-method signature="Verify_Navigation()[pri:1, instance:com.qa.testcases.inwardlist.JobWorkInspectionPageTest@4145bad8]" started-at="2023-02-08T16:23:02 IST" name="Verify_Navigation" finished-at="2023-02-08T16:23:08 IST" duration-ms="6086" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Verify_Navigation -->
-        <test-method signature="Verify_inwardbutton_click()[pri:2, instance:com.qa.testcases.inwardlist.JobWorkRoughListPageTest@3646a422]" started-at="2023-02-07T18:33:29 IST" name="Verify_inwardbutton_click" finished-at="2023-02-07T18:33:29 IST" duration-ms="206" status="PASS">
+        <test-method signature="Verify_inwardbutton_click()[pri:2, instance:com.qa.testcases.inwardlist.JobWorkInspectionPageTest@4145bad8]" started-at="2023-02-08T16:23:08 IST" name="Verify_inwardbutton_click" finished-at="2023-02-08T16:23:08 IST" duration-ms="121" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Verify_inwardbutton_click -->
-        <test-method signature="Verify_filldata_DocumentDeatils()[pri:3, instance:com.qa.testcases.inwardlist.JobWorkRoughListPageTest@3646a422]" started-at="2023-02-07T18:33:29 IST" name="Verify_filldata_DocumentDeatils" finished-at="2023-02-07T18:34:04 IST" duration-ms="34299" status="PASS">
+        <test-method signature="Verify_filldata_DocumentDeatils()[pri:3, instance:com.qa.testcases.inwardlist.JobWorkInspectionPageTest@4145bad8]" started-at="2023-02-08T16:23:08 IST" name="Verify_filldata_DocumentDeatils" finished-at="2023-02-08T16:23:35 IST" duration-ms="27038" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Verify_filldata_DocumentDeatils -->
-        <test-method signature="Verify_fill_data_KPCertificateDetails()[pri:4, instance:com.qa.testcases.inwardlist.JobWorkRoughListPageTest@3646a422]" started-at="2023-02-07T18:34:04 IST" name="Verify_fill_data_KPCertificateDetails" finished-at="2023-02-07T18:34:13 IST" duration-ms="9305" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- Verify_fill_data_KPCertificateDetails -->
-        <test-method signature="Verify_fill_data_BillEntryDetails()[pri:5, instance:com.qa.testcases.inwardlist.JobWorkRoughListPageTest@3646a422]" started-at="2023-02-07T18:34:13 IST" name="Verify_fill_data_BillEntryDetails" finished-at="2023-02-07T18:34:16 IST" duration-ms="3167" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- Verify_fill_data_BillEntryDetails -->
-        <test-method signature="Verify_fill_data_CorrespondingInvoice()[pri:6, instance:com.qa.testcases.inwardlist.JobWorkRoughListPageTest@3646a422]" started-at="2023-02-07T18:34:16 IST" name="Verify_fill_data_CorrespondingInvoice" finished-at="2023-02-07T18:34:31 IST" duration-ms="14436" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- Verify_fill_data_CorrespondingInvoice -->
-        <test-method signature="Verify_fill_data_MiningInformation()[pri:7, instance:com.qa.testcases.inwardlist.JobWorkRoughListPageTest@3646a422]" started-at="2023-02-07T18:34:31 IST" name="Verify_fill_data_MiningInformation" finished-at="2023-02-07T18:34:38 IST" duration-ms="7833" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- Verify_fill_data_MiningInformation -->
-        <test-method signature="Verify_fill_data_DocumentLines()[pri:8, instance:com.qa.testcases.inwardlist.JobWorkRoughListPageTest@3646a422]" started-at="2023-02-07T18:34:38 IST" name="Verify_fill_data_DocumentLines" finished-at="2023-02-07T18:34:44 IST" duration-ms="5512" status="PASS">
+        <test-method signature="Verify_fill_data_DocumentLines()[pri:4, instance:com.qa.testcases.inwardlist.JobWorkInspectionPageTest@4145bad8]" started-at="2023-02-08T16:23:35 IST" name="Verify_fill_data_DocumentLines" finished-at="2023-02-08T16:23:41 IST" duration-ms="6168" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Verify_fill_data_DocumentLines -->
-        <test-method signature="Verify_fill_data_JangadExpenseDetails()[pri:9, instance:com.qa.testcases.inwardlist.JobWorkRoughListPageTest@3646a422]" started-at="2023-02-07T18:34:44 IST" name="Verify_fill_data_JangadExpenseDetails" finished-at="2023-02-07T18:35:17 IST" duration-ms="32660" status="PASS">
+        <test-method signature="Verify_fill_data_JangadExpenseDetails()[pri:5, instance:com.qa.testcases.inwardlist.JobWorkInspectionPageTest@4145bad8]" started-at="2023-02-08T16:23:41 IST" name="Verify_fill_data_JangadExpenseDetails" finished-at="2023-02-08T16:24:10 IST" duration-ms="28261" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Verify_fill_data_JangadExpenseDetails -->
-        <test-method signature="Verify_ValidateConfirmationRecord()[pri:10, instance:com.qa.testcases.inwardlist.JobWorkRoughListPageTest@3646a422]" started-at="2023-02-07T18:35:17 IST" name="Verify_ValidateConfirmationRecord" finished-at="2023-02-07T18:35:17 IST" duration-ms="34" status="PASS">
+        <test-method signature="Verify_ValidateConfirmationRecord()[pri:6, instance:com.qa.testcases.inwardlist.JobWorkInspectionPageTest@4145bad8]" started-at="2023-02-08T16:24:10 IST" name="Verify_ValidateConfirmationRecord" finished-at="2023-02-08T16:24:10 IST" duration-ms="28" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Verify_ValidateConfirmationRecord -->
-        <test-method signature="Verify_ValidateDisableFields()[pri:11, instance:com.qa.testcases.inwardlist.JobWorkRoughListPageTest@3646a422]" started-at="2023-02-07T18:35:17 IST" name="Verify_ValidateDisableFields" finished-at="2023-02-07T18:35:19 IST" duration-ms="2847" status="PASS">
+        <test-method signature="Verify_ValidateDisableFields()[pri:7, instance:com.qa.testcases.inwardlist.JobWorkInspectionPageTest@4145bad8]" started-at="2023-02-08T16:24:10 IST" name="Verify_ValidateDisableFields" finished-at="2023-02-08T16:24:12 IST" duration-ms="2133" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Verify_ValidateDisableFields -->
-        <test-method signature="Verify_ValidateEditFunctionality()[pri:12, instance:com.qa.testcases.inwardlist.JobWorkRoughListPageTest@3646a422]" started-at="2023-02-07T18:35:19 IST" name="Verify_ValidateEditFunctionality" finished-at="2023-02-07T18:35:37 IST" duration-ms="17899" status="PASS">
+        <test-method signature="Verify_ValidateEditFunctionality()[pri:8, instance:com.qa.testcases.inwardlist.JobWorkInspectionPageTest@4145bad8]" started-at="2023-02-08T16:24:12 IST" name="Verify_ValidateEditFunctionality" finished-at="2023-02-08T16:24:22 IST" duration-ms="10594" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Verify_ValidateEditFunctionality -->
-      </class> <!-- com.qa.testcases.inwardlist.JobWorkRoughListPageTest -->
+      </class> <!-- com.qa.testcases.inwardlist.JobWorkInspectionPageTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
