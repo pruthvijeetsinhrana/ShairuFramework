@@ -1,5 +1,6 @@
 package com.qa.inwardlistpages;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
@@ -44,5 +45,7 @@ public class JobWorkRepairListPage extends TestBase{
 			inward_button.isDisplayed();
 			inward_button.click();
 			System.out.println("Inward module is open - user can enter data in it.");
+			
+			driver.findElement(By.xpath("(//input[@accept='application/pdf'])[1]")).sendKeys(System.getProperty("user.dir")+ prop.getProperty("demo_text"));
 		}
 }
