@@ -33,7 +33,7 @@ public class TestBase {
 		
 		prop = new Properties();
 		try {
-			FileInputStream ip = new FileInputStream("D:\\ShairuFramework\\src\\main\\java\\com\\qa\\configs\\config_qa.properties");
+			FileInputStream ip = new FileInputStream(System.getProperty("user.dir")+"\\src\\main\\java\\com\\qa\\configs\\config_qa.properties");
 		prop.load(ip);
 		
 		} catch (FileNotFoundException e) {
