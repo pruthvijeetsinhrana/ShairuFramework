@@ -18,6 +18,9 @@ import com.qa.utils.TestUtil;
 
 public class JobWorkInspectionPage extends TestBase{
 	
+	//File path 
+	public String Commonpath_pdf = System.getProperty("user.dir")+ prop.getProperty("Commonpath_pdf");
+	
 	//Document Info section 
 	
 		@FindBy(xpath= "(//span[normalize-space()='Inward List'])[1]")
@@ -278,7 +281,7 @@ public class JobWorkInspectionPage extends TestBase{
 				
 				
 			
-			TestUtil.upload_file(DocumentFile,prop.getProperty("DocumentFile_path"));
+			TestUtil.upload_file(DocumentFile,Commonpath_pdf);
 			try {
 				TestUtil.navigate_to_option1(ExchangeType,ExchangeType_select);
 			} catch (InterruptedException e) {
@@ -381,7 +384,7 @@ public class JobWorkInspectionPage extends TestBase{
 			CourierNo.sendKeys(prop.getProperty("Common_No"));
 			
 			
-			 TestUtil.upload_file(CourierDocument,prop.getProperty("CourierDocument_path"));
+			 TestUtil.upload_file(CourierDocument,Commonpath_pdf);
 			 
 			 
 

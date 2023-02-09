@@ -10,6 +10,10 @@ import com.qa.utils.TestUtil;
 
 public class JobWorkRepairListPage extends TestBase{
 	
+	//File path 
+		public String Commonpath_pdf = System.getProperty("user.dir")+ prop.getProperty("Commonpath_pdf");
+		public String Commonpath_image = System.getProperty("user.dir")+ prop.getProperty("Commonpath_image");
+	
 	//Document Info section 
 	
 
@@ -46,6 +50,6 @@ public class JobWorkRepairListPage extends TestBase{
 			inward_button.click();
 			System.out.println("Inward module is open - user can enter data in it.");
 			
-			driver.findElement(By.xpath("(//input[@accept='application/pdf'])[1]")).sendKeys(System.getProperty("user.dir")+ prop.getProperty("demo_text"));
+			driver.findElement(By.xpath("(//input[@accept='application/pdf'])[1]")).sendKeys(Commonpath_pdf);
 		}
 }

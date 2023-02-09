@@ -21,6 +21,10 @@ import com.qa.utils.TestUtil;
 
 public class JobWorkRoughListPage extends TestBase{
 	
+	//File path 
+	public String Commonpath_pdf = System.getProperty("user.dir")+ prop.getProperty("Commonpath_pdf");
+	public String Commonpath_image = System.getProperty("user.dir")+ prop.getProperty("Commonpath_image");
+	
 	//Document Info section 
 	
 
@@ -385,7 +389,7 @@ public class JobWorkRoughListPage extends TestBase{
 				
 				
 			TotalPackets.sendKeys(prop.getProperty("TotalPackets"));
-			TestUtil.upload_file(DocumentFile,prop.getProperty("DocumentFile_path"));
+			TestUtil.upload_file(DocumentFile,Commonpath_pdf);
 			try {
 				TestUtil.navigate_to_option1(ExchangeType,ExchangeType_select);
 			} catch (InterruptedException e) {
@@ -396,7 +400,7 @@ public class JobWorkRoughListPage extends TestBase{
 			
 			ExchangeRate_BOE.sendKeys(prop.getProperty("ExchangeRate_BOE"));
 			ExchangeRate_RBI.sendKeys(prop.getProperty("ExchangeRate_RBI"));
-			TestUtil.upload_file(RoughImages,prop.getProperty("RoughImages_path"));
+			TestUtil.upload_file(RoughImages,Commonpath_image);
 			
 			
 			GrossValue.sendKeys(prop.getProperty("GrossValue"));
@@ -449,7 +453,7 @@ public class JobWorkRoughListPage extends TestBase{
 			ExpiryDate.sendKeys(TestUtil.GetCurrentDate("dd-MM-yyyy"));
 			ExpiryDate.sendKeys(Keys.RETURN);
 			
-			TestUtil.upload_file(Certificate,prop.getProperty("Certificate_path"));
+			TestUtil.upload_file(Certificate,Commonpath_pdf);
 			
 		}
 		
@@ -468,9 +472,9 @@ public class JobWorkRoughListPage extends TestBase{
 			 Source_InwardDate.sendKeys(TestUtil.GetCurrentDate("dd-MM-yyyy"));
 			 Source_InwardDate.sendKeys(Keys.RETURN);
 			 
-			 TestUtil.upload_file(BillofEntry_upload,prop.getProperty("BillofEntry_path"));
+			 TestUtil.upload_file(BillofEntry_upload,Commonpath_pdf);
 			 
-			 TestUtil.upload_file(Airwaybill_upload,prop.getProperty("Airwaybill_path"));
+			 TestUtil.upload_file(Airwaybill_upload,Commonpath_pdf);
 			
 			 Save_button2.click();
 			
@@ -512,7 +516,7 @@ public class JobWorkRoughListPage extends TestBase{
 			ExpiryDate_invoicesection.sendKeys(TestUtil.GetCurrentDate("dd-MM-yyyy"));
 			ExpiryDate_invoicesection.sendKeys(Keys.RETURN);
 			
-			 TestUtil.upload_file(Certificate__invoicesection,prop.getProperty("Certificate__invoicesection_path"));
+			 TestUtil.upload_file(Certificate__invoicesection,Commonpath_pdf);
 			
 			 try {
 				Thread.sleep(2000);
@@ -611,7 +615,7 @@ public class JobWorkRoughListPage extends TestBase{
 			CourierNo.sendKeys(prop.getProperty("Common_No"));
 			
 			
-			 TestUtil.upload_file(CourierDocument,prop.getProperty("CourierDocument_path"));
+			 TestUtil.upload_file(CourierDocument,Commonpath_pdf);
 			 
 			 
 
