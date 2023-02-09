@@ -1,10 +1,14 @@
 package com.qa.inwardlistpages;
 
+import java.time.Duration;
+
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 import com.qa.base.TestBase;
 import com.qa.utils.TestUtil;
@@ -118,6 +122,147 @@ public class ConsignmentListPage extends TestBase{
 		@FindBy(xpath= "(//button[@type='submit'])[1]")
 		WebElement save_button1;
 		
+		//KP Certificate Details section 
+		
+				@FindBy(xpath= "(//input[@type='text'])[11]")
+				WebElement CertificateNo;
+				
+				@FindBy(xpath= "(//div[@class=' css-1d8n9bt'])[7]")
+				WebElement Origin;
+				
+				@FindBy(id= "react-select-8-option-3")
+				WebElement Origin_select;
+				
+				@FindBy(xpath= "(//input[@placeholder='Select date'])[4]")
+				WebElement IssueDate;
+				
+				@FindBy(xpath= "(//input[@placeholder='Select date'])[5]")
+				WebElement ExpiryDate;
+				
+				@FindBy(xpath= "(//input[@type='file'])[2]")
+				WebElement Certificate;
+				
+				//Bill of Entry Details
+				
+				@FindBy(xpath= "(//input[@placeholder='Select date'])[6]")
+				WebElement BOE_Date;
+				
+				@FindBy(xpath= "(//input[@type='text'])[13]")
+				WebElement BOE_No;
+				
+				@FindBy(xpath= "(//input[@type='text'])[14]")
+				WebElement MAWB_No;
+				
+				@FindBy(xpath= "(//input[@type='text'])[15]")
+				WebElement HAWB_No;
+				
+				@FindBy(xpath= "(//input[@placeholder='Select date'])[7]")
+				WebElement Source_InwardDate;
+				
+				@FindBy(xpath= "(//input[@type='file'])[3]")
+				WebElement BillofEntry_upload;
+				
+				@FindBy(xpath= "(//input[@type='file'])[4]")
+				WebElement Airwaybill_upload;
+				
+				@FindBy(xpath= "(//button[@type='submit'])[2]")
+				WebElement Save_button2;
+				
+				
+				@FindBy(xpath= "(//button[@type='button'])[15]")
+				WebElement row_button1;
+
+				
+				//Document line section
+				
+				@FindBy(xpath= "(//input[@type='text'])[16]")
+				WebElement KapanNo;
+				
+				
+				@FindBy(xpath= "(//input[@type='text'])[17]")
+				WebElement Pieces;
+				
+				@FindBy(xpath= "(//input[@type='number'])[12]")
+				WebElement Carats;
+				
+				@FindBy(xpath= "(//input[@type='number'])[13]")
+				WebElement Rate;
+				
+				@FindBy(xpath= "(//button[@type='submit'])[3]")
+				WebElement Save_button3;
+				
+				//Jangad Expense Details
+				
+				@FindBy(xpath= "(//button[@type='button'])[17]")
+				WebElement row_button_Jangad;
+				
+				@FindBy(xpath= "(//input[@type='text'])[19]")
+				WebElement JangadNo;
+				
+				@FindBy(xpath="/html/body/div[1]/div/section/section/main/div[4]/form/div/div/div/div/div/div/table/tbody/tr[2]/td[4]/div/div/div/div/div/div/div/div[1]/div[2]")
+				WebElement CourierPartyName;
+				
+				@FindBy(id="react-select-23-option-1")
+				WebElement CourierPartyName_select;
+				
+				@FindBy(xpath= "(//input[@type='text'])[20]")
+				WebElement CourierNo;
+				
+				@FindBy(xpath= "(//input[@type='file'])[5]")
+				WebElement CourierDocument;
+				
+				@FindBy(xpath= "(//div[contains(@class,'css-zq61zj-control')])[3]")
+				WebElement Expense1;
+				
+				@FindBy(id= "react-select-11-option-1")
+				WebElement Expense1_select;
+				
+				@FindBy(xpath= "(//input[@type='number'])[14]")
+				WebElement Expense1_value;
+				
+				@FindBy(xpath= "(//div[@class='ant-select ant-select-sm ant-select-in-form-item ant-select-multiple ant-select-allow-clear ant-select-open ant-select-show-search'])[1]")
+				WebElement appliedfield;
+				
+				
+				@FindBy(xpath= "(//div[@class='ant-select-item-option-content'])[1]")
+				WebElement appliedfield_select;
+				
+				
+				
+				//navigation to Hide_button
+				@FindBy(xpath= "(//span[@aria-label='left'])[1]")
+				WebElement navigation_hidebutton;
+				
+				
+				
+				@FindBy(xpath= "(//div[@class='ant-table ant-table-bordered ant-table-ping-left ant-table-fixed-column ant-table-scroll-horizontal ant-table-has-fix-right'])[1]")
+				WebElement horizontal_scroll;
+				
+				@FindBy(xpath= "(//span[normalize-space()='Save'])[1]")
+				WebElement Save_finalbutton;
+				
+				//Confirmation Record - record added successfully
+				@FindBy(xpath= "//td[normalize-space()='+text_record+']")
+				WebElement Record_added;
+				
+				//View button
+				@FindBy(xpath= "(//*[name()='svg'])[35]")
+				WebElement view_button;
+				
+				
+				//Edit Functionality 
+				
+				@FindBy(xpath= "(//*[name()='svg'])[36]")
+				WebElement edit_button;
+				
+				
+				// Success msg edit page
+				
+				@FindBy(xpath= "//span[normalize-space()='Record added successfully']")
+				WebElement success_edit_msg;
+				
+				
+		
 		public ConsignmentListPage()
 		{
 			PageFactory.initElements(driver, this);
@@ -223,5 +368,204 @@ public class ConsignmentListPage extends TestBase{
 				e.printStackTrace();
 			}
 			
+		}
+		
+		public void fill_data_KPCertificateDetails()
+		{
+			
+			
+			CertificateNo.sendKeys(prop.getProperty("Common_No"));
+			
+			
+			
+			
+			
+			 
+			
+			try {
+				TestUtil.navigate_to_option1(Origin,Origin_select);
+				Thread.sleep(2000);
+			} catch (InterruptedException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+			
+			
+			
+			
+			IssueDate.sendKeys(TestUtil.GetCurrentDate("dd-MM-yyyy"));
+			IssueDate.sendKeys(Keys.RETURN);
+			
+			try {
+				Thread.sleep(3000);
+			} catch (InterruptedException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+			
+			ExpiryDate.sendKeys(TestUtil.GetCurrentDate("dd-MM-yyyy"));
+			ExpiryDate.sendKeys(Keys.RETURN);
+			
+			TestUtil.upload_file(Certificate,Commonpath_pdf);
+			
+		}
+		
+		
+		public void fill_data_BillEntryDetails()
+		{
+			BOE_Date.sendKeys(TestUtil.GetCurrentDate("dd-MM-yyyy"));
+			BOE_Date.sendKeys(Keys.RETURN);
+			
+			 BOE_No.sendKeys(prop.getProperty("Common_No"));
+			
+			 MAWB_No.sendKeys(prop.getProperty("Common_No"));
+			 try {
+				Thread.sleep(1000);
+			} catch (InterruptedException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+			
+			 HAWB_No.sendKeys(prop.getProperty("Common_No"));
+			
+			 Source_InwardDate.sendKeys(TestUtil.GetCurrentDate("dd-MM-yyyy"));
+			 Source_InwardDate.sendKeys(Keys.RETURN);
+			 
+			 TestUtil.upload_file(BillofEntry_upload,Commonpath_pdf);
+			 
+			 TestUtil.upload_file(Airwaybill_upload,Commonpath_pdf);
+			
+			 Save_button2.click();
+			
+			 WebDriverWait wait = new WebDriverWait(driver,Duration.ofSeconds(20));
+				wait.until(ExpectedConditions.elementToBeClickable(row_button1));
+				
+
+				
+				row_button1.click();
+				try {
+					Thread.sleep(2000);
+				} catch (InterruptedException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+		}
+		
+		public void fill_data_DocumentLines()
+		{
+			KapanNo.sendKeys(prop.getProperty("Common_No"));
+			
+			Pieces.sendKeys(prop.getProperty("Pieces"));
+			
+			Carats.sendKeys(prop.getProperty("Carats"));
+			
+			Rate.sendKeys(prop.getProperty("Rate"));
+			
+			WebDriverWait wait = new WebDriverWait(driver,Duration.ofSeconds(20));
+			wait.until(ExpectedConditions.elementToBeClickable(Save_button3));
+			
+			Save_button3.click();
+			
+			try {
+				Thread.sleep(3000);
+			} catch (InterruptedException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+			navigation_hidebutton.click();
+			
+			
+			
+		}
+		
+		public void fill_data_JangadExpenseDetails()
+		{
+			TestUtil.scroll_until();
+			
+			WebDriverWait wait = new WebDriverWait(driver,Duration.ofSeconds(20));
+			wait.until(ExpectedConditions.elementToBeClickable(row_button_Jangad));
+			
+			
+			row_button_Jangad.click();
+			
+			
+			
+			try {
+				Thread.sleep(5000);
+			} catch (InterruptedException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+			
+			
+			JangadNo.sendKeys(prop.getProperty("Common_No"));
+			
+			
+			try {
+				TestUtil.navigate_to_option1(CourierPartyName,CourierPartyName_select);
+			} catch (InterruptedException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+			
+			
+			CourierNo.sendKeys(prop.getProperty("Common_No"));
+			
+			
+			 TestUtil.upload_file(CourierDocument,Commonpath_pdf);
+			 
+			 
+
+				try {
+					TestUtil.navigate_to_option1(Expense1,Expense1_select);
+				} catch (InterruptedException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+				
+			
+			 
+				Expense1_value.sendKeys(prop.getProperty("Expense1_value"));
+				
+				JavascriptExecutor js = (JavascriptExecutor) driver;
+				//Scroll down till the bottom of the page
+				js.executeScript("window.scrollBy(0,document.body.scrollHeight)");
+
+				
+				
+				appliedfield.click();
+				
+				try {
+					Thread.sleep(1000);
+				} catch (InterruptedException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+				
+				try {
+					TestUtil.navigate_to_option1(appliedfield,appliedfield_select);
+				} catch (InterruptedException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+				
+				
+				try {
+					Thread.sleep(2000);
+				} catch (InterruptedException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+				Save_finalbutton.click();
+				
+				try {
+					Thread.sleep(3000);
+				} catch (InterruptedException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+				
+				
+
 		}
 }

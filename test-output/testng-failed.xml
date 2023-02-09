@@ -5,7 +5,7 @@
     <classes>
       <class name="com.qa.testcases.inwardlist.ConsignmentListPageTest">
         <methods>
-          <include name="Verify_filldata_DocumentDeatils"/>
+          <include name="Verify_fill_data_JangadExpenseDetails"/>
           <include name="setup"/>
         </methods>
       </class> <!-- com.qa.testcases.inwardlist.ConsignmentListPageTest -->

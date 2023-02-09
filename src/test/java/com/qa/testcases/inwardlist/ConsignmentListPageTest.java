@@ -53,4 +53,33 @@ public class ConsignmentListPageTest extends TestBase {
 		
 		
 	}
+	
+	@Test(priority=4)
+	public void  Verify_fill_data_KPCertificateDetails()
+	{
+		consignmentlistpage.fill_data_KPCertificateDetails();
+		
+	}
+	
+	
+	@Test(priority=5)
+	public void  Verify_fill_data_BillEntryDetails()
+	{
+		consignmentlistpage.fill_data_BillEntryDetails();
+		
+	}
+	
+	@Test(priority=6)
+	public void  Verify_fill_data_DocumentLines()
+	{
+		consignmentlistpage.fill_data_DocumentLines();
+		
+	}
+	
+	@Test(priority=7)
+	public void  Verify_fill_data_JangadExpenseDetails()
+	{
+		consignmentlistpage.fill_data_JangadExpenseDetails();
+		
+	}
 }
