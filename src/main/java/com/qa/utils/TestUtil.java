@@ -70,12 +70,28 @@ public class TestUtil extends TestBase {
 			Thread.sleep(2000);
 		}
 		
+		// It is used for 3st level menu navigation
+		public static void navigate_to_option3(WebElement menu,WebElement submenu,WebElement submenu2,WebElement submenu3) throws InterruptedException
+		{
+			Actions action = new Actions(driver);
+			action.moveToElement(menu).perform();
+			Thread.sleep(2000);
+			action.moveToElement(submenu).perform();
+			Thread.sleep(2000);
+			action.moveToElement(submenu2).click().perform();
+			Thread.sleep(3000);
+			action.moveToElement(submenu3).click().perform();
+			Thread.sleep(3000);
+		}
+			
+		
 		// It is used for dropdown selection
 		
 		public static void Dropdown_select(WebElement dropdown_element,String dropdown_text)
 		{
 			Select dropdown_option = new Select(dropdown_element);
-			dropdown_option.selectByVisibleText(dropdown_text);
+			dropdown_option.selectByVisibleText(dropdown_text); 
+			//You can change it to index if required
 		}
 		
 		
@@ -110,13 +126,35 @@ public class TestUtil extends TestBase {
 	        }
 		}
 		
-		
+		//Scrolling to specific x & y coordinates
 		public static void scroll_until() 
 		{
 			JavascriptExecutor js = (JavascriptExecutor) driver;
 			js.executeScript("window.scrollBy(0,600)");
 		}
 		
+		//scrolling top section of page
+		public static void scroll_top() 
+		{
+			((JavascriptExecutor) driver)
+			.executeScript("window.scrollTo(0, document.body.scrollHeight)");
+			
+		}
+		
+		//Scrolling bottom of the page
+		public static void scroll_bottom() 
+		{
+			((JavascriptExecutor) driver)
+			.executeScript("window.scrollTo(document.body.scrollHeight, 0)");
+		}
+		
+		
+		//Scrolling to particular element
+		public void Scroll_to_element(WebElement element)
+		{
+			((JavascriptExecutor) driver)
+			.executeScript("arguments[0].scrollIntoView();", element);
+		}
 		
 		
 		// It is used for uploading file only when type = "file"
@@ -150,7 +188,7 @@ public class TestUtil extends TestBase {
 		}
 		
 		
-		
+		//This will returns the current date for date module
 		public static  String GetCurrentDate(String Date_format)
 		{
 			Date date = new Date();
