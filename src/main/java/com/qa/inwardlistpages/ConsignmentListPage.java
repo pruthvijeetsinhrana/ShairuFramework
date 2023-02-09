@@ -1,7 +1,9 @@
 package com.qa.inwardlistpages;
 
 import java.time.Duration;
+import java.util.List;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
@@ -9,6 +11,7 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.Assert;
 
 import com.qa.base.TestBase;
 import com.qa.utils.TestUtil;
@@ -199,19 +202,19 @@ public class ConsignmentListPage extends TestBase{
 				@FindBy(xpath= "(//input[@type='text'])[19]")
 				WebElement JangadNo;
 				
-				@FindBy(xpath="/html/body/div[1]/div/section/section/main/div[4]/form/div/div/div/div/div/div/table/tbody/tr[2]/td[4]/div/div/div/div/div/div/div/div[1]/div[2]")
+				@FindBy(xpath="/html[1]/body[1]/div[1]/div[1]/section[1]/section[1]/main[1]/div[4]/form[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/table[1]/tbody[1]/tr[2]/td[4]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[2]")
 				WebElement CourierPartyName;
 				
-				@FindBy(id="react-select-23-option-1")
+				@FindBy(xpath="(//div[@id='react-select-10-option-1'])[1]")
 				WebElement CourierPartyName_select;
 				
-				@FindBy(xpath= "(//input[@type='text'])[20]")
+				@FindBy(xpath= "/html[1]/body[1]/div[1]/div[1]/section[1]/section[1]/main[1]/div[4]/form[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/table[1]/tbody[1]/tr[2]/td[5]/div[1]/div[1]/div[1]/div[1]/div[1]/input[1]")
 				WebElement CourierNo;
 				
 				@FindBy(xpath= "(//input[@type='file'])[5]")
 				WebElement CourierDocument;
 				
-				@FindBy(xpath= "(//div[contains(@class,'css-zq61zj-control')])[3]")
+				@FindBy(xpath= "/html/body/div[1]/div/section/section/main/div[4]/form/div/div/div/div/div/div/table/tbody/tr[2]/td[7]/div[1]/div/div/div/div/div/div/div[1]/div[2]")
 				WebElement Expense1;
 				
 				@FindBy(id= "react-select-11-option-1")
@@ -220,7 +223,7 @@ public class ConsignmentListPage extends TestBase{
 				@FindBy(xpath= "(//input[@type='number'])[14]")
 				WebElement Expense1_value;
 				
-				@FindBy(xpath= "(//div[@class='ant-select ant-select-sm ant-select-in-form-item ant-select-multiple ant-select-allow-clear ant-select-open ant-select-show-search'])[1]")
+				@FindBy(xpath= "(//div//div//div[@class='ant-select-selection-overflow'])[1]")
 				WebElement appliedfield;
 				
 				
@@ -235,8 +238,7 @@ public class ConsignmentListPage extends TestBase{
 				
 				
 				
-				@FindBy(xpath= "(//div[@class='ant-table ant-table-bordered ant-table-ping-left ant-table-fixed-column ant-table-scroll-horizontal ant-table-has-fix-right'])[1]")
-				WebElement horizontal_scroll;
+				
 				
 				@FindBy(xpath= "(//span[normalize-space()='Save'])[1]")
 				WebElement Save_finalbutton;
@@ -252,7 +254,7 @@ public class ConsignmentListPage extends TestBase{
 				
 				//Edit Functionality 
 				
-				@FindBy(xpath= "(//*[name()='svg'])[36]")
+				@FindBy(xpath= "(//*[name()='svg'])[30]")
 				WebElement edit_button;
 				
 				
@@ -517,6 +519,7 @@ public class ConsignmentListPage extends TestBase{
 			 
 
 				try {
+					Thread.sleep(1000);
 					TestUtil.navigate_to_option1(Expense1,Expense1_select);
 				} catch (InterruptedException e) {
 					// TODO Auto-generated catch block
@@ -568,4 +571,104 @@ public class ConsignmentListPage extends TestBase{
 				
 
 		}
+		
+		public void ValidateConfirmationRecord() //taken from top Init
+		{
+			String text_record = prop.getProperty("Common_No");
+			
+			
+			WebElement Record_added = driver.findElement(By.xpath("//*[contains(text(),'"+text_record+"')]"));
+			Assert.assertEquals(Record_added.getText(),text_record);
+		}
+		
+		public void ValidateDisableFields()
+		{
+			view_button.click();
+			try {
+				Thread.sleep(2000);
+			} catch (InterruptedException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+			List<WebElement> disable_fields = driver.findElements(By.xpath("//input[@disabled]"));
+		      System.out.println("Total number of disable elements on page: " + disable_fields.size());
+			
+		}
+		
+		public void ValidateEditFunctionality()
+		{
+			driver.navigate().back();
+			
+			try {
+				Thread.sleep(3000);
+			} catch (InterruptedException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+			
+			edit_button.click();
+			
+			try {
+				Thread.sleep(2000);
+			} catch (InterruptedException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+			
+			save_button1.click();
+			
+			try {
+				Thread.sleep(2000);
+			} catch (InterruptedException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+			CertificateNo.clear();
+			CertificateNo.sendKeys(prop.getProperty("Common_No_edit"));
+			
+			 BOE_No.clear();
+			 BOE_No.sendKeys(prop.getProperty("Common_No_edit"));
+			 
+			 MAWB_No.clear();	
+			 MAWB_No.sendKeys(prop.getProperty("Common_No_edit"));
+			
+			 HAWB_No.clear();
+			 HAWB_No.sendKeys(prop.getProperty("Common_No_edit"));
+			 
+			 Save_button2.click();
+			 
+			 try {
+					Thread.sleep(2000);
+				} catch (InterruptedException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+			
+			 
+			
+			 
+			 Save_button3.click();
+			 
+			 try {
+					Thread.sleep(2000);
+				} catch (InterruptedException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+			 
+			 Save_finalbutton.click();
+			 
+			 try {
+					Thread.sleep(3000);
+				} catch (InterruptedException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+			 
+			 
+			 Assert.assertTrue(success_edit_msg.isDisplayed());
+			 
+			 
+		}
+	
 }

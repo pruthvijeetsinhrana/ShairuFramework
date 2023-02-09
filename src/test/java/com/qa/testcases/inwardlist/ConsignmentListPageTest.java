@@ -82,4 +82,26 @@ public class ConsignmentListPageTest extends TestBase {
 		consignmentlistpage.fill_data_JangadExpenseDetails();
 		
 	}
+	
+	@Test(priority=8)
+	public void  Verify_ValidateConfirmationRecord()
+	{
+		consignmentlistpage.ValidateConfirmationRecord();
+		
+	}
+	
+	@Test(priority=9)
+	public void  Verify_ValidateDisableFields()
+	{
+		consignmentlistpage.ValidateDisableFields();
+		
+	}
+	
+	
+	@Test(priority=10)
+	public void  Verify_ValidateEditFunctionality()
+	{
+		consignmentlistpage.ValidateEditFunctionality();
+		
+	}
 }
