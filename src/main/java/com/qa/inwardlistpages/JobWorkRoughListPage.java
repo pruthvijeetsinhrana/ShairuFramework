@@ -259,10 +259,10 @@ public class JobWorkRoughListPage extends TestBase{
 		@FindBy(xpath= "(//input[@type='file'])[9]")
 		WebElement CourierDocument;
 		
-		@FindBy(xpath= "(//div[contains(@class,'css-13z0ixq')])[11]")
+		@FindBy(xpath= "(//div[contains(@class,'async-select select css-b62m3t-container')])[2]")
 		WebElement Expense1;
 		
-		@FindBy(xpath= "(//div[@id='react-select-16-option-1'])[1]")
+		@FindBy(xpath= "(//div[@id='react-select-11-option-1'])[1]")
 		WebElement Expense1_select;
 		
 		@FindBy(xpath= "(//input[@type='number'])[15]")
