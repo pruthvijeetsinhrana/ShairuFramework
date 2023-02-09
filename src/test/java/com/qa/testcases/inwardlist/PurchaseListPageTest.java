@@ -4,17 +4,17 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
 import com.qa.base.TestBase;
-import com.qa.inwardlistpages.JobWorkRoughListPage;
+import com.qa.inwardlistpages.PurchaseListPage;
 import com.qa.utils.TestUtil;
 
-public class JobWorkRoughListPageTest extends TestBase {
+public class PurchaseListPageTest extends TestBase {
 	
-	JobWorkRoughListPage jobworkroughlistpage;
-	
-	
+	PurchaseListPage purchaselistpage;
 	
 	
-	public JobWorkRoughListPageTest()	
+	
+	
+	public PurchaseListPageTest()	
 	{
 		super();
 	}
@@ -23,7 +23,7 @@ public class JobWorkRoughListPageTest extends TestBase {
 	public void setup()
 	{
 		initialization();
-		jobworkroughlistpage = new JobWorkRoughListPage();
+		purchaselistpage = new PurchaseListPage();
 		TestUtil.ValidateUserLogin();
 	}
 	
@@ -37,19 +37,19 @@ public class JobWorkRoughListPageTest extends TestBase {
 	public void Verify_Navigation()
 	{	
 		
-		jobworkroughlistpage.Navigate_jobworkrough_menu();
+		purchaselistpage.Navigate_purchaselist_menu();
 	}
 	
 	@Test(priority=2)
 	public void Verify_inwardbutton_click()
 	{
-		jobworkroughlistpage.Open_inward_button();
+		purchaselistpage.Open_inward_button();
 	}
 	
 	@Test(priority=3)
 	public void Verify_filldata_DocumentDeatils()
 	{
-		jobworkroughlistpage.fill_data_DocumentDetails();
+		purchaselistpage.fill_data_DocumentDetails();
 		
 		
 	}
@@ -60,7 +60,7 @@ public class JobWorkRoughListPageTest extends TestBase {
 	@Test(priority=4)
 	public void  Verify_fill_data_KPCertificateDetails()
 	{
-		jobworkroughlistpage.fill_data_KPCertificateDetails();
+		purchaselistpage.fill_data_KPCertificateDetails();
 		
 	}
 	
@@ -68,7 +68,7 @@ public class JobWorkRoughListPageTest extends TestBase {
 	@Test(priority=5)
 	public void  Verify_fill_data_BillEntryDetails()
 	{
-		jobworkroughlistpage.fill_data_BillEntryDetails();
+		purchaselistpage.fill_data_BillEntryDetails();
 		
 	}
 	
@@ -76,7 +76,7 @@ public class JobWorkRoughListPageTest extends TestBase {
 	@Test(priority=6)
 	public void  Verify_fill_data_CorrespondingInvoice()
 	{
-		jobworkroughlistpage.fill_data_CorrespondingInvoice();
+		purchaselistpage.fill_data_CorrespondingInvoice();
 		
 	}
 	
@@ -84,7 +84,7 @@ public class JobWorkRoughListPageTest extends TestBase {
 	@Test(priority=7)
 	public void  Verify_fill_data_MiningInformation()
 	{
-		jobworkroughlistpage.fill_data_MiningInformation();
+		purchaselistpage.fill_data_MiningInformation();
 		
 	}
 	
@@ -93,28 +93,28 @@ public class JobWorkRoughListPageTest extends TestBase {
 	@Test(priority=8)
 	public void  Verify_fill_data_DocumentLines()
 	{
-		jobworkroughlistpage.fill_data_DocumentLines();
+		purchaselistpage.fill_data_DocumentLines();
 		
 	}
 	
 	@Test(priority=9)
 	public void  Verify_fill_data_JangadExpenseDetails()
 	{
-		jobworkroughlistpage.fill_data_JangadExpenseDetails();
+		purchaselistpage.fill_data_JangadExpenseDetails();
 		
 	}
 	
 	@Test(priority=10)
 	public void  Verify_ValidateConfirmationRecord()
 	{
-		jobworkroughlistpage.ValidateConfirmationRecord();
+		purchaselistpage.ValidateConfirmationRecord();
 		
 	}
 	
 	@Test(priority=11)
 	public void  Verify_ValidateDisableFields()
 	{
-		jobworkroughlistpage.ValidateDisableFields();
+		purchaselistpage.ValidateDisableFields();
 		
 	}
 	
@@ -122,7 +122,7 @@ public class JobWorkRoughListPageTest extends TestBase {
 	@Test(priority=12)
 	public void  Verify_ValidateEditFunctionality()
 	{
-		jobworkroughlistpage.ValidateEditFunctionality();
+		purchaselistpage.ValidateEditFunctionality();
 		
 	}
 	
