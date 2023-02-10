@@ -216,13 +216,21 @@ public class MemoListPage extends TestBase{
 				WebElement green_icon;
 				
 				
-				// Search Functionality & pagination Test // 
+				// Search Functionality 
 				
 				@FindBy(xpath= "(//input[@placeholder='Search...'])[1]")
 				WebElement search_field;
 				
 				@FindBy(xpath= "//div[contains(text(),'No search data')]")
 				WebElement No_search_data;
+				
+				//pagination Elements
+				@FindBy(xpath= "(//button[@type='button'])[2]")
+				WebElement previous_pagination_button;
+				
+				@FindBy(xpath= "(//button[@type='button'])[3]")
+				WebElement next_pagination_button;
+				
 		
 		
 		//Success message after edit
@@ -567,5 +575,12 @@ public class MemoListPage extends TestBase{
 			
 			Assert.assertEquals(No_search_data.getText(),"No search data");    
 			
+		}
+		
+		public void pagination_functionality()
+		{
+			previous_pagination_button.click();
+			
+			next_pagination_button.click();
 		}
 }

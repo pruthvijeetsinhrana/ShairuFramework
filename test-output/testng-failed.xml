@@ -8,8 +8,10 @@
           <include name="Verify_search_functionality_test"/>
           <include name="Verify_ValidateDisableFields"/>
           <include name="setup"/>
+          <include name="Verify_fill_data_CorrespondingInvoice"/>
           <include name="Verify_ValidateEditFunctionality"/>
           <include name="Verify_fill_data_DocumentLines"/>
+          <include name="Verify_fill_data_MiningInformation"/>
           <include name="Verify_ValidateConfirmationRecord"/>
           <include name="Verify_fill_data_JangadExpenseDetails"/>
         </methods>

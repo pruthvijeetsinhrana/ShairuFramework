@@ -2,14 +2,7 @@ package com.qa.dummytest;
 
 import java.util.Random;
 
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.interactions.Actions;
-import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
-
-import com.qa.base.TestBase;
-import com.qa.utils.TestUtil;
 
 public class Dummytest 
 {
@@ -34,6 +27,8 @@ public class Dummytest
 	    return generatedString;
 	    
 	}
+	
+	
 
 }
 		
