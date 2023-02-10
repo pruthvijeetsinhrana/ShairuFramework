@@ -69,7 +69,7 @@ public class MemoListPageTest extends TestBase {
 	}
 
 	@Test(priority=6)
-	public void  Verify_ValidateConfirmationRecord()
+	public void  Verify_ValidateConfirmationRecord() throws InterruptedException
 	{
 		memolistlistpage.ValidateConfirmationRecord();
 		
@@ -89,4 +89,10 @@ public class MemoListPageTest extends TestBase {
 		
 	}
 	
+	@Test(priority=9)
+	public void  Verify_search_functionality_test()
+	{
+		memolistlistpage.search_functionality_test();
+		
+	}
 }

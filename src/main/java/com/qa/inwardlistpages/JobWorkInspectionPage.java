@@ -18,6 +18,9 @@ import com.qa.utils.TestUtil;
 
 public class JobWorkInspectionPage extends TestBase{
 	
+	//Random String generated for : Document Number & all 
+		String Common_No_random	= TestUtil.RandomStringGenerator();
+	
 	//File path 
 	public String Commonpath_pdf = System.getProperty("user.dir")+ prop.getProperty("Commonpath_pdf");
 	
@@ -201,13 +204,27 @@ public class JobWorkInspectionPage extends TestBase{
 			
 			//Edit Functionality 
 			
-			@FindBy(xpath= "(//*[name()='svg'])[36]")
+			@FindBy(xpath= "(//span[@aria-label='edit'])[1]")
 			WebElement edit_button;
 			
 			
 			//Success message after edit
 			@FindBy(xpath= "(//span[normalize-space()='Record added successfully'])[1]")
 			WebElement success_msg_edit;
+			
+			//Completed Icon - green tick 
+			
+			@FindBy(xpath= "(//*[name()='svg'])[34]")
+			WebElement green_icon;
+			
+			
+			// Search Functionality & pagination Test // 
+			
+			@FindBy(xpath= "(//input[@placeholder='Search...'])[1]")
+			WebElement search_field;
+			
+			@FindBy(xpath= "//div[contains(text(),'No search data')]")
+			WebElement No_search_data;
 			
 
 		public JobWorkInspectionPage()
@@ -258,7 +275,7 @@ public class JobWorkInspectionPage extends TestBase{
 				e.printStackTrace();
 			}
 			 
-			 DocumentNo.sendKeys(prop.getProperty("Common_No"));
+			 DocumentNo.sendKeys(Common_No_random);
 			 
 			 try {
 				TestUtil.navigate_to_option1(SenderName,SenderName_select);
@@ -325,7 +342,7 @@ public class JobWorkInspectionPage extends TestBase{
 				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
-			KapanNo.sendKeys(prop.getProperty("Common_No"));
+			KapanNo.sendKeys(Common_No_random);
 			
 			Pieces.sendKeys(prop.getProperty("Pieces"));
 			
@@ -370,7 +387,7 @@ public class JobWorkInspectionPage extends TestBase{
 			}
 			
 			
-			JangadNo.sendKeys(prop.getProperty("Common_No"));
+			JangadNo.sendKeys(Common_No_random);
 			
 			
 			try {
@@ -381,7 +398,7 @@ public class JobWorkInspectionPage extends TestBase{
 			}
 			
 			
-			CourierNo.sendKeys(prop.getProperty("Common_No"));
+			CourierNo.sendKeys(Common_No_random);
 			
 			
 			 TestUtil.upload_file(CourierDocument,Commonpath_pdf);
@@ -443,13 +460,16 @@ public class JobWorkInspectionPage extends TestBase{
 		
 		//After record added 
 		
-		public void ValidateConfirmationRecord() 
+		public void ValidateConfirmationRecord() throws InterruptedException 
 		{
-			String text_record = prop.getProperty("Common_No");
+			String text_record = Common_No_random;
 			
 			
 			WebElement Record_added = driver.findElement(By.xpath("//*[contains(text(),'"+text_record+"')]"));
 			Assert.assertEquals(Record_added.getText(),text_record);
+			
+			Thread.sleep(1000);
+			Assert.assertTrue(green_icon.isDisplayed());
 		}
 		
 		public void ValidateDisableFields()
@@ -516,9 +536,29 @@ public class JobWorkInspectionPage extends TestBase{
 					e.printStackTrace();
 				}
 			 
-			 
 			 Assert.assertTrue(success_msg_edit.isDisplayed());
 			 
-			 
+	}
+		
+		public void search_functionality_test()
+		{
+			search_field.isDisplayed();
+			try {
+				Thread.sleep(1000);
+			} catch (InterruptedException e1) {
+				// TODO Auto-generated catch block
+				e1.printStackTrace();
+			}
+			search_field.sendKeys(prop.getProperty("Random_text"));
+			
+			try {
+				Thread.sleep(3000);
+			} catch (InterruptedException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+			
+			Assert.assertEquals(No_search_data.getText(),"No search data");    
+			
 		}
 }

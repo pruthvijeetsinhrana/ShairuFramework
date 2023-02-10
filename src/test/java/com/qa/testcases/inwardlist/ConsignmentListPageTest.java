@@ -84,7 +84,7 @@ public class ConsignmentListPageTest extends TestBase {
 	}
 	
 	@Test(priority=8)
-	public void  Verify_ValidateConfirmationRecord()
+	public void  Verify_ValidateConfirmationRecord() throws InterruptedException
 	{
 		consignmentlistpage.ValidateConfirmationRecord();
 		
@@ -102,6 +102,13 @@ public class ConsignmentListPageTest extends TestBase {
 	public void  Verify_ValidateEditFunctionality()
 	{
 		consignmentlistpage.ValidateEditFunctionality();
+		
+	}
+	
+	@Test(priority=11)
+	public void  Verify_search_functionality_test()
+	{
+		consignmentlistpage.search_functionality_test();
 		
 	}
 }

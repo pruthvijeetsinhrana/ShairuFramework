@@ -70,7 +70,7 @@ public void  Verify_fill_data_JangadExpenseDetails()
 }
 
 @Test(priority=6)
-public void  Verify_ValidateConfirmationRecord()
+public void  Verify_ValidateConfirmationRecord() throws InterruptedException
 {
 	jobworkinspectionpage.ValidateConfirmationRecord();
 	
@@ -86,6 +86,12 @@ public void  Verify_ValidateDisableFields()
 public void  Verify_ValidateEditFunctionality()
 {
 	jobworkinspectionpage.ValidateEditFunctionality();
+	
+}
+@Test(priority=9)
+public void  Verify_search_functionality_test()
+{
+	jobworkinspectionpage.search_functionality_test();
 	
 }
 }

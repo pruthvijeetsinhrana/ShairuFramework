@@ -5,8 +5,10 @@ import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.text.SimpleDateFormat;
+import java.time.Duration;
 import java.util.Date;
 import java.util.Iterator;
+import java.util.Random;
 import java.util.Set;
 
 import org.apache.commons.io.FileUtils;
@@ -18,13 +20,19 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
+import org.openqa.selenium.support.ui.WebDriverWait;
+
 import com.qa.base.TestBase;
 
 public class TestUtil extends TestBase {
+	
+	//Here TestUtils class extends some properties from TestBase class;
 	
 	public static final long PAGE_LOAD_TIMEOUT = 30;
 	public static final long IMPLICIT_WAIT = 30;
@@ -58,6 +66,7 @@ public class TestUtil extends TestBase {
 		action.moveToElement(submenu2).click().perform();
 		Thread.sleep(3000);
 	}
+	
 	
 	// It is used for 1st level menu navigation
 	
@@ -133,6 +142,26 @@ public class TestUtil extends TestBase {
 			js.executeScript("window.scrollBy(0,600)");
 		}
 		
+		//Alert handling 
+		public static void alert_handle()
+		{
+			try {
+				Thread.sleep(1000);
+			} catch (InterruptedException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+			 driver.switchTo().alert().accept();
+		     
+		}
+		
+		//Double Click on element
+		public static void  double_click(WebElement element)
+		{
+			Actions act = new Actions(driver);
+			act.doubleClick(element).perform();
+		}
+		
 		//scrolling top section of page
 		public static void scroll_top() 
 		{
@@ -155,6 +184,39 @@ public class TestUtil extends TestBase {
 			((JavascriptExecutor) driver)
 			.executeScript("arguments[0].scrollIntoView();", element);
 		}
+		
+		//Click multiple times on element
+		
+		public static void click_on_element_multiple(WebElement element,int Count_of_click)
+		{
+			for (int i = 0; i < Count_of_click; i++) {
+				element.click();
+				try {
+					Thread.sleep(1000);
+				} catch (InterruptedException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+			}
+		}
+		
+		//Click on element until target element is not displayed
+		public void clickUntilDisplayed(WebDriver driver, By clickLocator, By targetLocator) {
+		    WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+		    while (true) {
+		        try {
+		            WebElement clickElement = driver.findElement(clickLocator);
+		            clickElement.click();
+		            wait.until(ExpectedConditions.presenceOfElementLocated(targetLocator));
+		            return;
+		        } catch (Exception e) {
+		            // Exception will be thrown if the target element is not found after clicking on the click element
+		            // In this case, the loop continues and clicks on the click element again
+		        }
+		    }
+		}
+			
+		
 		
 		
 		// It is used for uploading file only when type = "file"
@@ -224,6 +286,22 @@ public class TestUtil extends TestBase {
 				}
 			}
 			return data;
+		}
+		
+		public static String RandomStringGenerator() {
+		    int leftLimit = 48; // numeral '0'
+		    int rightLimit = 122; // letter 'z'
+		    int targetStringLength = 5;
+		    Random random = new Random();
+
+		    String generatedString = random.ints(leftLimit, rightLimit + 1)
+		      .filter(i -> (i <= 57 || i >= 65) && (i <= 90 || i >= 97))
+		      .limit(targetStringLength)
+		      .collect(StringBuilder::new, StringBuilder::appendCodePoint, StringBuilder::append)
+		      .toString();
+
+		    return generatedString;
+		    
 		}
 		
 }
