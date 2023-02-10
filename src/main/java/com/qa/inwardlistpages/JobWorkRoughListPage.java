@@ -503,9 +503,9 @@ public class JobWorkRoughListPage extends TestBase{
 			
 			Invoice_Weight.sendKeys(prop.getProperty("Invoice_Weight"));
 			
-			TestUtil.upload_file(Invoice,prop.getProperty("Invoice_path"));
+			TestUtil.upload_file(Invoice,Commonpath_pdf);
 			
-			TestUtil.upload_file(Packing_List,prop.getProperty("Packing_List_path"));
+			TestUtil.upload_file(Packing_List,Commonpath_pdf);
 			
 			
 			KP_Certificate_No.sendKeys(Common_No_random);
