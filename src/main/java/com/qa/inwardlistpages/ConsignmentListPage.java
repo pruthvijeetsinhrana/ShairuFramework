@@ -18,6 +18,9 @@ import com.qa.utils.TestUtil;
 
 public class ConsignmentListPage extends TestBase{
 	
+	//Random String generated for : Document Number & all 
+			String Common_No_random	= TestUtil.RandomStringGenerator();
+	
 	//File path 
 		public String Commonpath_pdf = System.getProperty("user.dir")+ prop.getProperty("Commonpath_pdf");
 		public String Commonpath_image = System.getProperty("user.dir")+ prop.getProperty("Commonpath_image");
@@ -263,6 +266,18 @@ public class ConsignmentListPage extends TestBase{
 				@FindBy(xpath= "//span[normalize-space()='Record added successfully']")
 				WebElement success_edit_msg;
 				
+				//Completed Icon - green tick 
+				
+				@FindBy(xpath= "(//*[name()='svg'])[34]")
+				WebElement green_icon;
+				
+				// Search Functionality & pagination Test // 
+				
+				@FindBy(xpath= "(//input[@placeholder='Search...'])[1]")
+				WebElement search_field;
+				
+				@FindBy(xpath= "//div[contains(text(),'No search data')]")
+				WebElement No_search_data;
 				
 		
 		public ConsignmentListPage()
@@ -315,7 +330,7 @@ public class ConsignmentListPage extends TestBase{
 				e.printStackTrace();
 			}
 			 
-			 DocumentNo.sendKeys(prop.getProperty("Common_No"));
+			 DocumentNo.sendKeys(Common_No_random);
 			 Duration_field.sendKeys(prop.getProperty("Duration_field"));
 			 
 			 
@@ -376,7 +391,7 @@ public class ConsignmentListPage extends TestBase{
 		{
 			
 			
-			CertificateNo.sendKeys(prop.getProperty("Common_No"));
+			CertificateNo.sendKeys(Common_No_random);
 			
 			
 			
@@ -418,9 +433,9 @@ public class ConsignmentListPage extends TestBase{
 			BOE_Date.sendKeys(TestUtil.GetCurrentDate("dd-MM-yyyy"));
 			BOE_Date.sendKeys(Keys.RETURN);
 			
-			 BOE_No.sendKeys(prop.getProperty("Common_No"));
+			 BOE_No.sendKeys(Common_No_random);
 			
-			 MAWB_No.sendKeys(prop.getProperty("Common_No"));
+			 MAWB_No.sendKeys(Common_No_random);
 			 try {
 				Thread.sleep(1000);
 			} catch (InterruptedException e) {
@@ -428,7 +443,7 @@ public class ConsignmentListPage extends TestBase{
 				e.printStackTrace();
 			}
 			
-			 HAWB_No.sendKeys(prop.getProperty("Common_No"));
+			 HAWB_No.sendKeys(Common_No_random);
 			
 			 Source_InwardDate.sendKeys(TestUtil.GetCurrentDate("dd-MM-yyyy"));
 			 Source_InwardDate.sendKeys(Keys.RETURN);
@@ -455,7 +470,7 @@ public class ConsignmentListPage extends TestBase{
 		
 		public void fill_data_DocumentLines()
 		{
-			KapanNo.sendKeys(prop.getProperty("Common_No"));
+			KapanNo.sendKeys(Common_No_random);
 			
 			Pieces.sendKeys(prop.getProperty("Pieces"));
 			
@@ -500,7 +515,7 @@ public class ConsignmentListPage extends TestBase{
 			}
 			
 			
-			JangadNo.sendKeys(prop.getProperty("Common_No"));
+			JangadNo.sendKeys(Common_No_random);
 			
 			
 			try {
@@ -511,7 +526,7 @@ public class ConsignmentListPage extends TestBase{
 			}
 			
 			
-			CourierNo.sendKeys(prop.getProperty("Common_No"));
+			CourierNo.sendKeys(Common_No_random);
 			
 			
 			 TestUtil.upload_file(CourierDocument,Commonpath_pdf);
@@ -572,13 +587,18 @@ public class ConsignmentListPage extends TestBase{
 
 		}
 		
-		public void ValidateConfirmationRecord() //taken from top Init
+		public void ValidateConfirmationRecord() throws InterruptedException //taken from top Init
 		{
-			String text_record = prop.getProperty("Common_No");
+			String text_record = Common_No_random;
 			
 			
 			WebElement Record_added = driver.findElement(By.xpath("//*[contains(text(),'"+text_record+"')]"));
 			Assert.assertEquals(Record_added.getText(),text_record);
+			
+			Thread.sleep(1000);
+			Assert.assertTrue(green_icon.isDisplayed());
+			
+			
 		}
 		
 		public void ValidateDisableFields()
@@ -624,16 +644,16 @@ public class ConsignmentListPage extends TestBase{
 				e.printStackTrace();
 			}
 			CertificateNo.clear();
-			CertificateNo.sendKeys(prop.getProperty("Common_No_edit"));
+			CertificateNo.sendKeys(Common_No_random);
 			
 			 BOE_No.clear();
-			 BOE_No.sendKeys(prop.getProperty("Common_No_edit"));
+			 BOE_No.sendKeys(Common_No_random);
 			 
 			 MAWB_No.clear();	
-			 MAWB_No.sendKeys(prop.getProperty("Common_No_edit"));
+			 MAWB_No.sendKeys(Common_No_random);
 			
 			 HAWB_No.clear();
-			 HAWB_No.sendKeys(prop.getProperty("Common_No_edit"));
+			 HAWB_No.sendKeys(Common_No_random);
 			 
 			 Save_button2.click();
 			 
@@ -669,6 +689,28 @@ public class ConsignmentListPage extends TestBase{
 			 Assert.assertTrue(success_edit_msg.isDisplayed());
 			 
 			 
+		}
+		
+		public void search_functionality_test()
+		{
+			search_field.isDisplayed();
+			try {
+				Thread.sleep(1000);
+			} catch (InterruptedException e1) {
+				// TODO Auto-generated catch block
+				e1.printStackTrace();
+			}
+			search_field.sendKeys(prop.getProperty("Random_text"));
+			
+			try {
+				Thread.sleep(3000);
+			} catch (InterruptedException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+			
+			Assert.assertEquals(No_search_data.getText(),"No search data");    
+			
 		}
 	
 }

@@ -18,6 +18,10 @@ import com.qa.utils.TestUtil;
 
 public class JobWorkRoughListPage extends TestBase{
 	
+	//Random String generated for : Document Number & all 
+	String Common_No_random	= TestUtil.RandomStringGenerator();
+
+	
 	//File path 
 	public String Commonpath_pdf = System.getProperty("user.dir")+ prop.getProperty("Commonpath_pdf");
 	public String Commonpath_image = System.getProperty("user.dir")+ prop.getProperty("Commonpath_image");
@@ -309,6 +313,21 @@ public class JobWorkRoughListPage extends TestBase{
 		@FindBy(xpath= "//span[normalize-space()='Record added successfully']")
 		WebElement success_edit_msg;
 		
+		//Completed Icon - green tick 
+		
+		@FindBy(xpath= "(//*[name()='svg'])[34]")
+		WebElement green_icon;
+		
+		
+		// Search Functionality & pagination Test // 
+		
+		@FindBy(xpath= "(//input[@placeholder='Search...'])[1]")
+		WebElement search_field;
+		
+		@FindBy(xpath= "//div[contains(text(),'No search data')]")
+		WebElement No_search_data;
+		
+		
 		
 		
 		
@@ -363,7 +382,7 @@ public class JobWorkRoughListPage extends TestBase{
 				e.printStackTrace();
 			}
 			 
-			 DocumentNo.sendKeys(prop.getProperty("Common_No"));
+			 DocumentNo.sendKeys(Common_No_random);
 			 
 			 try {
 				TestUtil.navigate_to_option1(SenderName,SenderName_select);
@@ -419,7 +438,7 @@ public class JobWorkRoughListPage extends TestBase{
 		{
 			
 			
-			CertificateNo.sendKeys(prop.getProperty("Common_No"));
+			CertificateNo.sendKeys(Common_No_random);
 			
 			
 			
@@ -460,11 +479,11 @@ public class JobWorkRoughListPage extends TestBase{
 			BOE_Date.sendKeys(TestUtil.GetCurrentDate("dd-MM-yyyy"));
 			BOE_Date.sendKeys(Keys.RETURN);
 			
-			 BOE_No.sendKeys(prop.getProperty("Common_No"));
+			 BOE_No.sendKeys(Common_No_random);
 			
-			 MAWB_No.sendKeys(prop.getProperty("Common_No"));
+			 MAWB_No.sendKeys(Common_No_random);
 			
-			 HAWB_No.sendKeys(prop.getProperty("Common_No"));
+			 HAWB_No.sendKeys(Common_No_random);
 			
 			 Source_InwardDate.sendKeys(TestUtil.GetCurrentDate("dd-MM-yyyy"));
 			 Source_InwardDate.sendKeys(Keys.RETURN);
@@ -480,7 +499,7 @@ public class JobWorkRoughListPage extends TestBase{
 		
 		public void fill_data_CorrespondingInvoice()
 		{
-			Invoice_No.sendKeys(prop.getProperty("Common_No"));
+			Invoice_No.sendKeys(Common_No_random);
 			
 			Invoice_Weight.sendKeys(prop.getProperty("Invoice_Weight"));
 			
@@ -489,7 +508,7 @@ public class JobWorkRoughListPage extends TestBase{
 			TestUtil.upload_file(Packing_List,prop.getProperty("Packing_List_path"));
 			
 			
-			KP_Certificate_No.sendKeys(prop.getProperty("Common_No"));
+			KP_Certificate_No.sendKeys(Common_No_random);
 			
 			try {
 				TestUtil.navigate_to_option1(Origin_invoicesection,Origin_invoicesection_select);
@@ -553,7 +572,7 @@ public class JobWorkRoughListPage extends TestBase{
 		
 		public void fill_data_DocumentLines()
 		{
-			KapanNo.sendKeys(prop.getProperty("Common_No"));
+			KapanNo.sendKeys(Common_No_random);
 			
 			Pieces.sendKeys(prop.getProperty("Pieces"));
 			
@@ -598,7 +617,7 @@ public class JobWorkRoughListPage extends TestBase{
 			}
 			
 			
-			JangadNo.sendKeys(prop.getProperty("Common_No"));
+			JangadNo.sendKeys(Common_No_random);
 			
 			
 			try {
@@ -669,13 +688,15 @@ public class JobWorkRoughListPage extends TestBase{
 
 		}
 		
-		public void ValidateConfirmationRecord() //taken from top Init
+		public void ValidateConfirmationRecord() throws InterruptedException //taken from top Init
 		{
 			String text_record = prop.getProperty("Common_No");
 			
 			
 			WebElement Record_added = driver.findElement(By.xpath("//*[contains(text(),'"+text_record+"')]"));
 			Assert.assertEquals(Record_added.getText(),text_record);
+			Thread.sleep(1000);
+			Assert.assertTrue(green_icon.isDisplayed());
 		}
 		
 		public void ValidateDisableFields()
@@ -721,16 +742,16 @@ public class JobWorkRoughListPage extends TestBase{
 				e.printStackTrace();
 			}
 			CertificateNo.clear();
-			CertificateNo.sendKeys(prop.getProperty("Common_No_edit"));
+			CertificateNo.sendKeys(Common_No_random);
 			
 			 BOE_No.clear();
-			 BOE_No.sendKeys(prop.getProperty("Common_No_edit"));
+			 BOE_No.sendKeys(Common_No_random);
 			 
 			 MAWB_No.clear();	
-			 MAWB_No.sendKeys(prop.getProperty("Common_No_edit"));
+			 MAWB_No.sendKeys(Common_No_random);
 			
 			 HAWB_No.clear();
-			 HAWB_No.sendKeys(prop.getProperty("Common_No_edit"));
+			 HAWB_No.sendKeys(Common_No_random);
 			 
 			 Save_button2.click();
 			 
@@ -741,7 +762,7 @@ public class JobWorkRoughListPage extends TestBase{
 					e.printStackTrace();
 				}
 			 Invoice_No.clear();
-			 Invoice_No.sendKeys(prop.getProperty("Common_No_edit"));
+			 Invoice_No.sendKeys(Common_No_random);
 			 
 			 try {
 					Thread.sleep(2000);
@@ -772,6 +793,21 @@ public class JobWorkRoughListPage extends TestBase{
 			 Assert.assertTrue(success_edit_msg.isDisplayed());
 			 
 			 
+		}
+		
+		public void search_functionality_test()
+		{
+			search_field.sendKeys(prop.getProperty("Random_text"));
+			
+			try {
+				Thread.sleep(3000);
+			} catch (InterruptedException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+			
+			Assert.assertEquals(No_search_data.getText(),"No search data");    
+			
 		}
 	
 }

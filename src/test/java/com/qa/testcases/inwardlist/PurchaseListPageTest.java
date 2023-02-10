@@ -105,7 +105,7 @@ public class PurchaseListPageTest extends TestBase {
 	}
 	
 	@Test(priority=10)
-	public void  Verify_ValidateConfirmationRecord()
+	public void  Verify_ValidateConfirmationRecord() throws InterruptedException
 	{
 		purchaselistpage.ValidateConfirmationRecord();
 		
@@ -126,6 +126,13 @@ public class PurchaseListPageTest extends TestBase {
 		
 	}
 	
+
+	@Test(priority=13)
+	public void  Verify_search_functionality_test()
+	{
+		purchaselistpage.search_functionality_test();
+		
+	}
 	
 
 	

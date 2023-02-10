@@ -3,12 +3,17 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.qa.testcases.inwardlist.ConsignmentListPageTest">
+      <class name="com.qa.testcases.inwardlist.JobWorkRoughListPageTest">
         <methods>
-          <include name="Verify_fill_data_JangadExpenseDetails"/>
+          <include name="Verify_search_functionality_test"/>
+          <include name="Verify_ValidateDisableFields"/>
           <include name="setup"/>
+          <include name="Verify_ValidateEditFunctionality"/>
+          <include name="Verify_fill_data_DocumentLines"/>
+          <include name="Verify_ValidateConfirmationRecord"/>
+          <include name="Verify_fill_data_JangadExpenseDetails"/>
         </methods>
-      </class> <!-- com.qa.testcases.inwardlist.ConsignmentListPageTest -->
+      </class> <!-- com.qa.testcases.inwardlist.JobWorkRoughListPageTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

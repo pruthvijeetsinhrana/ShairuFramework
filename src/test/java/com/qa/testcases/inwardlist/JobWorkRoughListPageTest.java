@@ -105,7 +105,7 @@ public class JobWorkRoughListPageTest extends TestBase {
 	}
 	
 	@Test(priority=10)
-	public void  Verify_ValidateConfirmationRecord()
+	public void  Verify_ValidateConfirmationRecord() throws InterruptedException
 	{
 		jobworkroughlistpage.ValidateConfirmationRecord();
 		
@@ -125,6 +125,15 @@ public class JobWorkRoughListPageTest extends TestBase {
 		jobworkroughlistpage.ValidateEditFunctionality();
 		
 	}
+	
+
+	@Test(priority=13)
+	public void  Verify_search_functionality_test()
+	{
+		jobworkroughlistpage.search_functionality_test();
+		
+	}
+	
 	
 	
 

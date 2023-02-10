@@ -69,7 +69,7 @@ public class JobWorkRepairListPageTest extends TestBase {
 	}
 
 	@Test(priority=6)
-	public void  Verify_ValidateConfirmationRecord()
+	public void  Verify_ValidateConfirmationRecord() throws InterruptedException
 	{
 		jobworkrepairlistpage.ValidateConfirmationRecord();
 		
@@ -87,5 +87,13 @@ public class JobWorkRepairListPageTest extends TestBase {
 		jobworkrepairlistpage.ValidateEditFunctionality();
 		
 	}
+	
+	@Test(priority=9)
+	public void  Verify_search_functionality_test()
+	{
+		jobworkrepairlistpage.search_functionality_test();
+		
+	}
+	
 	
 }
