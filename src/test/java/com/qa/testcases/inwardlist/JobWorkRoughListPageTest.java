@@ -134,6 +134,13 @@ public class JobWorkRoughListPageTest extends TestBase {
 		
 	}
 	
+	@Test(priority=14)
+	public void  pagination_functionality() throws InterruptedException
+	{
+		jobworkroughlistpage.pagination_functionality();
+		
+	}
+	
 	
 	
 

@@ -94,4 +94,11 @@ public void  Verify_search_functionality_test()
 	jobworkinspectionpage.search_functionality_test();
 	
 }
+
+@Test(priority=10)
+public void  pagination_functionality() throws InterruptedException
+{
+	jobworkinspectionpage.pagination_functionality();
+	
+}
 }

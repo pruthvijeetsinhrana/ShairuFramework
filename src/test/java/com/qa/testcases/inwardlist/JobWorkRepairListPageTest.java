@@ -95,5 +95,12 @@ public class JobWorkRepairListPageTest extends TestBase {
 		
 	}
 	
+	@Test(priority=10)
+	public void  pagination_functionality() throws InterruptedException
+	{
+		jobworkrepairlistpage.pagination_functionality();
+		
+	}
+	
 	
 }

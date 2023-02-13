@@ -111,4 +111,11 @@ public class ConsignmentListPageTest extends TestBase {
 		consignmentlistpage.search_functionality_test();
 		
 	}
+	
+	@Test(priority=10)
+	public void  pagination_functionality() throws InterruptedException
+	{
+		consignmentlistpage.pagination_functionality();
+		
+	}
 }

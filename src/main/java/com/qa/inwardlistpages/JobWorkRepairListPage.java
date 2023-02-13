@@ -226,6 +226,14 @@ public class JobWorkRepairListPage extends TestBase{
 				@FindBy(xpath= "//div[contains(text(),'No search data')]")
 				WebElement No_search_data;
 				
+
+				//pagination Elements
+				@FindBy(xpath= "(//button[@type='button'])[2]")
+				WebElement previous_pagination_button;
+				
+				@FindBy(xpath= "(//button[@type='button'])[3]")
+				WebElement next_pagination_button;
+				
 				
 				
 				
@@ -565,6 +573,29 @@ public class JobWorkRepairListPage extends TestBase{
 			}
 			
 			Assert.assertEquals(No_search_data.getText(),"No search data");    
+			
+		}
+		
+		public void pagination_functionality() throws InterruptedException
+		{
+			driver.navigate().refresh();
+			
+			if(previous_pagination_button.isEnabled()== false)
+			{
+				
+				Thread.sleep(1000);
+				next_pagination_button.click();
+				Thread.sleep(2000);
+				next_pagination_button.click();
+				Thread.sleep(2000);
+				previous_pagination_button.click();
+			}
+			else
+			{
+				System.out.println("Pagination functionality is not working..");
+			}
+			
+			
 			
 		}
 }
