@@ -1,351 +1,67 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="13" passed="5" failed="8" skipped="0">
+<testng-results ignored="0" total="14" passed="8" failed="6" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-02-10T16:24:21 IST" name="Default suite" finished-at="2023-02-10T16:28:33 IST" duration-ms="252267">
+  <suite started-at="2023-02-13T12:01:03 IST" name="Default suite" finished-at="2023-02-13T12:04:39 IST" duration-ms="215946">
     <groups>
     </groups>
-    <test started-at="2023-02-10T16:24:21 IST" name="Default test" finished-at="2023-02-10T16:28:33 IST" duration-ms="252267">
-      <class name="com.qa.testcases.inwardlist.JobWorkRoughListPageTest">
-        <test-method is-config="true" signature="setup()[pri:0, instance:com.qa.testcases.inwardlist.JobWorkRoughListPageTest@2ddc9a9f]" started-at="2023-02-10T16:24:21 IST" name="setup" finished-at="2023-02-10T16:24:30 IST" duration-ms="8654" status="PASS">
+    <test started-at="2023-02-13T12:01:03 IST" name="Default test" finished-at="2023-02-13T12:04:39 IST" duration-ms="215946">
+      <class name="com.qa.testcases.inwardlist.PurchaseListPageTest">
+        <test-method is-config="true" signature="setup()[pri:0, instance:com.qa.testcases.inwardlist.PurchaseListPageTest@f78a47e]" started-at="2023-02-13T12:01:03 IST" name="setup" finished-at="2023-02-13T12:01:08 IST" duration-ms="5160" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="Verify_Navigation()[pri:1, instance:com.qa.testcases.inwardlist.JobWorkRoughListPageTest@2ddc9a9f]" started-at="2023-02-10T16:24:30 IST" name="Verify_Navigation" finished-at="2023-02-10T16:24:36 IST" duration-ms="6356" status="PASS">
+        <test-method signature="Verify_Navigation()[pri:1, instance:com.qa.testcases.inwardlist.PurchaseListPageTest@f78a47e]" started-at="2023-02-13T12:01:08 IST" name="Verify_Navigation" finished-at="2023-02-13T12:01:15 IST" duration-ms="6386" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Verify_Navigation -->
-        <test-method signature="Verify_inwardbutton_click()[pri:2, instance:com.qa.testcases.inwardlist.JobWorkRoughListPageTest@2ddc9a9f]" started-at="2023-02-10T16:24:36 IST" name="Verify_inwardbutton_click" finished-at="2023-02-10T16:24:36 IST" duration-ms="118" status="PASS">
+        <test-method signature="Verify_inwardbutton_click()[pri:2, instance:com.qa.testcases.inwardlist.PurchaseListPageTest@f78a47e]" started-at="2023-02-13T12:01:15 IST" name="Verify_inwardbutton_click" finished-at="2023-02-13T12:01:15 IST" duration-ms="207" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Verify_inwardbutton_click -->
-        <test-method signature="Verify_filldata_DocumentDeatils()[pri:3, instance:com.qa.testcases.inwardlist.JobWorkRoughListPageTest@2ddc9a9f]" started-at="2023-02-10T16:24:36 IST" name="Verify_filldata_DocumentDeatils" finished-at="2023-02-10T16:25:09 IST" duration-ms="32328" status="PASS">
+        <test-method signature="Verify_filldata_DocumentDeatils()[pri:3, instance:com.qa.testcases.inwardlist.PurchaseListPageTest@f78a47e]" started-at="2023-02-13T12:01:15 IST" name="Verify_filldata_DocumentDeatils" finished-at="2023-02-13T12:01:50 IST" duration-ms="34910" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Verify_filldata_DocumentDeatils -->
-        <test-method signature="Verify_fill_data_KPCertificateDetails()[pri:4, instance:com.qa.testcases.inwardlist.JobWorkRoughListPageTest@2ddc9a9f]" started-at="2023-02-10T16:25:09 IST" name="Verify_fill_data_KPCertificateDetails" finished-at="2023-02-10T16:25:17 IST" duration-ms="8950" status="PASS">
+        <test-method signature="Verify_fill_data_KPCertificateDetails()[pri:4, instance:com.qa.testcases.inwardlist.PurchaseListPageTest@f78a47e]" started-at="2023-02-13T12:01:50 IST" name="Verify_fill_data_KPCertificateDetails" finished-at="2023-02-13T12:01:59 IST" duration-ms="9459" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Verify_fill_data_KPCertificateDetails -->
-        <test-method signature="Verify_fill_data_BillEntryDetails()[pri:5, instance:com.qa.testcases.inwardlist.JobWorkRoughListPageTest@2ddc9a9f]" started-at="2023-02-10T16:25:17 IST" name="Verify_fill_data_BillEntryDetails" finished-at="2023-02-10T16:25:19 IST" duration-ms="1697" status="PASS">
+        <test-method signature="Verify_fill_data_BillEntryDetails()[pri:5, instance:com.qa.testcases.inwardlist.PurchaseListPageTest@f78a47e]" started-at="2023-02-13T12:01:59 IST" name="Verify_fill_data_BillEntryDetails" finished-at="2023-02-13T12:02:02 IST" duration-ms="3006" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Verify_fill_data_BillEntryDetails -->
-        <test-method signature="Verify_fill_data_CorrespondingInvoice()[pri:6, instance:com.qa.testcases.inwardlist.JobWorkRoughListPageTest@2ddc9a9f]" started-at="2023-02-10T16:25:19 IST" name="Verify_fill_data_CorrespondingInvoice" finished-at="2023-02-10T16:25:55 IST" duration-ms="35468" status="FAIL">
-          <exception class="org.openqa.selenium.json.JsonException">
-            <message>
-              <![CDATA[java.lang.reflect.InvocationTargetException
-Build info: version: '4.6.0', revision: '79f1c02ae20'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.5'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [194b96f842fc60222c894fe263515408, actions {actions=[org.openqa.selenium.interactions.Sequence@c29fe36]}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 109.0.5414.121, chrome: {chromedriverVersion: 109.0.5414.74 (e7c5703604da..., userDataDir: C:\Users\KUSHAL~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:64641}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:64641/devtoo..., se:cdpVersion: 109.0.5414.121, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: 194b96f842fc60222c894fe263515408]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.json.JsonException: java.lang.reflect.InvocationTargetException
-Build info: version: '4.6.0', revision: '79f1c02ae20'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.5'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [194b96f842fc60222c894fe263515408, actions {actions=[org.openqa.selenium.interactions.Sequence@c29fe36]}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 109.0.5414.121, chrome: {chromedriverVersion: 109.0.5414.74 (e7c5703604da..., userDataDir: C:\Users\KUSHAL~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:64641}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:64641/devtoo..., se:cdpVersion: 109.0.5414.121, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: 194b96f842fc60222c894fe263515408
-at org.openqa.selenium.json.JsonOutput.convertUsingMethod(JsonOutput.java:362)
-at org.openqa.selenium.json.JsonOutput.lambda$new$16(JsonOutput.java:154)
-at org.openqa.selenium.json.JsonOutput.write(JsonOutput.java:287)
-at org.openqa.selenium.json.JsonOutput.lambda$new$22(JsonOutput.java:169)
-at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.accept(ForEachOps.java:183)
-at java.base/java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:179)
-at java.base/java.util.Iterator.forEachRemaining(Iterator.java:133)
-at java.base/java.util.Spliterators$IteratorSpliterator.forEachRemaining(Spliterators.java:1845)
-at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:509)
-at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499)
-at java.base/java.util.stream.ForEachOps$ForEachOp.evaluateSequential(ForEachOps.java:150)
-at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.evaluateSequential(ForEachOps.java:173)
-at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
-at java.base/java.util.stream.ReferencePipeline.forEach(ReferencePipeline.java:596)
-at org.openqa.selenium.json.JsonOutput.lambda$new$23(JsonOutput.java:169)
-at org.openqa.selenium.json.JsonOutput.write(JsonOutput.java:287)
-at org.openqa.selenium.json.JsonOutput.lambda$new$24(JsonOutput.java:182)
-at com.google.common.collect.SingletonImmutableBiMap.forEach(SingletonImmutableBiMap.java:68)
-at org.openqa.selenium.json.JsonOutput.lambda$new$25(JsonOutput.java:177)
-at org.openqa.selenium.json.JsonOutput.write(JsonOutput.java:287)
-at org.openqa.selenium.json.JsonOutput.write(JsonOutput.java:278)
-at org.openqa.selenium.json.Json.toJson(Json.java:42)
-at org.openqa.selenium.remote.codec.AbstractHttpCommandCodec.encode(AbstractHttpCommandCodec.java:259)
-at org.openqa.selenium.remote.codec.AbstractHttpCommandCodec.encode(AbstractHttpCommandCodec.java:122)
-at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:172)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:541)
-at org.openqa.selenium.remote.RemoteWebDriver.perform(RemoteWebDriver.java:609)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-at org.openqa.selenium.support.events.EventFiringWebDriver.lambda$new$1(EventFiringWebDriver.java:106)
-at jdk.proxy2/jdk.proxy2.$Proxy14.perform(Unknown Source)
-at org.openqa.selenium.support.events.EventFiringWebDriver.perform(EventFiringWebDriver.java:334)
-at org.openqa.selenium.interactions.Actions$BuiltAction.perform(Actions.java:567)
-at org.openqa.selenium.interactions.Actions.perform(Actions.java:536)
-at com.qa.utils.TestUtil.navigate_to_option1(TestUtil.java:78)
-at com.qa.inwardlistpages.JobWorkRoughListPage.fill_data_CorrespondingInvoice(JobWorkRoughListPage.java:514)
-at com.qa.testcases.inwardlist.JobWorkRoughListPageTest.Verify_fill_data_CorrespondingInvoice(JobWorkRoughListPageTest.java:79)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
-at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
-at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
-at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:962)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-at org.testng.TestRunner.privateRun(TestRunner.java:806)
-at org.testng.TestRunner.run(TestRunner.java:601)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:433)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:427)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:387)
-at org.testng.SuiteRunner.run(SuiteRunner.java:330)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
-at org.testng.TestNG.runSuites(TestNG.java:1099)
-at org.testng.TestNG.run(TestNG.java:1067)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-Suppressed: org.openqa.selenium.json.JsonException: Attempting to close incomplete json stream
-Build info: version: '4.6.0', revision: '79f1c02ae20'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.5'
-Driver info: driver.version: EventFiringWebDriver
-at org.openqa.selenium.json.JsonOutput.close(JsonOutput.java:303)
-at org.openqa.selenium.json.Json.toJson(Json.java:40)
-... 47 more
-Caused by: java.lang.reflect.InvocationTargetException
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-at org.openqa.selenium.json.JsonOutput.convertUsingMethod(JsonOutput.java:358)
-... 68 more
-Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"(//div[@id='react-select-9-option-3'])[1]"}
-  (Session info: chrome=109.0.5414.121)
-For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
-Build info: version: '4.6.0', revision: '79f1c02ae20'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.5'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [194b96f842fc60222c894fe263515408, findElement {using=xpath, value=(//div[@id='react-select-9-option-3'])[1]}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 109.0.5414.121, chrome: {chromedriverVersion: 109.0.5414.74 (e7c5703604da..., userDataDir: C:\Users\KUSHAL~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:64641}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:64641/devtoo..., se:cdpVersion: 109.0.5414.121, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: 194b96f842fc60222c894fe263515408
-at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
-at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
-at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
-at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:541)
-at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:162)
-at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:365)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:357)
-at jdk.internal.reflect.GeneratedMethodAccessor2.invoke(Unknown Source)
-at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-at org.openqa.selenium.support.events.EventFiringWebDriver.lambda$new$1(EventFiringWebDriver.java:106)
-at jdk.proxy2/jdk.proxy2.$Proxy14.findElement(Unknown Source)
-at org.openqa.selenium.support.events.EventFiringWebDriver.findElement(EventFiringWebDriver.java:195)
-at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:70)
-at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:39)
-at jdk.proxy2/jdk.proxy2.$Proxy18.getWrappedElement(Unknown Source)
-at org.openqa.selenium.interactions.PointerInput$Origin.asArg(PointerInput.java:260)
-at org.openqa.selenium.interactions.PointerInput$Move.encode(PointerInput.java:209)
-at org.openqa.selenium.interactions.Sequence.encode(Sequence.java:73)
-at org.openqa.selenium.interactions.Sequence.toJson(Sequence.java:82)
-... 73 more
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.json.JsonException -->
+        <test-method signature="Verify_fill_data_CorrespondingInvoice()[pri:6, instance:com.qa.testcases.inwardlist.PurchaseListPageTest@f78a47e]" started-at="2023-02-13T12:02:02 IST" name="Verify_fill_data_CorrespondingInvoice" finished-at="2023-02-13T12:02:15 IST" duration-ms="12881" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Verify_fill_data_CorrespondingInvoice -->
-        <test-method signature="Verify_fill_data_MiningInformation()[pri:7, instance:com.qa.testcases.inwardlist.JobWorkRoughListPageTest@2ddc9a9f]" started-at="2023-02-10T16:25:55 IST" name="Verify_fill_data_MiningInformation" finished-at="2023-02-10T16:26:28 IST" duration-ms="33457" status="FAIL">
-          <exception class="org.openqa.selenium.json.JsonException">
-            <message>
-              <![CDATA[java.lang.reflect.InvocationTargetException
-Build info: version: '4.6.0', revision: '79f1c02ae20'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.5'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [194b96f842fc60222c894fe263515408, actions {actions=[org.openqa.selenium.interactions.Sequence@2149594a]}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 109.0.5414.121, chrome: {chromedriverVersion: 109.0.5414.74 (e7c5703604da..., userDataDir: C:\Users\KUSHAL~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:64641}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:64641/devtoo..., se:cdpVersion: 109.0.5414.121, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: 194b96f842fc60222c894fe263515408]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.json.JsonException: java.lang.reflect.InvocationTargetException
-Build info: version: '4.6.0', revision: '79f1c02ae20'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.5'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [194b96f842fc60222c894fe263515408, actions {actions=[org.openqa.selenium.interactions.Sequence@2149594a]}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 109.0.5414.121, chrome: {chromedriverVersion: 109.0.5414.74 (e7c5703604da..., userDataDir: C:\Users\KUSHAL~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:64641}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:64641/devtoo..., se:cdpVersion: 109.0.5414.121, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: 194b96f842fc60222c894fe263515408
-at org.openqa.selenium.json.JsonOutput.convertUsingMethod(JsonOutput.java:362)
-at org.openqa.selenium.json.JsonOutput.lambda$new$16(JsonOutput.java:154)
-at org.openqa.selenium.json.JsonOutput.write(JsonOutput.java:287)
-at org.openqa.selenium.json.JsonOutput.lambda$new$22(JsonOutput.java:169)
-at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.accept(ForEachOps.java:183)
-at java.base/java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:179)
-at java.base/java.util.Iterator.forEachRemaining(Iterator.java:133)
-at java.base/java.util.Spliterators$IteratorSpliterator.forEachRemaining(Spliterators.java:1845)
-at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:509)
-at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499)
-at java.base/java.util.stream.ForEachOps$ForEachOp.evaluateSequential(ForEachOps.java:150)
-at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.evaluateSequential(ForEachOps.java:173)
-at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
-at java.base/java.util.stream.ReferencePipeline.forEach(ReferencePipeline.java:596)
-at org.openqa.selenium.json.JsonOutput.lambda$new$23(JsonOutput.java:169)
-at org.openqa.selenium.json.JsonOutput.write(JsonOutput.java:287)
-at org.openqa.selenium.json.JsonOutput.lambda$new$24(JsonOutput.java:182)
-at com.google.common.collect.SingletonImmutableBiMap.forEach(SingletonImmutableBiMap.java:68)
-at org.openqa.selenium.json.JsonOutput.lambda$new$25(JsonOutput.java:177)
-at org.openqa.selenium.json.JsonOutput.write(JsonOutput.java:287)
-at org.openqa.selenium.json.JsonOutput.write(JsonOutput.java:278)
-at org.openqa.selenium.json.Json.toJson(Json.java:42)
-at org.openqa.selenium.remote.codec.AbstractHttpCommandCodec.encode(AbstractHttpCommandCodec.java:259)
-at org.openqa.selenium.remote.codec.AbstractHttpCommandCodec.encode(AbstractHttpCommandCodec.java:122)
-at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:172)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:541)
-at org.openqa.selenium.remote.RemoteWebDriver.perform(RemoteWebDriver.java:609)
-at jdk.internal.reflect.GeneratedMethodAccessor7.invoke(Unknown Source)
-at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-at org.openqa.selenium.support.events.EventFiringWebDriver.lambda$new$1(EventFiringWebDriver.java:106)
-at jdk.proxy2/jdk.proxy2.$Proxy14.perform(Unknown Source)
-at org.openqa.selenium.support.events.EventFiringWebDriver.perform(EventFiringWebDriver.java:334)
-at org.openqa.selenium.interactions.Actions$BuiltAction.perform(Actions.java:567)
-at org.openqa.selenium.interactions.Actions.perform(Actions.java:536)
-at com.qa.utils.TestUtil.navigate_to_option1(TestUtil.java:78)
-at com.qa.inwardlistpages.JobWorkRoughListPage.fill_data_MiningInformation(JobWorkRoughListPage.java:550)
-at com.qa.testcases.inwardlist.JobWorkRoughListPageTest.Verify_fill_data_MiningInformation(JobWorkRoughListPageTest.java:87)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
-at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
-at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
-at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:962)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-at org.testng.TestRunner.privateRun(TestRunner.java:806)
-at org.testng.TestRunner.run(TestRunner.java:601)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:433)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:427)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:387)
-at org.testng.SuiteRunner.run(SuiteRunner.java:330)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
-at org.testng.TestNG.runSuites(TestNG.java:1099)
-at org.testng.TestNG.run(TestNG.java:1067)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-Suppressed: org.openqa.selenium.json.JsonException: Attempting to close incomplete json stream
-Build info: version: '4.6.0', revision: '79f1c02ae20'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.5'
-Driver info: driver.version: EventFiringWebDriver
-at org.openqa.selenium.json.JsonOutput.close(JsonOutput.java:303)
-at org.openqa.selenium.json.Json.toJson(Json.java:40)
-... 46 more
-Caused by: java.lang.reflect.InvocationTargetException
-at jdk.internal.reflect.GeneratedMethodAccessor8.invoke(Unknown Source)
-at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-at org.openqa.selenium.json.JsonOutput.convertUsingMethod(JsonOutput.java:358)
-... 67 more
-Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"css selector","selector":"#react\-select\-10\-option\-1"}
-  (Session info: chrome=109.0.5414.121)
-For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
-Build info: version: '4.6.0', revision: '79f1c02ae20'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.5'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [194b96f842fc60222c894fe263515408, findElement {using=id, value=react-select-10-option-1}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 109.0.5414.121, chrome: {chromedriverVersion: 109.0.5414.74 (e7c5703604da..., userDataDir: C:\Users\KUSHAL~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:64641}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:64641/devtoo..., se:cdpVersion: 109.0.5414.121, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: 194b96f842fc60222c894fe263515408
-at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
-at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
-at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
-at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:541)
-at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:162)
-at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:66)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:365)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:357)
-at jdk.internal.reflect.GeneratedMethodAccessor2.invoke(Unknown Source)
-at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-at org.openqa.selenium.support.events.EventFiringWebDriver.lambda$new$1(EventFiringWebDriver.java:106)
-at jdk.proxy2/jdk.proxy2.$Proxy14.findElement(Unknown Source)
-at org.openqa.selenium.support.events.EventFiringWebDriver.findElement(EventFiringWebDriver.java:195)
-at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:70)
-at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:39)
-at jdk.proxy2/jdk.proxy2.$Proxy18.getWrappedElement(Unknown Source)
-at org.openqa.selenium.interactions.PointerInput$Origin.asArg(PointerInput.java:260)
-at org.openqa.selenium.interactions.PointerInput$Move.encode(PointerInput.java:209)
-at org.openqa.selenium.interactions.Sequence.encode(Sequence.java:73)
-at org.openqa.selenium.interactions.Sequence.toJson(Sequence.java:82)
-... 71 more
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.json.JsonException -->
+        <test-method signature="Verify_fill_data_MiningInformation()[pri:7, instance:com.qa.testcases.inwardlist.PurchaseListPageTest@f78a47e]" started-at="2023-02-13T12:02:15 IST" name="Verify_fill_data_MiningInformation" finished-at="2023-02-13T12:02:23 IST" duration-ms="7899" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Verify_fill_data_MiningInformation -->
-        <test-method signature="Verify_fill_data_DocumentLines()[pri:8, instance:com.qa.testcases.inwardlist.JobWorkRoughListPageTest@2ddc9a9f]" started-at="2023-02-10T16:26:28 IST" name="Verify_fill_data_DocumentLines" finished-at="2023-02-10T16:26:58 IST" duration-ms="30120" status="FAIL">
+        <test-method signature="Verify_fill_data_DocumentLines()[pri:8, instance:com.qa.testcases.inwardlist.PurchaseListPageTest@f78a47e]" started-at="2023-02-13T12:02:23 IST" name="Verify_fill_data_DocumentLines" finished-at="2023-02-13T12:02:55 IST" duration-ms="31566" status="FAIL">
           <exception class="org.openqa.selenium.NoSuchElementException">
             <message>
-              <![CDATA[no such element: Unable to locate element: {"method":"xpath","selector":"(//input[@type='text'])[21]"}
+              <![CDATA[no such element: Unable to locate element: {"method":"xpath","selector":"(//input[@type='number'])[14]"}
   (Session info: chrome=109.0.5414.121)
 For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
 Build info: version: '4.6.0', revision: '79f1c02ae20'
 System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.5'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [194b96f842fc60222c894fe263515408, findElement {using=xpath, value=(//input[@type='text'])[21]}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 109.0.5414.121, chrome: {chromedriverVersion: 109.0.5414.74 (e7c5703604da..., userDataDir: C:\Users\KUSHAL~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:64641}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:64641/devtoo..., se:cdpVersion: 109.0.5414.121, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: 194b96f842fc60222c894fe263515408]]>
+Command: [628f6954f4f299513cab07de7728bf80, findElement {using=xpath, value=(//input[@type='number'])[14]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 109.0.5414.121, chrome: {chromedriverVersion: 109.0.5414.74 (e7c5703604da..., userDataDir: C:\Users\KUSHAL~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:54856}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:54856/devtoo..., se:cdpVersion: 109.0.5414.121, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 628f6954f4f299513cab07de7728bf80]]>
             </message>
             <full-stacktrace>
-              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"(//input[@type='text'])[21]"}
+              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"(//input[@type='number'])[14]"}
   (Session info: chrome=109.0.5414.121)
 For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
 Build info: version: '4.6.0', revision: '79f1c02ae20'
 System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.5'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [194b96f842fc60222c894fe263515408, findElement {using=xpath, value=(//input[@type='text'])[21]}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 109.0.5414.121, chrome: {chromedriverVersion: 109.0.5414.74 (e7c5703604da..., userDataDir: C:\Users\KUSHAL~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:64641}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:64641/devtoo..., se:cdpVersion: 109.0.5414.121, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: 194b96f842fc60222c894fe263515408
+Command: [628f6954f4f299513cab07de7728bf80, findElement {using=xpath, value=(//input[@type='number'])[14]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 109.0.5414.121, chrome: {chromedriverVersion: 109.0.5414.74 (e7c5703604da..., userDataDir: C:\Users\KUSHAL~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:54856}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:54856/devtoo..., se:cdpVersion: 109.0.5414.121, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 628f6954f4f299513cab07de7728bf80
 at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
 at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
@@ -371,8 +87,8 @@ at org.openqa.selenium.support.events.EventFiringWebDriver.findElement(EventFiri
 at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:70)
 at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:39)
 at jdk.proxy2/jdk.proxy2.$Proxy18.sendKeys(Unknown Source)
-at com.qa.inwardlistpages.JobWorkRoughListPage.fill_data_DocumentLines(JobWorkRoughListPage.java:575)
-at com.qa.testcases.inwardlist.JobWorkRoughListPageTest.Verify_fill_data_DocumentLines(JobWorkRoughListPageTest.java:96)
+at com.qa.inwardlistpages.PurchaseListPage.fill_data_DocumentLines(PurchaseListPage.java:586)
+at com.qa.testcases.inwardlist.PurchaseListPageTest.Verify_fill_data_DocumentLines(PurchaseListPageTest.java:96)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
 at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -407,27 +123,27 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Verify_fill_data_DocumentLines -->
-        <test-method signature="Verify_fill_data_JangadExpenseDetails()[pri:9, instance:com.qa.testcases.inwardlist.JobWorkRoughListPageTest@2ddc9a9f]" started-at="2023-02-10T16:26:58 IST" name="Verify_fill_data_JangadExpenseDetails" finished-at="2023-02-10T16:27:18 IST" duration-ms="20193" status="FAIL">
+        <test-method signature="Verify_fill_data_JangadExpenseDetails()[pri:9, instance:com.qa.testcases.inwardlist.PurchaseListPageTest@f78a47e]" started-at="2023-02-13T12:02:55 IST" name="Verify_fill_data_JangadExpenseDetails" finished-at="2023-02-13T12:03:15 IST" duration-ms="20445" status="FAIL">
           <exception class="org.openqa.selenium.TimeoutException">
             <message>
-              <![CDATA[Expected condition failed: waiting for element to be clickable: [[ChromeDriver: chrome on WINDOWS (194b96f842fc60222c894fe263515408)] -> xpath: /html/body/div[1]/div/section/section/main/div[4]/div[1]/div/div[2]/button] (tried for 20 second(s) with 500 milliseconds interval)
+              <![CDATA[Expected condition failed: waiting for element to be clickable: [[ChromeDriver: chrome on WINDOWS (628f6954f4f299513cab07de7728bf80)] -> xpath: /html/body/div[1]/div/section/section/main/div[4]/div[1]/div/div[2]/button] (tried for 20 second(s) with 500 milliseconds interval)
 Build info: version: '4.6.0', revision: '79f1c02ae20'
 System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.5'
 Driver info: org.openqa.selenium.support.events.EventFiringWebDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 109.0.5414.121, chrome: {chromedriverVersion: 109.0.5414.74 (e7c5703604da..., userDataDir: C:\Users\KUSHAL~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:64641}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:64641/devtoo..., se:cdpVersion: 109.0.5414.121, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: 194b96f842fc60222c894fe263515408]]>
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 109.0.5414.121, chrome: {chromedriverVersion: 109.0.5414.74 (e7c5703604da..., userDataDir: C:\Users\KUSHAL~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:54856}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:54856/devtoo..., se:cdpVersion: 109.0.5414.121, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 628f6954f4f299513cab07de7728bf80]]>
             </message>
             <full-stacktrace>
-              <![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: [[ChromeDriver: chrome on WINDOWS (194b96f842fc60222c894fe263515408)] -> xpath: /html/body/div[1]/div/section/section/main/div[4]/div[1]/div/div[2]/button] (tried for 20 second(s) with 500 milliseconds interval)
+              <![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: [[ChromeDriver: chrome on WINDOWS (628f6954f4f299513cab07de7728bf80)] -> xpath: /html/body/div[1]/div/section/section/main/div[4]/div[1]/div/div[2]/button] (tried for 20 second(s) with 500 milliseconds interval)
 Build info: version: '4.6.0', revision: '79f1c02ae20'
 System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.5'
 Driver info: org.openqa.selenium.support.events.EventFiringWebDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 109.0.5414.121, chrome: {chromedriverVersion: 109.0.5414.74 (e7c5703604da..., userDataDir: C:\Users\KUSHAL~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:64641}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:64641/devtoo..., se:cdpVersion: 109.0.5414.121, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: 194b96f842fc60222c894fe263515408
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 109.0.5414.121, chrome: {chromedriverVersion: 109.0.5414.74 (e7c5703604da..., userDataDir: C:\Users\KUSHAL~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:54856}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:54856/devtoo..., se:cdpVersion: 109.0.5414.121, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 628f6954f4f299513cab07de7728bf80
 at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:87)
 at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:231)
-at com.qa.inwardlistpages.JobWorkRoughListPage.fill_data_JangadExpenseDetails(JobWorkRoughListPage.java:605)
-at com.qa.testcases.inwardlist.JobWorkRoughListPageTest.Verify_fill_data_JangadExpenseDetails(JobWorkRoughListPageTest.java:103)
+at com.qa.inwardlistpages.PurchaseListPage.fill_data_JangadExpenseDetails(PurchaseListPage.java:610)
+at com.qa.testcases.inwardlist.PurchaseListPageTest.Verify_fill_data_JangadExpenseDetails(PurchaseListPageTest.java:103)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
 at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -462,29 +178,29 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Verify_fill_data_JangadExpenseDetails -->
-        <test-method signature="Verify_ValidateConfirmationRecord()[pri:10, instance:com.qa.testcases.inwardlist.JobWorkRoughListPageTest@2ddc9a9f]" started-at="2023-02-10T16:27:18 IST" name="Verify_ValidateConfirmationRecord" finished-at="2023-02-10T16:27:49 IST" duration-ms="30251" status="FAIL">
+        <test-method signature="Verify_ValidateConfirmationRecord()[pri:10, instance:com.qa.testcases.inwardlist.PurchaseListPageTest@f78a47e]" started-at="2023-02-13T12:03:15 IST" name="Verify_ValidateConfirmationRecord" finished-at="2023-02-13T12:03:45 IST" duration-ms="30219" status="FAIL">
           <exception class="org.openqa.selenium.NoSuchElementException">
             <message>
-              <![CDATA[no such element: Unable to locate element: {"method":"xpath","selector":"//*[contains(text(),'Rip99')]"}
+              <![CDATA[no such element: Unable to locate element: {"method":"xpath","selector":"//*[contains(text(),'tpFoC')]"}
   (Session info: chrome=109.0.5414.121)
 For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
 Build info: version: '4.6.0', revision: '79f1c02ae20'
 System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.5'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [194b96f842fc60222c894fe263515408, findElement {using=xpath, value=//*[contains(text(),'Rip99')]}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 109.0.5414.121, chrome: {chromedriverVersion: 109.0.5414.74 (e7c5703604da..., userDataDir: C:\Users\KUSHAL~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:64641}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:64641/devtoo..., se:cdpVersion: 109.0.5414.121, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: 194b96f842fc60222c894fe263515408]]>
+Command: [628f6954f4f299513cab07de7728bf80, findElement {using=xpath, value=//*[contains(text(),'tpFoC')]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 109.0.5414.121, chrome: {chromedriverVersion: 109.0.5414.74 (e7c5703604da..., userDataDir: C:\Users\KUSHAL~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:54856}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:54856/devtoo..., se:cdpVersion: 109.0.5414.121, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 628f6954f4f299513cab07de7728bf80]]>
             </message>
             <full-stacktrace>
-              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//*[contains(text(),'Rip99')]"}
+              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//*[contains(text(),'tpFoC')]"}
   (Session info: chrome=109.0.5414.121)
 For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
 Build info: version: '4.6.0', revision: '79f1c02ae20'
 System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.5'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [194b96f842fc60222c894fe263515408, findElement {using=xpath, value=//*[contains(text(),'Rip99')]}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 109.0.5414.121, chrome: {chromedriverVersion: 109.0.5414.74 (e7c5703604da..., userDataDir: C:\Users\KUSHAL~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:64641}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:64641/devtoo..., se:cdpVersion: 109.0.5414.121, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: 194b96f842fc60222c894fe263515408
+Command: [628f6954f4f299513cab07de7728bf80, findElement {using=xpath, value=//*[contains(text(),'tpFoC')]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 109.0.5414.121, chrome: {chromedriverVersion: 109.0.5414.74 (e7c5703604da..., userDataDir: C:\Users\KUSHAL~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:54856}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:54856/devtoo..., se:cdpVersion: 109.0.5414.121, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 628f6954f4f299513cab07de7728bf80
 at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
 at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
@@ -507,8 +223,8 @@ at java.base/java.lang.reflect.Method.invoke(Method.java:568)
 at org.openqa.selenium.support.events.EventFiringWebDriver.lambda$new$1(EventFiringWebDriver.java:106)
 at jdk.proxy2/jdk.proxy2.$Proxy14.findElement(Unknown Source)
 at org.openqa.selenium.support.events.EventFiringWebDriver.findElement(EventFiringWebDriver.java:195)
-at com.qa.inwardlistpages.JobWorkRoughListPage.ValidateConfirmationRecord(JobWorkRoughListPage.java:696)
-at com.qa.testcases.inwardlist.JobWorkRoughListPageTest.Verify_ValidateConfirmationRecord(JobWorkRoughListPageTest.java:110)
+at com.qa.inwardlistpages.PurchaseListPage.ValidateConfirmationRecord(PurchaseListPage.java:701)
+at com.qa.testcases.inwardlist.PurchaseListPageTest.Verify_ValidateConfirmationRecord(PurchaseListPageTest.java:110)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
 at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -543,7 +259,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Verify_ValidateConfirmationRecord -->
-        <test-method signature="Verify_ValidateDisableFields()[pri:11, instance:com.qa.testcases.inwardlist.JobWorkRoughListPageTest@2ddc9a9f]" started-at="2023-02-10T16:27:49 IST" name="Verify_ValidateDisableFields" finished-at="2023-02-10T16:27:50 IST" duration-ms="1182" status="FAIL">
+        <test-method signature="Verify_ValidateDisableFields()[pri:11, instance:com.qa.testcases.inwardlist.PurchaseListPageTest@f78a47e]" started-at="2023-02-13T12:03:45 IST" name="Verify_ValidateDisableFields" finished-at="2023-02-13T12:03:47 IST" duration-ms="1345" status="FAIL">
           <exception class="org.openqa.selenium.ElementClickInterceptedException">
             <message>
               <![CDATA[element click intercepted: Element <svg viewBox="64 64 896 896" focusable="false" data-icon="redo" width="1em" height="1em" fill="currentColor" aria-hidden="true">...</svg> is not clickable at point (1187, 7). Other element would receive the click: <div class="header-topbar-right">...</div>
@@ -551,10 +267,10 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 Build info: version: '4.6.0', revision: '79f1c02ae20'
 System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.5'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [194b96f842fc60222c894fe263515408, clickElement {id=cea415eb-de50-436d-b65d-0d9cc201df7d}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 109.0.5414.121, chrome: {chromedriverVersion: 109.0.5414.74 (e7c5703604da..., userDataDir: C:\Users\KUSHAL~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:64641}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:64641/devtoo..., se:cdpVersion: 109.0.5414.121, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Element: [[ChromeDriver: chrome on WINDOWS (194b96f842fc60222c894fe263515408)] -> xpath: (//*[name()='svg'])[35]]
-Session ID: 194b96f842fc60222c894fe263515408]]>
+Command: [628f6954f4f299513cab07de7728bf80, clickElement {id=a756b1dc-407b-4942-8552-d09c2cdf9c70}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 109.0.5414.121, chrome: {chromedriverVersion: 109.0.5414.74 (e7c5703604da..., userDataDir: C:\Users\KUSHAL~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:54856}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:54856/devtoo..., se:cdpVersion: 109.0.5414.121, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on WINDOWS (628f6954f4f299513cab07de7728bf80)] -> xpath: (//*[name()='svg'])[35]]
+Session ID: 628f6954f4f299513cab07de7728bf80]]>
             </message>
             <full-stacktrace>
               <![CDATA[org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element <svg viewBox="64 64 896 896" focusable="false" data-icon="redo" width="1em" height="1em" fill="currentColor" aria-hidden="true">...</svg> is not clickable at point (1187, 7). Other element would receive the click: <div class="header-topbar-right">...</div>
@@ -562,10 +278,10 @@ Session ID: 194b96f842fc60222c894fe263515408]]>
 Build info: version: '4.6.0', revision: '79f1c02ae20'
 System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.5'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [194b96f842fc60222c894fe263515408, clickElement {id=cea415eb-de50-436d-b65d-0d9cc201df7d}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 109.0.5414.121, chrome: {chromedriverVersion: 109.0.5414.74 (e7c5703604da..., userDataDir: C:\Users\KUSHAL~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:64641}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:64641/devtoo..., se:cdpVersion: 109.0.5414.121, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Element: [[ChromeDriver: chrome on WINDOWS (194b96f842fc60222c894fe263515408)] -> xpath: (//*[name()='svg'])[35]]
-Session ID: 194b96f842fc60222c894fe263515408
+Command: [628f6954f4f299513cab07de7728bf80, clickElement {id=a756b1dc-407b-4942-8552-d09c2cdf9c70}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 109.0.5414.121, chrome: {chromedriverVersion: 109.0.5414.74 (e7c5703604da..., userDataDir: C:\Users\KUSHAL~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:54856}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:54856/devtoo..., se:cdpVersion: 109.0.5414.121, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on WINDOWS (628f6954f4f299513cab07de7728bf80)] -> xpath: (//*[name()='svg'])[35]]
+Session ID: 628f6954f4f299513cab07de7728bf80
 at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
 at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
@@ -593,8 +309,8 @@ at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(Delegating
 at java.base/java.lang.reflect.Method.invoke(Method.java:568)
 at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:52)
 at jdk.proxy2/jdk.proxy2.$Proxy18.click(Unknown Source)
-at com.qa.inwardlistpages.JobWorkRoughListPage.ValidateDisableFields(JobWorkRoughListPage.java:704)
-at com.qa.testcases.inwardlist.JobWorkRoughListPageTest.Verify_ValidateDisableFields(JobWorkRoughListPageTest.java:117)
+at com.qa.inwardlistpages.PurchaseListPage.ValidateDisableFields(PurchaseListPage.java:710)
+at com.qa.testcases.inwardlist.PurchaseListPageTest.Verify_ValidateDisableFields(PurchaseListPageTest.java:117)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
 at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -629,7 +345,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Verify_ValidateDisableFields -->
-        <test-method signature="Verify_ValidateEditFunctionality()[pri:12, instance:com.qa.testcases.inwardlist.JobWorkRoughListPageTest@2ddc9a9f]" started-at="2023-02-10T16:27:50 IST" name="Verify_ValidateEditFunctionality" finished-at="2023-02-10T16:28:03 IST" duration-ms="13295" status="FAIL">
+        <test-method signature="Verify_ValidateEditFunctionality()[pri:12, instance:com.qa.testcases.inwardlist.PurchaseListPageTest@f78a47e]" started-at="2023-02-13T12:03:47 IST" name="Verify_ValidateEditFunctionality" finished-at="2023-02-13T12:04:06 IST" duration-ms="19178" status="FAIL">
           <exception class="org.openqa.selenium.ElementClickInterceptedException">
             <message>
               <![CDATA[element click intercepted: Element <span>...</span> is not clickable at point (1259, 585). Other element would receive the click: <button type="button" class="ant-btn ant-btn-primary ant-btn-lg btn-orange" disabled="">...</button>
@@ -637,10 +353,10 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 Build info: version: '4.6.0', revision: '79f1c02ae20'
 System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.5'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [194b96f842fc60222c894fe263515408, clickElement {id=7fdd397f-ffc6-463f-9534-e1f73acf2968}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 109.0.5414.121, chrome: {chromedriverVersion: 109.0.5414.74 (e7c5703604da..., userDataDir: C:\Users\KUSHAL~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:64641}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:64641/devtoo..., se:cdpVersion: 109.0.5414.121, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Element: [[ChromeDriver: chrome on WINDOWS (194b96f842fc60222c894fe263515408)] -> xpath: (//span[normalize-space()='Save'])[1]]
-Session ID: 194b96f842fc60222c894fe263515408]]>
+Command: [628f6954f4f299513cab07de7728bf80, clickElement {id=38ec0ab8-9d05-41dc-89fe-8ec0d0791a13}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 109.0.5414.121, chrome: {chromedriverVersion: 109.0.5414.74 (e7c5703604da..., userDataDir: C:\Users\KUSHAL~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:54856}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:54856/devtoo..., se:cdpVersion: 109.0.5414.121, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on WINDOWS (628f6954f4f299513cab07de7728bf80)] -> xpath: (//span[normalize-space()='Save'])[1]]
+Session ID: 628f6954f4f299513cab07de7728bf80]]>
             </message>
             <full-stacktrace>
               <![CDATA[org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element <span>...</span> is not clickable at point (1259, 585). Other element would receive the click: <button type="button" class="ant-btn ant-btn-primary ant-btn-lg btn-orange" disabled="">...</button>
@@ -648,10 +364,10 @@ Session ID: 194b96f842fc60222c894fe263515408]]>
 Build info: version: '4.6.0', revision: '79f1c02ae20'
 System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.5'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [194b96f842fc60222c894fe263515408, clickElement {id=7fdd397f-ffc6-463f-9534-e1f73acf2968}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 109.0.5414.121, chrome: {chromedriverVersion: 109.0.5414.74 (e7c5703604da..., userDataDir: C:\Users\KUSHAL~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:64641}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:64641/devtoo..., se:cdpVersion: 109.0.5414.121, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Element: [[ChromeDriver: chrome on WINDOWS (194b96f842fc60222c894fe263515408)] -> xpath: (//span[normalize-space()='Save'])[1]]
-Session ID: 194b96f842fc60222c894fe263515408
+Command: [628f6954f4f299513cab07de7728bf80, clickElement {id=38ec0ab8-9d05-41dc-89fe-8ec0d0791a13}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 109.0.5414.121, chrome: {chromedriverVersion: 109.0.5414.74 (e7c5703604da..., userDataDir: C:\Users\KUSHAL~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:54856}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:54856/devtoo..., se:cdpVersion: 109.0.5414.121, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on WINDOWS (628f6954f4f299513cab07de7728bf80)] -> xpath: (//span[normalize-space()='Save'])[1]]
+Session ID: 628f6954f4f299513cab07de7728bf80
 at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
 at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
@@ -677,8 +393,8 @@ at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(Delegating
 at java.base/java.lang.reflect.Method.invoke(Method.java:568)
 at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:52)
 at jdk.proxy2/jdk.proxy2.$Proxy18.click(Unknown Source)
-at com.qa.inwardlistpages.JobWorkRoughListPage.ValidateEditFunctionality(JobWorkRoughListPage.java:783)
-at com.qa.testcases.inwardlist.JobWorkRoughListPageTest.Verify_ValidateEditFunctionality(JobWorkRoughListPageTest.java:125)
+at com.qa.inwardlistpages.PurchaseListPage.ValidateEditFunctionality(PurchaseListPage.java:789)
+at com.qa.testcases.inwardlist.PurchaseListPageTest.Verify_ValidateEditFunctionality(PurchaseListPageTest.java:125)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
 at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -713,7 +429,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Verify_ValidateEditFunctionality -->
-        <test-method signature="Verify_search_functionality_test()[pri:13, instance:com.qa.testcases.inwardlist.JobWorkRoughListPageTest@2ddc9a9f]" started-at="2023-02-10T16:28:03 IST" name="Verify_search_functionality_test" finished-at="2023-02-10T16:28:33 IST" duration-ms="30128" status="FAIL">
+        <test-method signature="Verify_search_functionality_test()[pri:13, instance:com.qa.testcases.inwardlist.PurchaseListPageTest@f78a47e]" started-at="2023-02-13T12:04:06 IST" name="Verify_search_functionality_test" finished-at="2023-02-13T12:04:36 IST" duration-ms="30227" status="FAIL">
           <exception class="org.openqa.selenium.NoSuchElementException">
             <message>
               <![CDATA[no such element: Unable to locate element: {"method":"xpath","selector":"(//input[@placeholder='Search...'])[1]"}
@@ -722,9 +438,9 @@ For documentation on this error, please visit: https://selenium.dev/exceptions/#
 Build info: version: '4.6.0', revision: '79f1c02ae20'
 System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.5'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [194b96f842fc60222c894fe263515408, findElement {using=xpath, value=(//input[@placeholder='Search...'])[1]}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 109.0.5414.121, chrome: {chromedriverVersion: 109.0.5414.74 (e7c5703604da..., userDataDir: C:\Users\KUSHAL~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:64641}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:64641/devtoo..., se:cdpVersion: 109.0.5414.121, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: 194b96f842fc60222c894fe263515408]]>
+Command: [628f6954f4f299513cab07de7728bf80, findElement {using=xpath, value=(//input[@placeholder='Search...'])[1]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 109.0.5414.121, chrome: {chromedriverVersion: 109.0.5414.74 (e7c5703604da..., userDataDir: C:\Users\KUSHAL~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:54856}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:54856/devtoo..., se:cdpVersion: 109.0.5414.121, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 628f6954f4f299513cab07de7728bf80]]>
             </message>
             <full-stacktrace>
               <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"(//input[@placeholder='Search...'])[1]"}
@@ -733,9 +449,9 @@ For documentation on this error, please visit: https://selenium.dev/exceptions/#
 Build info: version: '4.6.0', revision: '79f1c02ae20'
 System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.5'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [194b96f842fc60222c894fe263515408, findElement {using=xpath, value=(//input[@placeholder='Search...'])[1]}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 109.0.5414.121, chrome: {chromedriverVersion: 109.0.5414.74 (e7c5703604da..., userDataDir: C:\Users\KUSHAL~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:64641}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:64641/devtoo..., se:cdpVersion: 109.0.5414.121, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: 194b96f842fc60222c894fe263515408
+Command: [628f6954f4f299513cab07de7728bf80, findElement {using=xpath, value=(//input[@placeholder='Search...'])[1]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 109.0.5414.121, chrome: {chromedriverVersion: 109.0.5414.74 (e7c5703604da..., userDataDir: C:\Users\KUSHAL~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:54856}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:54856/devtoo..., se:cdpVersion: 109.0.5414.121, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 628f6954f4f299513cab07de7728bf80
 at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
 at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
@@ -760,9 +476,9 @@ at jdk.proxy2/jdk.proxy2.$Proxy14.findElement(Unknown Source)
 at org.openqa.selenium.support.events.EventFiringWebDriver.findElement(EventFiringWebDriver.java:195)
 at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:70)
 at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:39)
-at jdk.proxy2/jdk.proxy2.$Proxy18.sendKeys(Unknown Source)
-at com.qa.inwardlistpages.JobWorkRoughListPage.search_functionality_test(JobWorkRoughListPage.java:800)
-at com.qa.testcases.inwardlist.JobWorkRoughListPageTest.Verify_search_functionality_test(JobWorkRoughListPageTest.java:133)
+at jdk.proxy2/jdk.proxy2.$Proxy18.isDisplayed(Unknown Source)
+at com.qa.inwardlistpages.PurchaseListPage.search_functionality_test(PurchaseListPage.java:806)
+at com.qa.testcases.inwardlist.PurchaseListPageTest.Verify_search_functionality_test(PurchaseListPageTest.java:133)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
 at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -797,7 +513,11 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Verify_search_functionality_test -->
-      </class> <!-- com.qa.testcases.inwardlist.JobWorkRoughListPageTest -->
+        <test-method signature="pagination_functionality()[pri:14, instance:com.qa.testcases.inwardlist.PurchaseListPageTest@f78a47e]" started-at="2023-02-13T12:04:36 IST" name="pagination_functionality" finished-at="2023-02-13T12:04:39 IST" duration-ms="2936" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- pagination_functionality -->
+      </class> <!-- com.qa.testcases.inwardlist.PurchaseListPageTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

@@ -95,4 +95,11 @@ public class MemoListPageTest extends TestBase {
 		memolistlistpage.search_functionality_test();
 		
 	}
+	
+	@Test(priority=10)
+	public void  pagination_functionality() throws InterruptedException
+	{
+		memolistlistpage.pagination_functionality();
+		
+	}
 }

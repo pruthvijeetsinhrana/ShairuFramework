@@ -134,6 +134,12 @@ public class PurchaseListPageTest extends TestBase {
 		
 	}
 	
+	@Test(priority=14)
+	public void  pagination_functionality() throws InterruptedException
+	{
+		purchaselistpage.pagination_functionality();
+		
+	}
 
 	
 	

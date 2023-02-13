@@ -94,7 +94,7 @@ public class PurchaseListPage extends TestBase{
 		
 		
 		
-		@FindBy(xpath= "(//input[@type='number'])[3]")
+		@FindBy(xpath= "(//input[@type='text'])[9]")
 		WebElement TotalPackets;
 		
 		@FindBy(xpath= "(//input[@type='file'])[1]")
@@ -107,10 +107,10 @@ public class PurchaseListPage extends TestBase{
 		WebElement ExchangeType_select;
 		
 		
-		@FindBy(xpath= "(//input[@type='number'])[4]")
+		@FindBy(xpath= "(//input[@type='number'])[3]")
 		WebElement ExchangeRate_BOE;
 		
-		@FindBy(xpath= "(//input[@type='number'])[5]")
+		@FindBy(xpath= "(//input[@type='number'])[4]")
 		WebElement ExchangeRate_RBI;
 		
 		@FindBy(xpath= "(//input[@accept='image/jpg, image/jpeg, image/png'])[1]")
@@ -118,9 +118,9 @@ public class PurchaseListPage extends TestBase{
 		
 		// Total Invoice value in $
 		
-		@FindBy(xpath= "(//input[@type='number'])[6]")
+		@FindBy(xpath= "(//input[@type='number'])[5]")
 		WebElement GrossValue;
-		@FindBy(xpath= "(//input[@type='number'])[7]")
+		@FindBy(xpath= "(//input[@type='number'])[6]")
 		WebElement Expense;
 		
 		// Save buttons of page 
@@ -135,7 +135,7 @@ public class PurchaseListPage extends TestBase{
 		
 		//KP Certificate Details section 
 		
-		@FindBy(xpath= "(//input[@type='text'])[10]")
+		@FindBy(xpath= "(//input[@type='text'])[11]")
 		WebElement CertificateNo;
 		
 		@FindBy(xpath= "(//div[@id='react-select-8-placeholder'])[1]")
@@ -158,13 +158,13 @@ public class PurchaseListPage extends TestBase{
 		@FindBy(xpath= "(//input[@placeholder='Select date'])[5]")
 		WebElement BOE_Date;
 		
-		@FindBy(xpath= "(//input[@type='text'])[12]")
+		@FindBy(xpath= "(//input[@type='text'])[13]")
 		WebElement BOE_No;
 		
-		@FindBy(xpath= "(//input[@type='text'])[13]")
+		@FindBy(xpath= "(//input[@type='text'])[14]")
 		WebElement MAWB_No;
 		
-		@FindBy(xpath= "(//input[@type='text'])[14]")
+		@FindBy(xpath= "(//input[@type='text'])[15]")
 		WebElement HAWB_No;
 		
 		@FindBy(xpath= "(//input[@placeholder='Select date'])[6]")
@@ -182,10 +182,10 @@ public class PurchaseListPage extends TestBase{
 		
 		// Corresponding Invoice & KP Information
 		
-		@FindBy(xpath= "(//input[@type='text'])[15]")
+		@FindBy(xpath= "(//input[@type='text'])[16]")
 		WebElement Invoice_No;
 		
-		@FindBy(xpath= "(//input[@type='number'])[12]")
+		@FindBy(xpath= "(//input[@type='number'])[11]")
 		WebElement Invoice_Weight;
 		
 		@FindBy(xpath= "(//input[@type='file'])[6]")
@@ -194,7 +194,7 @@ public class PurchaseListPage extends TestBase{
 		@FindBy(xpath= "(//input[@accept='application/pdf, application/excel, application/vnd.ms-excel, application/x-excel, application/x-msexcel, application/vnd.openxmlformats-officedocument.spreadsheetml.sheet, text/csv'])[1]")
 		WebElement Packing_List;
 		
-		@FindBy(xpath= "(//input[@type='text'])[16]")
+		@FindBy(xpath= "(//input[@type='text'])[17]")
 		WebElement KP_Certificate_No;
 		
 		@FindBy(xpath= "(//div[@class=' css-13z0ixq'])[7]")
@@ -226,17 +226,17 @@ public class PurchaseListPage extends TestBase{
 		
 		//Document line section
 		
-		@FindBy(xpath= "(//input[@type='text'])[21]")
+		@FindBy(xpath= "(//input[@class='ant-input ant-input-status-success'])[1]")
 		WebElement KapanNo;
 		
 		
-		@FindBy(xpath= "(//input[@type='text'])[22]")
+		@FindBy(xpath= "(//input[@type='text'])[23]")
 		WebElement Pieces;
 		
-		@FindBy(xpath= "(//input[@type='number'])[13]")
+		@FindBy(xpath= "(//input[@type='number'])[12]")
 		WebElement Carats;
 		
-		@FindBy(xpath= "(//input[@type='number'])[14]")
+		@FindBy(xpath= "(//input[@type='number'])[13]")
 		WebElement Rate;
 		
 		@FindBy(xpath= "(//button[@type='submit'])[3]")
@@ -247,7 +247,7 @@ public class PurchaseListPage extends TestBase{
 		@FindBy(xpath= "/html/body/div[1]/div/section/section/main/div[4]/div[1]/div/div[2]/button")
 		WebElement row_button_Jangad;
 		
-		@FindBy(xpath= "(//input[@type='text'])[24]")
+		@FindBy(xpath= "(//input[@type='text'])[25]")
 		WebElement JangadNo;
 		
 		@FindBy(xpath= "(//div[contains(@class,'css-1d8n9bt')])[11]")
@@ -256,7 +256,7 @@ public class PurchaseListPage extends TestBase{
 		@FindBy(xpath= "(//div[@id='react-select-15-option-2'])[1]")
 		WebElement CourierPartyName_select;
 		
-		@FindBy(xpath= "(//input[@type='text'])[26]")
+		@FindBy(xpath= "(//input[@type='text'])[27]")
 		WebElement CourierNo;
 		
 		@FindBy(xpath= "(//input[@type='file'])[9]")
@@ -268,7 +268,7 @@ public class PurchaseListPage extends TestBase{
 		@FindBy(xpath= "(//div[@id='react-select-16-option-1'])[1]")
 		WebElement Expense1_select;
 		
-		@FindBy(xpath= "(//input[@type='number'])[15]")
+		@FindBy(xpath= "(//input[@type='number'])[14]")
 		WebElement Expense1_value;
 		
 		@FindBy(xpath= "/html[1]/body[1]/div[1]/div[1]/section[1]/section[1]/main[1]/div[4]/form[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/table[1]/tbody[1]/tr[2]/td[13]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]")
@@ -327,7 +327,14 @@ public class PurchaseListPage extends TestBase{
 				@FindBy(xpath= "//div[contains(text(),'No search data')]")
 				WebElement No_search_data;
 		
-		
+
+				//pagination Elements
+				@FindBy(xpath= "(//button[@type='button'])[2]")
+				WebElement previous_pagination_button;
+				
+				@FindBy(xpath= "(//button[@type='button'])[3]")
+				WebElement next_pagination_button;
+				
 		
 		
 		
@@ -813,6 +820,29 @@ public class PurchaseListPage extends TestBase{
 			}
 			
 			Assert.assertEquals(No_search_data.getText(),"No search data");    
+			
+		}
+		
+		public void pagination_functionality() throws InterruptedException
+		{
+			driver.navigate().refresh();
+			
+			if(previous_pagination_button.isEnabled()== false)
+			{
+				
+				Thread.sleep(1000);
+				next_pagination_button.click();
+				Thread.sleep(2000);
+				next_pagination_button.click();
+				Thread.sleep(2000);
+				previous_pagination_button.click();
+			}
+			else
+			{
+				System.out.println("Pagination functionality is not working..");
+			}
+			
+			
 			
 		}
 }

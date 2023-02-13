@@ -193,7 +193,7 @@ public class MemoListPage extends TestBase{
 		
 		
 		
-		@FindBy(xpath= "(//button[@type='button'])[8]")
+		@FindBy(xpath= "(//button//span[@aria-label='save'])[3]")
 		WebElement Save_finalbutton;
 		
 		
@@ -207,7 +207,7 @@ public class MemoListPage extends TestBase{
 		
 		//Edit Functionality 
 		
-		@FindBy(xpath= "(//*[name()='svg'])[36]")
+		@FindBy(xpath= "(//span[@aria-label='edit'])[1]")
 		WebElement edit_button;
 		
 		//Completed Icon - green tick 
@@ -453,7 +453,7 @@ public class MemoListPage extends TestBase{
 				
 				
 				try {
-					Thread.sleep(2000);
+					Thread.sleep(4000);
 				} catch (InterruptedException e) {
 					// TODO Auto-generated catch block
 					e.printStackTrace();
@@ -577,10 +577,28 @@ public class MemoListPage extends TestBase{
 			
 		}
 		
-		public void pagination_functionality()
+		public void pagination_functionality() throws InterruptedException
 		{
-			previous_pagination_button.click();
+			driver.navigate().refresh();
 			
-			next_pagination_button.click();
+			if(previous_pagination_button.isEnabled()== false)
+			{
+				
+				Thread.sleep(1000);
+				next_pagination_button.click();
+				Thread.sleep(2000);
+				next_pagination_button.click();
+				Thread.sleep(2000);
+				previous_pagination_button.click();
+			}
+			else
+			{
+				System.out.println("Pagination functionality is not working..");
+			}
+			
+			
+			
 		}
+		
+		
 }
