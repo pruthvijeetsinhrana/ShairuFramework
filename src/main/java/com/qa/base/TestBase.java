@@ -7,11 +7,14 @@ import java.util.Properties;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.events.EventFiringWebDriver;
 import com.qa.utils.TestUtil;
 import com.qa.utils.WebEventListener;
+
+import io.github.bonigarcia.wdm.WebDriverManager;
 
 /*
   @Created By:  Kushal Parikh
@@ -51,7 +54,10 @@ public class TestBase {
 		
 		if(browserName.equalsIgnoreCase("Chrome")){
 			
-			driver = new ChromeDriver(); 
+			ChromeOptions options  = new ChromeOptions();
+			options.addArguments("--remote-allow-origins=*");
+			WebDriverManager.chromedriver().setup();
+			driver = new ChromeDriver(options); 
 		}
 		else if(browserName.equalsIgnoreCase("Firefox")){
 			
