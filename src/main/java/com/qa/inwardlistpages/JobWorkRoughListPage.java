@@ -95,7 +95,7 @@ public class JobWorkRoughListPage extends TestBase{
 		
 		
 		
-		@FindBy(xpath= "(//input[@type='number'])[3]")
+		@FindBy(xpath= "//input[@name='total_packets']")
 		WebElement TotalPackets;
 		
 		@FindBy(xpath= "(//input[@type='file'])[1]")
@@ -108,10 +108,10 @@ public class JobWorkRoughListPage extends TestBase{
 		WebElement ExchangeType_select;
 		
 		
-		@FindBy(xpath= "(//input[@type='number'])[4]")
+		@FindBy(xpath= "//input[@name='exchange_rate_boe']")
 		WebElement ExchangeRate_BOE;
 		
-		@FindBy(xpath= "(//input[@type='number'])[5]")
+		@FindBy(xpath= "(//input[@name='number'])[1]")
 		WebElement ExchangeRate_RBI;
 		
 		@FindBy(xpath= "(//input[@accept='image/jpg, image/jpeg, image/png'])[1]")
@@ -119,9 +119,9 @@ public class JobWorkRoughListPage extends TestBase{
 		
 		// Total Invoice value in $
 		
-		@FindBy(xpath= "(//input[@type='number'])[6]")
+		@FindBy(xpath= "//input[@name='gross_value_forex']")
 		WebElement GrossValue;
-		@FindBy(xpath= "(//input[@type='number'])[7]")
+		@FindBy(xpath= "//input[@name='expense_forex']")
 		WebElement Expense;
 		
 		// Save buttons of page 
@@ -136,7 +136,7 @@ public class JobWorkRoughListPage extends TestBase{
 		
 		//KP Certificate Details section 
 		
-		@FindBy(xpath= "(//input[@type='text'])[10]")
+		@FindBy(xpath= "//input[@name='certificate_no']")
 		WebElement CertificateNo;
 		
 		@FindBy(xpath= "(//div[@id='react-select-8-placeholder'])[1]")
@@ -159,13 +159,13 @@ public class JobWorkRoughListPage extends TestBase{
 		@FindBy(xpath= "(//input[@placeholder='Select date'])[5]")
 		WebElement BOE_Date;
 		
-		@FindBy(xpath= "(//input[@type='text'])[12]")
+		@FindBy(xpath= "//input[@name='boe_no']")
 		WebElement BOE_No;
 		
-		@FindBy(xpath= "(//input[@type='text'])[13]")
+		@FindBy(xpath= "//input[@name='mawb_no']")
 		WebElement MAWB_No;
 		
-		@FindBy(xpath= "(//input[@type='text'])[14]")
+		@FindBy(xpath= "//input[@name='hawb_no']")
 		WebElement HAWB_No;
 		
 		@FindBy(xpath= "(//input[@placeholder='Select date'])[6]")
@@ -183,10 +183,10 @@ public class JobWorkRoughListPage extends TestBase{
 		
 		// Corresponding Invoice & KP Information
 		
-		@FindBy(xpath= "(//input[@type='text'])[15]")
+		@FindBy(xpath= "(//input[@type='text'])[16]")
 		WebElement Invoice_No;
 		
-		@FindBy(xpath= "(//input[@type='number'])[12]")
+		@FindBy(xpath= "(//input[@type='number'])[11]")
 		WebElement Invoice_Weight;
 		
 		@FindBy(xpath= "(//input[@type='file'])[6]")
@@ -195,7 +195,7 @@ public class JobWorkRoughListPage extends TestBase{
 		@FindBy(xpath= "(//input[@accept='application/pdf, application/excel, application/vnd.ms-excel, application/x-excel, application/x-msexcel, application/vnd.openxmlformats-officedocument.spreadsheetml.sheet, text/csv'])[1]")
 		WebElement Packing_List;
 		
-		@FindBy(xpath= "(//input[@type='text'])[16]")
+		@FindBy(xpath= "(//input[@type='text'])[17]")
 		WebElement KP_Certificate_No;
 		
 		@FindBy(xpath= "(//div[@class=' css-13z0ixq'])[7]")
@@ -221,23 +221,23 @@ public class JobWorkRoughListPage extends TestBase{
 		@FindBy(id= "react-select-10-option-1")
 		WebElement MiningName_select;
 		
-		@FindBy(xpath= "(//button[@type='button'])[28]")
+		@FindBy(xpath= "(//button//span[contains(text(),'Row')])[1]")
 		WebElement row_button1;
 
 		
 		//Document line section
 		
-		@FindBy(xpath= "(//input[@type='text'])[21]")
+		@FindBy(xpath= "(//input[@type='text'])[22]")
 		WebElement KapanNo;
 		
 		
-		@FindBy(xpath= "(//input[@type='text'])[22]")
+		@FindBy(xpath= "(//input[@type='text'])[23]")
 		WebElement Pieces;
 		
-		@FindBy(xpath= "(//input[@type='number'])[13]")
+		@FindBy(xpath= "(//input[@type='number'])[12]")
 		WebElement Carats;
 		
-		@FindBy(xpath= "(//input[@type='number'])[14]")
+		@FindBy(xpath= "(//input[@type='number'])[13]")
 		WebElement Rate;
 		
 		@FindBy(xpath= "(//button[@type='submit'])[3]")
@@ -248,7 +248,7 @@ public class JobWorkRoughListPage extends TestBase{
 		@FindBy(xpath= "/html/body/div[1]/div/section/section/main/div[4]/div[1]/div/div[2]/button")
 		WebElement row_button_Jangad;
 		
-		@FindBy(xpath= "(//input[@type='text'])[24]")
+		@FindBy(xpath= "(//input[@type='text'])[25]")
 		WebElement JangadNo;
 		
 		@FindBy(xpath= "(//div[contains(@class,'css-1d8n9bt')])[11]")
@@ -257,20 +257,52 @@ public class JobWorkRoughListPage extends TestBase{
 		@FindBy(xpath= "(//div[@id='react-select-15-option-2'])[1]")
 		WebElement CourierPartyName_select;
 		
-		@FindBy(xpath= "(//input[@type='text'])[26]")
+		@FindBy(xpath= "(//input[@type='text'])[27]")
 		WebElement CourierNo;
 		
 		@FindBy(xpath= "(//input[@type='file'])[9]")
 		WebElement CourierDocument;
 		
-		@FindBy(xpath= "(//div[contains(@class,'async-select select css-b62m3t-container')])[2]")
+		//1
+		
+		@FindBy(xpath= "(//div[contains(@class,'css-zq61zj-control')])[11]")
 		WebElement Expense1;
 		
-		@FindBy(xpath= "(//div[@id='react-select-11-option-1'])[1]")
+		@FindBy(xpath= "(//div[@id='react-select-16-option-0'])[1]")
 		WebElement Expense1_select;
 		
-		@FindBy(xpath= "(//input[@type='number'])[15]")
+		@FindBy(xpath= "(//input[@type='number'])[14]")
 		WebElement Expense1_value;
+		
+		//2
+		@FindBy(xpath= "(//div[contains(@class,'css-zq61zj-control')])[12]")
+		WebElement Expense2;
+		
+		@FindBy(xpath= "(//div[@id='react-select-17-option-0'])[1]")
+		WebElement Expense2_select;
+		
+		@FindBy(xpath= "(//input[@type='number'])[15]")
+		WebElement Expense2_value;
+		
+		//3
+		@FindBy(xpath= "(//div[contains(@class,'css-zq61zj-control')])[13]")
+		WebElement Expense3;
+		
+		@FindBy(xpath= "(//div[@id='react-select-18-option-0'])[1]")
+		WebElement Expense3_select;
+		
+		@FindBy(xpath= "(//input[@type='number'])[16]")
+		WebElement Expense3_value;
+		
+		//4
+		@FindBy(xpath= "(//div[contains(@class,'css-zq61zj-control')])[14]")
+		WebElement Expense4;
+		
+		@FindBy(xpath= "(//div[@id='react-select-19-option-0'])[1]")
+		WebElement Expense4_select;
+		
+		@FindBy(xpath= "(//input[@type='number'])[17]")
+		WebElement Expense4_value;
 		
 		@FindBy(xpath= "/html[1]/body[1]/div[1]/div[1]/section[1]/section[1]/main[1]/div[4]/form[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/table[1]/tbody[1]/tr[2]/td[13]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]")
 		WebElement appliedfield;
@@ -500,6 +532,12 @@ public class JobWorkRoughListPage extends TestBase{
 			 TestUtil.upload_file(Airwaybill_upload,Commonpath_pdf);
 			
 			 Save_button2.click();
+			 try {
+				Thread.sleep(3000);
+			} catch (InterruptedException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
 			
 		}
 		
@@ -581,11 +619,11 @@ public class JobWorkRoughListPage extends TestBase{
 		{
 			KapanNo.sendKeys(Common_No_random);
 			
-			Pieces.sendKeys(prop.getProperty("Pieces"));
+			//Pieces.sendKeys(prop.getProperty("Pieces"));
 			
-			Carats.sendKeys(prop.getProperty("Carats"));
+			//Carats.sendKeys(prop.getProperty("Carats"));
 			
-			Rate.sendKeys(prop.getProperty("Rate"));
+			//Rate.sendKeys(prop.getProperty("Rate"));
 			
 			WebDriverWait wait = new WebDriverWait(driver,Duration.ofSeconds(20));
 			wait.until(ExpectedConditions.elementToBeClickable(Save_button3));
@@ -635,7 +673,7 @@ public class JobWorkRoughListPage extends TestBase{
 			}
 			
 			
-			CourierNo.sendKeys(prop.getProperty("Common_No"));
+			CourierNo.sendKeys(Common_No_random);
 			
 			
 			 TestUtil.upload_file(CourierDocument,Commonpath_pdf);
@@ -651,13 +689,7 @@ public class JobWorkRoughListPage extends TestBase{
 				
 			
 			 
-				Expense1_value.sendKeys(prop.getProperty("Expense1_value"));
-				
-				JavascriptExecutor js = (JavascriptExecutor) driver;
-				//Scroll down till the bottom of the page
-				js.executeScript("window.scrollBy(0,document.body.scrollHeight)");
-
-				
+				Expense1_value.sendKeys(prop.getProperty("Expense"));
 				
 				appliedfield.click();
 				
@@ -672,8 +704,54 @@ public class JobWorkRoughListPage extends TestBase{
 					TestUtil.navigate_to_option1(appliedfield,appliedfield_select);
 				} catch (InterruptedException e) {
 					// TODO Auto-generated catch block
+				e.printStackTrace();
+				}
+				
+				try {
+					Thread.sleep(2000);
+					TestUtil.navigate_to_option1(Expense2,Expense2_select);
+				} catch (InterruptedException e) {
+					// TODO Auto-generated catch block
 					e.printStackTrace();
 				}
+				
+					
+				
+				
+			
+			 
+				Expense2_value.sendKeys(prop.getProperty("Expense"));
+				
+				try {
+					Thread.sleep(2000);
+					TestUtil.navigate_to_option1(Expense3,Expense3_select);
+				} catch (InterruptedException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+				
+			
+			 
+				Expense3_value.sendKeys(prop.getProperty("Expense"));
+				
+				try {
+					Thread.sleep(2000);
+					TestUtil.navigate_to_option1(Expense4,Expense4_select);
+				} catch (InterruptedException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+				
+			
+			 
+				Expense4_value.sendKeys(prop.getProperty("Expense"));
+				
+				JavascriptExecutor js = (JavascriptExecutor) driver;
+				//Scroll down till the bottom of the page
+				js.executeScript("window.scrollBy(0,document.body.scrollHeight)");
+
+				
+				
 				
 				
 				try {
@@ -697,7 +775,7 @@ public class JobWorkRoughListPage extends TestBase{
 		
 		public void ValidateConfirmationRecord() throws InterruptedException //taken from top Init
 		{
-			String text_record = prop.getProperty("Common_No");
+			String text_record = Common_No_random;
 			
 			
 			WebElement Record_added = driver.findElement(By.xpath("//*[contains(text(),'"+text_record+"')]"));
