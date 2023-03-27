@@ -57,14 +57,19 @@ public class OccupationPageTest extends TestBase {
 	@Test(priority=4)
 	public void Verify_Record_Edited()
 	{	
-		
 		occupationpage.edit_functionality();
 	}
 	
 	@Test(priority=5)
 	public void Verify_Record_ToggleStatus()
 	{	
-		
 		occupationpage.toggle_status();
+	}
+	
+	@Test(priority=6)
+	public void Verify_No_Record_found()
+	{	
+		
+		occupationpage.random_search();  //To check by entering random text & verify no result found.
 	}
 }

@@ -73,6 +73,11 @@ public class OccupationPage extends TestBase {
 	@FindBy(xpath= "(//button[@aria-checked='false'])[1]")
 	WebElement status_false;
 	
+	//Search_no_result
+	@FindBy(xpath= "//div[@class='ant-table-expanded-row-fixed']")
+	WebElement search_noresult_text;
+	
+	
 	
 	
 	
@@ -190,5 +195,17 @@ public class OccupationPage extends TestBase {
 			e.printStackTrace();
 		}
 		Assert.assertTrue(status_false.isDisplayed());
+	}
+	
+	public void random_search()
+	{
+		search_field.sendKeys("TntraTest_NoResultFound");
+		try {
+			Thread.sleep(2000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		Assert.assertTrue(search_noresult_text.isDisplayed());;
 	}
 }

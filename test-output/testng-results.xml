@@ -1,36 +1,40 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="5" passed="5" failed="0" skipped="0">
+<testng-results ignored="0" total="6" passed="6" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-03-27T17:10:07 IST" name="Default suite" finished-at="2023-03-27T17:10:41 IST" duration-ms="34014">
+  <suite started-at="2023-03-27T17:46:37 IST" name="Default suite" finished-at="2023-03-27T17:47:20 IST" duration-ms="43576">
     <groups>
     </groups>
-    <test started-at="2023-03-27T17:10:07 IST" name="Default test" finished-at="2023-03-27T17:10:41 IST" duration-ms="34014">
+    <test started-at="2023-03-27T17:46:37 IST" name="Default test" finished-at="2023-03-27T17:47:20 IST" duration-ms="43576">
       <class name="com.qa.testcases.masterpages.subpages_1.OccupationPageTest">
-        <test-method is-config="true" signature="setup()[pri:0, instance:com.qa.testcases.masterpages.subpages_1.OccupationPageTest@69e153c5]" started-at="2023-03-27T17:10:07 IST" name="setup" finished-at="2023-03-27T17:10:13 IST" duration-ms="5242" status="PASS">
+        <test-method is-config="true" signature="setup()[pri:0, instance:com.qa.testcases.masterpages.subpages_1.OccupationPageTest@173ed316]" started-at="2023-03-27T17:46:37 IST" name="setup" finished-at="2023-03-27T17:46:43 IST" duration-ms="6094" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="Verify_Navigation()[pri:1, instance:com.qa.testcases.masterpages.subpages_1.OccupationPageTest@69e153c5]" started-at="2023-03-27T17:10:13 IST" name="Verify_Navigation" finished-at="2023-03-27T17:10:16 IST" duration-ms="3092" status="PASS">
+        <test-method signature="Verify_Navigation()[pri:1, instance:com.qa.testcases.masterpages.subpages_1.OccupationPageTest@173ed316]" started-at="2023-03-27T17:46:43 IST" name="Verify_Navigation" finished-at="2023-03-27T17:46:46 IST" duration-ms="3147" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Verify_Navigation -->
-        <test-method signature="Verify_Clicking_on_record_btn()[pri:2, instance:com.qa.testcases.masterpages.subpages_1.OccupationPageTest@69e153c5]" started-at="2023-03-27T17:10:16 IST" name="Verify_Clicking_on_record_btn" finished-at="2023-03-27T17:10:18 IST" duration-ms="2109" status="PASS">
+        <test-method signature="Verify_Clicking_on_record_btn()[pri:2, instance:com.qa.testcases.masterpages.subpages_1.OccupationPageTest@173ed316]" started-at="2023-03-27T17:46:46 IST" name="Verify_Clicking_on_record_btn" finished-at="2023-03-27T17:46:48 IST" duration-ms="2169" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Verify_Clicking_on_record_btn -->
-        <test-method signature="Verify_Record_Add()[pri:3, instance:com.qa.testcases.masterpages.subpages_1.OccupationPageTest@69e153c5]" started-at="2023-03-27T17:10:18 IST" name="Verify_Record_Add" finished-at="2023-03-27T17:10:24 IST" duration-ms="6443" status="PASS">
+        <test-method signature="Verify_Record_Add()[pri:3, instance:com.qa.testcases.masterpages.subpages_1.OccupationPageTest@173ed316]" started-at="2023-03-27T17:46:48 IST" name="Verify_Record_Add" finished-at="2023-03-27T17:46:55 IST" duration-ms="6723" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Verify_Record_Add -->
-        <test-method signature="Verify_Record_Edited()[pri:4, instance:com.qa.testcases.masterpages.subpages_1.OccupationPageTest@69e153c5]" started-at="2023-03-27T17:10:24 IST" name="Verify_Record_Edited" finished-at="2023-03-27T17:10:30 IST" duration-ms="5350" status="PASS">
+        <test-method signature="Verify_Record_Edited()[pri:4, instance:com.qa.testcases.masterpages.subpages_1.OccupationPageTest@173ed316]" started-at="2023-03-27T17:46:55 IST" name="Verify_Record_Edited" finished-at="2023-03-27T17:47:06 IST" duration-ms="10821" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Verify_Record_Edited -->
-        <test-method signature="Verify_Record_ToggleStatus()[pri:5, instance:com.qa.testcases.masterpages.subpages_1.OccupationPageTest@69e153c5]" started-at="2023-03-27T17:10:30 IST" name="Verify_Record_ToggleStatus" finished-at="2023-03-27T17:10:41 IST" duration-ms="11733" status="PASS">
+        <test-method signature="Verify_Record_ToggleStatus()[pri:5, instance:com.qa.testcases.masterpages.subpages_1.OccupationPageTest@173ed316]" started-at="2023-03-27T17:47:06 IST" name="Verify_Record_ToggleStatus" finished-at="2023-03-27T17:47:18 IST" duration-ms="12289" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Verify_Record_ToggleStatus -->
+        <test-method signature="Verify_No_Record_found()[pri:6, instance:com.qa.testcases.masterpages.subpages_1.OccupationPageTest@173ed316]" started-at="2023-03-27T17:47:18 IST" name="Verify_No_Record_found" finished-at="2023-03-27T17:47:20 IST" duration-ms="2258" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Verify_No_Record_found -->
       </class> <!-- com.qa.testcases.masterpages.subpages_1.OccupationPageTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
