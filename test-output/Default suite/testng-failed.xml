@@ -3,12 +3,12 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.qa.testcases.inwardlist.JobWorkInspectionPageTest">
+      <class name="com.qa.testcases.masterpages.subpages_1.OccupationPageTest">
         <methods>
           <include name="setup"/>
-          <include name="Verify_search_functionality_test"/>
+          <include name="Verify_Record_Edited"/>
         </methods>
-      </class> <!-- com.qa.testcases.inwardlist.JobWorkInspectionPageTest -->
+      </class> <!-- com.qa.testcases.masterpages.subpages_1.OccupationPageTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
