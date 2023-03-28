@@ -5,8 +5,8 @@
     <classes>
       <class name="com.qa.testcases.masterpages.subpages_1.OccupationPageTest">
         <methods>
+          <include name="Verify_Pagination"/>
           <include name="setup"/>
-          <include name="Verify_Record_Edited"/>
         </methods>
       </class> <!-- com.qa.testcases.masterpages.subpages_1.OccupationPageTest -->
     </classes>

@@ -3,6 +3,7 @@ package com.qa.masterpages.subpages_1;
 import static org.testng.Assert.assertTrue;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
@@ -77,9 +78,23 @@ public class OccupationPage extends TestBase {
 	@FindBy(xpath= "//div[@class='ant-table-expanded-row-fixed']")
 	WebElement search_noresult_text;
 	
+	//Validation msg
+	@FindBy(xpath= "//div[@role='alert']")
+	WebElement validation_msg_text;
+	
+	@FindBy(xpath= "//a[@class='ant-typography']//span[@aria-label='close-circle']")
+	WebElement close_button;
+	
+	//Record Already exists
+	@FindBy(xpath= "//span[normalize-space()='Occupation already exists']")
+	WebElement record_exists_text;
 	
 	
-	
+	//pagination elements
+	@FindBy(xpath= "//li[@title='Next Page']//button[@type='button']")
+	WebElement rightArrow_button;
+	@FindBy(xpath= "//li[@title='Previous Page']//button[@type='button']")
+	WebElement leftArrow_button;
 	
 	
 	
@@ -207,5 +222,81 @@ public class OccupationPage extends TestBase {
 			e.printStackTrace();
 		}
 		Assert.assertTrue(search_noresult_text.isDisplayed());;
+	}
+	
+	public void validation_msg()
+	{
+		Click_on_Record();
+		save_button.click();
+		try {
+			Thread.sleep(2000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		Assert.assertTrue(validation_msg_text.isDisplayed());
+		close_button.click();
+	}
+	
+	public void Record_already_exists()
+	{
+		driver.navigate().refresh();
+		try {
+			Thread.sleep(2000);
+		} catch (InterruptedException e1) {
+			// TODO Auto-generated catch block
+			e1.printStackTrace();
+		}
+		Click_on_Record();
+		occupation_inputfield.sendKeys(Common_No_random);
+		description_inputfield.sendKeys(Common_No_random);
+		save_button.click();
+		
+		try {
+			Thread.sleep(3000);
+			} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		Assert.assertTrue(record_exists_text.isDisplayed());
+		close_button.click();
+	}
+	
+	public void pagination()
+	{
+		driver.navigate().refresh();
+		try {
+			Thread.sleep(2000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		// Click the right arrow button until it is disabled
+        while (rightArrow_button.isEnabled()) {
+        	try {
+        		 ((JavascriptExecutor) driver).executeScript("window.scrollTo(0, document.body.scrollHeight)");
+				Thread.sleep(5000);
+			} catch (InterruptedException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+        	rightArrow_button.click();
+        }
+        System.out.println("Right arrow button is disabled!");
+        
+        // Click the left arrow button until it is disabled
+        while (leftArrow_button.isEnabled()) {
+        	try {
+        		 ((JavascriptExecutor) driver).executeScript("window.scrollTo(0, document.body.scrollHeight)");
+				Thread.sleep(5000);
+			} catch (InterruptedException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+        	leftArrow_button.click();
+        }
+        System.out.println("Left arrow button is disabled!");
+        System.out.println("Pagination functionality is working");
 	}
 }
