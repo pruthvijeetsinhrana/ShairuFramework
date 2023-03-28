@@ -319,8 +319,7 @@ public class JobWorkRoughListPage extends TestBase{
 		
 		
 		
-		@FindBy(xpath= "(//div[@class='ant-table ant-table-bordered ant-table-ping-left ant-table-fixed-column ant-table-scroll-horizontal ant-table-has-fix-right'])[1]")
-		WebElement horizontal_scroll;
+		
 		
 		@FindBy(xpath= "(//span[normalize-space()='Save'])[1]")
 		WebElement Save_finalbutton;
@@ -631,7 +630,7 @@ public class JobWorkRoughListPage extends TestBase{
 			Save_button3.click();
 			
 			try {
-				Thread.sleep(3000);
+				Thread.sleep(5000);
 			} catch (InterruptedException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();

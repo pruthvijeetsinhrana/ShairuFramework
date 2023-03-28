@@ -3,12 +3,17 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.qa.testcases.masterpages.subpages_1.OccupationPageTest">
+      <class name="com.qa.testcases.inwardlist.MemoListPageTest">
         <methods>
-          <include name="Verify_Pagination"/>
+          <include name="pagination_functionality"/>
           <include name="setup"/>
+          <include name="Verify_ValidateDisableFields"/>
+          <include name="Verify_search_functionality_test"/>
+          <include name="Verify_ValidateConfirmationRecord"/>
+          <include name="Verify_fill_data_JangadExpenseDetails"/>
+          <include name="Verify_ValidateEditFunctionality"/>
         </methods>
-      </class> <!-- com.qa.testcases.masterpages.subpages_1.OccupationPageTest -->
+      </class> <!-- com.qa.testcases.inwardlist.MemoListPageTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

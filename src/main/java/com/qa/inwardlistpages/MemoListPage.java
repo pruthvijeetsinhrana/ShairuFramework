@@ -57,10 +57,10 @@ public class MemoListPage extends TestBase{
 		
 		
 		
-		@FindBy(xpath= "(//input[@type='text'])[3]")
+		@FindBy(xpath= "//input[@name='document_no']")
 		WebElement DocumentNo;
 		
-		@FindBy(xpath= "(//input[@type='text'])[4]")
+		@FindBy(xpath= "//input[@name='duration']")
 		WebElement Duration_field;
 		
 		@FindBy(xpath= "(//div[contains(@class,'css-13z0ixq')])[2]")
@@ -77,19 +77,19 @@ public class MemoListPage extends TestBase{
 		WebElement TransactionType_select;
 		
 
-		@FindBy(xpath= "(//input[@type='text'])[7]")
+		@FindBy(xpath= "//input[@name='total_packets']")
 		WebElement TotalPackets;
 		
-		@FindBy(xpath= "(//input[@type='text'])[8]")
+		@FindBy(xpath= "//input[@name='total_pieces']")
 		WebElement TotalPieces;
 		
-		@FindBy(xpath= "(//input[@type='number'])[1]")
+		@FindBy(xpath= "//input[@name='total_carats']")
 		WebElement TotalCarats;
 		
-		@FindBy(xpath= "(//input[@type='text'])[9]")
+		@FindBy(xpath= "//input[@name='inward_pieces']")
 		WebElement InwardPieces;
 		
-		@FindBy(xpath= "(//input[@type='number'])[2]")
+		@FindBy(xpath= "//input[@name='inward_carats']")
 		WebElement InwardCarats;
 		
 		
@@ -103,17 +103,17 @@ public class MemoListPage extends TestBase{
 		WebElement ExchangeType_select;
 		
 		
-		@FindBy(xpath= "(//input[@type='number'])[3]")
+		@FindBy(xpath= "//input[@name='exchange_rate_boe']")
 		WebElement ExchangeRate_BOE;
 		
-		@FindBy(xpath= "(//input[@type='number'])[4]")
+		@FindBy(xpath= "//input[@name='exchange_rate_rbi']")
 		WebElement ExchangeRate_RBI;
 		
 		// Total Invoice value in $
 		
-		@FindBy(xpath= "(//input[@type='number'])[5]")
+		@FindBy(xpath= "//input[@name='gross_value_forex']")
 		WebElement GrossValue;
-		@FindBy(xpath= "(//input[@type='number'])[6]")
+		@FindBy(xpath= "//input[@name='expense_forex']")
 		WebElement Expense;
 		
 		// Save buttons of page 
@@ -126,13 +126,13 @@ public class MemoListPage extends TestBase{
 		WebElement success_msg;
 		
 		
-		@FindBy(xpath= "(//button[@type='button'])[5]")
+		@FindBy(xpath= "(//button[@type='button'])[11]")
 		WebElement row_button1;
 
 		
 		//Document line section
 		
-		@FindBy(xpath= "(//input[@class='ant-input ant-input-status-success'])[1]")
+		@FindBy(xpath= "(//input[@type='text'])[11]")
 		WebElement KapanNo;
 		
 		
@@ -150,7 +150,7 @@ public class MemoListPage extends TestBase{
 		
 		//Jangad Expense Details
 		
-		@FindBy(xpath= "(//button[@type='button'])[7]")
+		@FindBy(xpath= "(//button[@type='button'])[13]")
 		WebElement row_button_Jangad;
 		
 		@FindBy(xpath= "(//input[@type='text'])[14]")
@@ -169,6 +169,7 @@ public class MemoListPage extends TestBase{
 		@FindBy(xpath= "(//input[@type='file'])[2]")
 		WebElement CourierDocument; 
 		
+		//1
 		@FindBy(xpath= "(//div[contains(@class,' css-1d8n9bt')])[8]")
 		WebElement Expense1;
 		
@@ -178,6 +179,36 @@ public class MemoListPage extends TestBase{
 		@FindBy(xpath= "(//input[@type='number'])[13]")
 		WebElement Expense1_value;
 		
+		//2
+				@FindBy(xpath= "(//div[contains(@class,' css-1d8n9bt')])[9]")
+				WebElement Expense2;
+				
+				@FindBy(xpath= "(//div[@id='react-select-10-option-0'])[1]")
+				WebElement Expense2_select;
+				
+				@FindBy(xpath= "(//input[@type='number'])[14]")
+				WebElement Expense2_value;
+				
+				//3
+				@FindBy(xpath= "(//div[contains(@class,' css-1d8n9bt')])[10]")
+				WebElement Expense3;
+				
+				@FindBy(xpath= "(//div[@id='react-select-11-option-0'])[1]")
+				WebElement Expense3_select;
+				
+				@FindBy(xpath= "(//input[@type='number'])[15]")
+				WebElement Expense3_value;
+				
+				//4
+				@FindBy(xpath= "(//div[contains(@class,' css-1d8n9bt')])[11]")
+				WebElement Expense4;
+				
+				@FindBy(xpath= "(//div[@id='react-select-12-option-0'])[1]")
+				WebElement Expense4_select;
+				
+				@FindBy(xpath= "(//input[@type='number'])[16]")
+				WebElement Expense4_value;
+				
 		@FindBy(xpath= "/html[1]/body[1]/div[1]/div[1]/section[1]/section[1]/main[1]/div[3]/form[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/table[1]/tbody[1]/tr[2]/td[13]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]")
 		WebElement appliedfield;
 		
@@ -193,7 +224,7 @@ public class MemoListPage extends TestBase{
 		
 		
 		
-		@FindBy(xpath= "(//button//span[@aria-label='save'])[3]")
+		@FindBy(xpath= "(//button[@type='button'])[19]")
 		WebElement Save_finalbutton;
 		
 		
@@ -357,11 +388,11 @@ public class MemoListPage extends TestBase{
 			}
 			KapanNo.sendKeys(Common_No_random);
 			
-			Pieces.sendKeys(prop.getProperty("Pieces"));
+			//Pieces.sendKeys(prop.getProperty("Pieces"));
 			
-			Carats.sendKeys(prop.getProperty("Carats"));
+			//Carats.sendKeys(prop.getProperty("Carats"));
 			
-			Rate.sendKeys(prop.getProperty("Rate"));
+			//Rate.sendKeys(prop.getProperty("Rate"));
 			
 			WebDriverWait wait1 = new WebDriverWait(driver,Duration.ofSeconds(20));
 			wait1.until(ExpectedConditions.elementToBeClickable(Save_button3));
@@ -417,8 +448,7 @@ public class MemoListPage extends TestBase{
 			 TestUtil.upload_file(CourierDocument,Commonpath_pdf);
 			 
 			 
-
-				try {
+			 try {
 					TestUtil.navigate_to_option1(Expense1,Expense1_select);
 				} catch (InterruptedException e) {
 					// TODO Auto-generated catch block
@@ -427,15 +457,66 @@ public class MemoListPage extends TestBase{
 				
 			
 			 
-				Expense1_value.sendKeys(prop.getProperty("Expense1_value"));
+				Expense1_value.sendKeys(prop.getProperty("Expense"));
+				
+				appliedfield.click();
+				
+				try {
+					Thread.sleep(1000);
+				} catch (InterruptedException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+				
+				try {
+					TestUtil.navigate_to_option1(appliedfield,appliedfield_select);
+				} catch (InterruptedException e) {
+					// TODO Auto-generated catch block
+				e.printStackTrace();
+				}
+				
+				try {
+					Thread.sleep(2000);
+					TestUtil.navigate_to_option1(Expense2,Expense2_select);
+				} catch (InterruptedException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+				
+					
+				
+				
+			
+			 
+				Expense2_value.sendKeys(prop.getProperty("Expense"));
+				
+				try {
+					Thread.sleep(2000);
+					TestUtil.navigate_to_option1(Expense3,Expense3_select);
+				} catch (InterruptedException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+				
+			
+			 
+				Expense3_value.sendKeys(prop.getProperty("Expense"));
+				
+				try {
+					Thread.sleep(2000);
+					TestUtil.navigate_to_option1(Expense4,Expense4_select);
+				} catch (InterruptedException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+				
+			
+			 
+				Expense4_value.sendKeys(prop.getProperty("Expense"));
 				
 				JavascriptExecutor js = (JavascriptExecutor) driver;
 				//Scroll down till the bottom of the page
 				js.executeScript("window.scrollBy(0,document.body.scrollHeight)");
-
-				
-				
-				appliedfield.click();
 				
 				try {
 					Thread.sleep(1000);
@@ -453,7 +534,7 @@ public class MemoListPage extends TestBase{
 				
 				
 				try {
-					Thread.sleep(4000);
+					Thread.sleep(5000);
 				} catch (InterruptedException e) {
 					// TODO Auto-generated catch block
 					e.printStackTrace();

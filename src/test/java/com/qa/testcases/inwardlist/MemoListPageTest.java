@@ -67,6 +67,8 @@ public class MemoListPageTest extends TestBase {
 		memolistlistpage.fill_data_JangadExpenseDetails();
 		
 	}
+	
+	
 
 	@Test(priority=6)
 	public void  Verify_ValidateConfirmationRecord() throws InterruptedException
@@ -102,4 +104,6 @@ public class MemoListPageTest extends TestBase {
 		memolistlistpage.pagination_functionality();
 		
 	}
+	
+	
 }
