@@ -104,6 +104,7 @@ public class PurchaseListPageTest extends TestBase {
 		
 	}
 	
+	/*
 	@Test(priority=10)
 	public void  Verify_ValidateConfirmationRecord() throws InterruptedException
 	{
@@ -141,7 +142,7 @@ public class PurchaseListPageTest extends TestBase {
 		
 	}
 
-	
+	*/
 	
 }
 

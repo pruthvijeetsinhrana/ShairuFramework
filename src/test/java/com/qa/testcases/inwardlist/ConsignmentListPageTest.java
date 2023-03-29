@@ -118,4 +118,6 @@ public class ConsignmentListPageTest extends TestBase {
 		consignmentlistpage.pagination_functionality();
 		
 	}
+	
+	
 }
