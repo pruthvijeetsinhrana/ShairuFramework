@@ -104,6 +104,6 @@ public class MemoListPageTest extends TestBase {
 		memolistlistpage.pagination_functionality();
 		
 	}
-	
+
 	
 }

@@ -224,7 +224,7 @@ public class MemoListPage extends TestBase{
 		
 		
 		
-		@FindBy(xpath= "(//button[@type='button'])[19]")
+		@FindBy(xpath= "//button[@type='button']//span[@aria-label='save']")
 		WebElement Save_finalbutton;
 		
 		
@@ -462,7 +462,7 @@ public class MemoListPage extends TestBase{
 				appliedfield.click();
 				
 				try {
-					Thread.sleep(1000);
+					Thread.sleep(2000);
 				} catch (InterruptedException e) {
 					// TODO Auto-generated catch block
 					e.printStackTrace();
@@ -518,23 +518,13 @@ public class MemoListPage extends TestBase{
 				//Scroll down till the bottom of the page
 				js.executeScript("window.scrollBy(0,document.body.scrollHeight)");
 				
-				try {
-					Thread.sleep(1000);
-				} catch (InterruptedException e) {
-					// TODO Auto-generated catch block
-					e.printStackTrace();
-				}
 				
-				try {
-					TestUtil.navigate_to_option1(appliedfield,appliedfield_select);
-				} catch (InterruptedException e) {
-					// TODO Auto-generated catch block
-					e.printStackTrace();
-				}
+				
+				
 				
 				
 				try {
-					Thread.sleep(5000);
+					Thread.sleep(3000);
 				} catch (InterruptedException e) {
 					// TODO Auto-generated catch block
 					e.printStackTrace();

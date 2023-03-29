@@ -319,7 +319,7 @@ public class PurchaseListPage extends TestBase{
 		@FindBy(xpath= "(//div[@class='ant-table ant-table-bordered ant-table-ping-left ant-table-fixed-column ant-table-scroll-horizontal ant-table-has-fix-right'])[1]")
 		WebElement horizontal_scroll;
 		
-		@FindBy(xpath= "(//span[normalize-space()='Save'])[1]")
+		@FindBy(xpath= "//button[@type='button']//span[@aria-label='save']")
 		WebElement Save_finalbutton;
 		
 		//Confirmation Record - record added successfully
