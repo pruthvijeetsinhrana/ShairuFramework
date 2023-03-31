@@ -96,6 +96,12 @@
         <artifactId>javase</artifactId>
         <version>3.3.0</version>
     </dependency>
+    
+    <dependency>
+	    <groupId>com.github.javafaker</groupId>
+	    <artifactId>javafaker</artifactId>
+	    <version>0.15</version>
+	</dependency>
 
 	</dependencies>
 </project>

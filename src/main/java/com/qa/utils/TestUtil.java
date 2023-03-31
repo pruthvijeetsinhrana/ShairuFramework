@@ -28,6 +28,7 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import com.github.javafaker.Faker;
 import com.qa.base.TestBase;
 
 public class TestUtil extends TestBase {
@@ -302,6 +303,66 @@ public class TestUtil extends TestBase {
 
 		    return generatedString;
 		    
+		}
+		
+		public static String RandomEmailGenerator()
+		{
+			Faker faker = new Faker();
+			String random_email =  faker.internet().emailAddress(); 
+			return random_email;
+		}
+		
+		public static String RandomNameGenerator()
+		{
+			Faker faker = new Faker();
+			String random_name =  faker.name().fullName(); 
+			return random_name;
+		}
+		
+		public static String RandomCompanyGenerator()
+		{
+			Faker faker = new Faker();
+			String random_company =  faker.company().name(); 
+			return random_company;
+		}
+		
+		public static String RandomAddressGenerator()
+		{
+			Faker faker = new Faker();
+			String random_address =  faker.name().fullName()+","
+					+ "\n" + faker.address().streetAddress()+","
+					+"\n" + faker.address().cityName()+","
+					+"\n" + faker.address().zipCode(); 
+			
+			return random_address; 
+		}
+		
+		public static String RandomPhoneNumberGenerator()
+		{
+			Faker faker = new Faker();
+			String random_number =  faker.phoneNumber().phoneNumber(); 
+			return random_number;
+		}
+		
+		public static String RandomMobileNumberGenerator()
+		{
+			Faker faker = new Faker();
+			String random_number =  faker.phoneNumber().cellPhone(); 
+			return random_number;
+		}
+		
+		public static String RandomWebsiteGenerator()
+		{
+			Faker faker = new Faker();
+			String random_website =  "https://www."+faker.internet().domainName();  
+			return random_website;
+		}
+		
+		public static String RandomUserIDGenerator()
+		{
+			Faker faker = new Faker();
+			String random_id = "@"+faker.name().username();  
+			return random_id;
 		}
 		
 }

@@ -3,17 +3,12 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.qa.testcases.masterpages.subpages_2.PartySubCategoryPageTest">
+      <class name="com.qa.testcases.masterpages.subpages_3.ExchangeTypePageTest">
         <methods>
-          <include name="Verify_Record_ToggleStatus"/>
-          <include name="Verify_Record_Edited"/>
-          <include name="Verify_Record_Already_exists"/>
-          <include name="Verify_Validation_with_no_data"/>
-          <include name="Verify_No_Record_found"/>
-          <include name="Verify_Pagination"/>
           <include name="setup"/>
+          <include name="Verify_Pagination"/>
         </methods>
-      </class> <!-- com.qa.testcases.masterpages.subpages_2.PartySubCategoryPageTest -->
+      </class> <!-- com.qa.testcases.masterpages.subpages_3.ExchangeTypePageTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
