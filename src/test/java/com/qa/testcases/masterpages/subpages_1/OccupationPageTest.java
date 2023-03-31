@@ -34,19 +34,19 @@ public class OccupationPageTest extends TestBase {
 //	}
 	
 	@Test(priority=1)
-	public void Verify_Navigation_to_menupage()
+	public void Verify_Navigation_to_menupage()   // To check navigation to sub menu
 	{	
-		occupationpage.Navigate_occupation_menu();
+		occupationpage.Navigate_sub_menu();
 	}
 	
 	@Test(priority=2)
-	public void Verify_Clicking_on_record_btn()
-	{	
+	public void Verify_Clicking_on_record_btn()   // To check click on Record button
+	{	 
 		occupationpage.Click_on_Record();
 	}
 	
 	@Test(priority=3)
-	public void Verify_Record_Add()
+	public void Verify_Record_Add()   // To check by adding record & verifying it is created or not.
 	{	
 		occupationpage.add_data_record();
 	}

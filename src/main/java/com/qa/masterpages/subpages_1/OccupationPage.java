@@ -1,7 +1,5 @@
 package com.qa.masterpages.subpages_1;
 
-import static org.testng.Assert.assertTrue;
-
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
@@ -32,7 +30,7 @@ public class OccupationPage extends TestBase {
 	
 	//Add record -data fields
 	@FindBy(xpath= "//input[@type='text']")
-	WebElement occupation_inputfield;
+	WebElement data_inputfield;
 	
 	@FindBy(xpath= "//textarea[@type='textArea']")
 	WebElement description_inputfield;
@@ -112,7 +110,7 @@ public class OccupationPage extends TestBase {
 	}
 	
 	
-	public void Navigate_occupation_menu() 
+	public void Navigate_sub_menu() 
 	{
 		try {
 			//TestUtil.navigate_to_option1(Master_menu,Occupation_menu);
@@ -127,7 +125,7 @@ public class OccupationPage extends TestBase {
 	public void Click_on_Record()
 	{
 		try {
-			Thread.sleep(2000);
+			Thread.sleep(3000);
 			plus_record_btn.click();
 		} catch (InterruptedException e) {
 			// TODO Auto-generated catch block
@@ -138,7 +136,7 @@ public class OccupationPage extends TestBase {
 	
 	public void add_data_record()
 	{
-		occupation_inputfield.sendKeys(Common_No_random);
+		data_inputfield.sendKeys(Common_No_random);
 		description_inputfield.sendKeys(Common_No_random);
 		save_button.click();
 		
@@ -166,10 +164,10 @@ public class OccupationPage extends TestBase {
 		edit_button.click();
 		try {
 			Thread.sleep(3000);
-			occupation_inputfield.sendKeys(Common_No_random);
+			data_inputfield.sendKeys(Common_No_random);
 			description_inputfield.sendKeys(Common_No_random);
 			check_button.click();
-			Thread.sleep(2000);
+			Thread.sleep(3000);
 		} catch (InterruptedException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -192,11 +190,11 @@ public class OccupationPage extends TestBase {
 		checkeded2_button.click();
 		checkeded3_button.click();
 		try {
-			Thread.sleep(2000);
+			Thread.sleep(3000);
 			record_delete_button.click();
 			Thread.sleep(2000);
 			record_delete_yes_button.click();
-			Thread.sleep(2000);
+			Thread.sleep(3000);
 		} catch (InterruptedException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -204,7 +202,7 @@ public class OccupationPage extends TestBase {
 		
 		Assert.assertTrue(toggle_status_msg.isDisplayed());
 		try {
-			Thread.sleep(2000);
+			Thread.sleep(3000);
 		} catch (InterruptedException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -216,7 +214,7 @@ public class OccupationPage extends TestBase {
 	{
 		search_field.sendKeys("TntraTest_NoResultFound");
 		try {
-			Thread.sleep(2000);
+			Thread.sleep(3000);
 		} catch (InterruptedException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -242,13 +240,13 @@ public class OccupationPage extends TestBase {
 	{
 		driver.navigate().refresh();
 		try {
-			Thread.sleep(2000);
+			Thread.sleep(3000);
 		} catch (InterruptedException e1) {
 			// TODO Auto-generated catch block
 			e1.printStackTrace();
 		}
 		Click_on_Record();
-		occupation_inputfield.sendKeys(Common_No_random);
+		data_inputfield.sendKeys(Common_No_random);
 		description_inputfield.sendKeys(Common_No_random);
 		save_button.click();
 		
@@ -264,39 +262,49 @@ public class OccupationPage extends TestBase {
 	}
 	
 	public void pagination()
-	{
-		driver.navigate().refresh();
-		try {
-			Thread.sleep(2000);
-		} catch (InterruptedException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-		// Click the right arrow button until it is disabled
-        while (rightArrow_button.isEnabled()) {
-        	try {
-        		 ((JavascriptExecutor) driver).executeScript("window.scrollTo(0, document.body.scrollHeight)");
-				Thread.sleep(5000);
-			} catch (InterruptedException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			}
-        	rightArrow_button.click();
-        }
-        System.out.println("Right arrow button is disabled!");
-        
-        // Click the left arrow button until it is disabled
-        while (leftArrow_button.isEnabled()) {
-        	try {
-        		 ((JavascriptExecutor) driver).executeScript("window.scrollTo(0, document.body.scrollHeight)");
-				Thread.sleep(5000);
-			} catch (InterruptedException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			}
-        	leftArrow_button.click();
-        }
-        System.out.println("Left arrow button is disabled!");
-        System.out.println("Pagination functionality is working");
+	{driver.navigate().refresh();
+	try {
+		Thread.sleep(2000);
+	} catch (InterruptedException e) {
+		// TODO Auto-generated catch block
+		e.printStackTrace();
 	}
+	// Click the right arrow button until it is disabled
+	// Click the right arrow button until it is disabled or 5 clicks have been made
+	int countRight = 0;
+	while (rightArrow_button.isEnabled() && countRight < 5) {
+	    try {
+	        ((JavascriptExecutor) driver).executeScript("window.scrollTo(0, document.body.scrollHeight)");
+	        Thread.sleep(5000);
+	    } catch (InterruptedException e) {
+	        e.printStackTrace();
+	    }
+	    rightArrow_button.click();
+	    countRight++;
+	}
+	if (countRight == 5) {
+	    System.out.println("Maximum count of clicks on rightArrow_button reached!");
+	} else {
+	    System.out.println("Right arrow button is disabled!");
+	}
+
+	// Click the left arrow button until it is disabled or 5 clicks have been made
+	int countLeft = 0;
+	while (leftArrow_button.isEnabled() && countLeft < 5) {
+	    try {
+	        ((JavascriptExecutor) driver).executeScript("window.scrollTo(0, document.body.scrollHeight)");
+	        Thread.sleep(5000);
+	    } catch (InterruptedException e) {
+	        e.printStackTrace();
+	    }
+	    leftArrow_button.click();
+	    countLeft++;
+	}
+	if (countLeft == 5) {
+	    System.out.println("Maximum count of clicks on leftArrow_button reached!");
+	} else {
+	    System.out.println("Left arrow button is disabled!");
+	}
+
+}
 }

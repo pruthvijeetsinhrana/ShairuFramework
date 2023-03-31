@@ -3,12 +3,17 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.qa.testcases.inwardlist.ConsignmentListPageTest">
+      <class name="com.qa.testcases.masterpages.subpages_2.PartySubCategoryPageTest">
         <methods>
-          <include name="Verify_fill_data_KPCertificateDetails"/>
+          <include name="Verify_Record_ToggleStatus"/>
+          <include name="Verify_Record_Edited"/>
+          <include name="Verify_Record_Already_exists"/>
+          <include name="Verify_Validation_with_no_data"/>
+          <include name="Verify_No_Record_found"/>
+          <include name="Verify_Pagination"/>
           <include name="setup"/>
         </methods>
-      </class> <!-- com.qa.testcases.inwardlist.ConsignmentListPageTest -->
+      </class> <!-- com.qa.testcases.masterpages.subpages_2.PartySubCategoryPageTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

@@ -53,8 +53,9 @@ public class TestBase {
 		String browserName = prop.getProperty("browser");
 		
 		if(browserName.equalsIgnoreCase("Chrome")){
-			
+					
 			ChromeOptions options  = new ChromeOptions();
+			
 			options.addArguments("--remote-allow-origins=*");
 			WebDriverManager.chromedriver().setup();
 			driver = new ChromeDriver(options); 
@@ -91,5 +92,7 @@ public class TestBase {
 		driver.get(prop.getProperty("url"));
 		
 	}
+	
+	
 
 }
