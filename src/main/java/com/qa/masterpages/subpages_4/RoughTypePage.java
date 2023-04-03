@@ -1,4 +1,4 @@
-package com.qa.masterpages.subpages_1;
+package com.qa.masterpages.subpages_4;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
@@ -10,7 +10,7 @@ import org.testng.Assert;
 import com.qa.base.TestBase;
 import com.qa.utils.TestUtil;
 
-public class OccupationPage extends TestBase {
+public class RoughTypePage extends TestBase {
 	
 	//Random String generated for : Document Number & all 
 		String Common_No_random	= TestUtil.RandomStringGenerator();
@@ -21,8 +21,8 @@ public class OccupationPage extends TestBase {
 	@FindBy(xpath= "(//span[normalize-space()='Master'])[1]")
 	WebElement Master_menu;
 	
-	@FindBy(xpath= "//a[normalize-space()='Occupation']")
-	WebElement Occupation_menu;
+	@FindBy(xpath= "//a[normalize-space()='Rough Type']")
+	WebElement RoughType_menu;
 	
 	//Plus Record Button
 	@FindBy(xpath= "//button[@class='ant-btn ant-btn-default ant-btn-lg btn-orange btn-table-top']")
@@ -84,7 +84,7 @@ public class OccupationPage extends TestBase {
 	WebElement close_button;
 	
 	//Record Already exists
-	@FindBy(xpath= "//span[normalize-space()='Occupation already exists']")
+	@FindBy(xpath= "//span[normalize-space()='Rough type already exists']")
 	WebElement record_exists_text;
 	
 	
@@ -95,7 +95,7 @@ public class OccupationPage extends TestBase {
 	WebElement leftArrow_button;
 	
 	
-	public OccupationPage()
+	public RoughTypePage()
 	{
 		PageFactory.initElements(driver, this);
 	}
@@ -106,7 +106,7 @@ public class OccupationPage extends TestBase {
 		try {
 			//TestUtil.navigate_to_option1(Master_menu,Occupation_menu);
 			Thread.sleep(3000);
-			Occupation_menu.click();
+			RoughType_menu.click();
 		} catch (InterruptedException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();

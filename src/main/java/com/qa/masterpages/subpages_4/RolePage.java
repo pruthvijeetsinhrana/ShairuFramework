@@ -1,4 +1,4 @@
-package com.qa.masterpages.subpages_1;
+package com.qa.masterpages.subpages_4;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
@@ -10,7 +10,7 @@ import org.testng.Assert;
 import com.qa.base.TestBase;
 import com.qa.utils.TestUtil;
 
-public class OccupationPage extends TestBase {
+public class RolePage extends TestBase {
 	
 	//Random String generated for : Document Number & all 
 		String Common_No_random	= TestUtil.RandomStringGenerator();
@@ -21,7 +21,7 @@ public class OccupationPage extends TestBase {
 	@FindBy(xpath= "(//span[normalize-space()='Master'])[1]")
 	WebElement Master_menu;
 	
-	@FindBy(xpath= "//a[normalize-space()='Occupation']")
+	@FindBy(xpath= "//a[normalize-space()='Role']")
 	WebElement Occupation_menu;
 	
 	//Plus Record Button
@@ -84,7 +84,7 @@ public class OccupationPage extends TestBase {
 	WebElement close_button;
 	
 	//Record Already exists
-	@FindBy(xpath= "//span[normalize-space()='Occupation already exists']")
+	@FindBy(xpath= "//span[normalize-space()='Role already exists']")
 	WebElement record_exists_text;
 	
 	
@@ -95,7 +95,7 @@ public class OccupationPage extends TestBase {
 	WebElement leftArrow_button;
 	
 	
-	public OccupationPage()
+	public RolePage()
 	{
 		PageFactory.initElements(driver, this);
 	}

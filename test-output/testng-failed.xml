@@ -3,12 +3,12 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.qa.testcases.masterpages.subpages_3.ExchangeTypePageTest">
+      <class name="com.qa.testcases.masterpages.subpages_3.CityPageTest">
         <methods>
           <include name="setup"/>
-          <include name="Verify_Pagination"/>
+          <include name="Verify_Record_Add"/>
         </methods>
-      </class> <!-- com.qa.testcases.masterpages.subpages_3.ExchangeTypePageTest -->
+      </class> <!-- com.qa.testcases.masterpages.subpages_3.CityPageTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
