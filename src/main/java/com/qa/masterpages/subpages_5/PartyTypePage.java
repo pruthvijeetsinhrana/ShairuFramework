@@ -1,4 +1,4 @@
-package com.qa.masterpages.subpages_1;
+package com.qa.masterpages.subpages_5;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
@@ -10,7 +10,7 @@ import org.testng.Assert;
 import com.qa.base.TestBase;
 import com.qa.utils.TestUtil;
 
-public class OccupationPage extends TestBase {
+public class PartyTypePage extends TestBase {
 	
 	//Random String generated for : Document Number & all 
 		String Common_No_random	= TestUtil.RandomStringGenerator();
@@ -21,19 +21,33 @@ public class OccupationPage extends TestBase {
 	@FindBy(xpath= "(//span[normalize-space()='Master'])[1]")
 	WebElement Master_menu;
 	
-	@FindBy(xpath= "//a[normalize-space()='Occupation']")
-	WebElement Occupation_menu;
+	@FindBy(xpath= "//a[normalize-space()='Party Type']")
+	WebElement PartyType_menu;
 	
 	//Plus Record Button
 	@FindBy(xpath= "//button[@class='ant-btn ant-btn-default ant-btn-lg btn-orange btn-table-top']")
 	WebElement plus_record_btn;
 	
 	//Add record -data fields
-	@FindBy(xpath= "//input[@type='text']")
+	@FindBy(xpath= "//input[@class='ant-input ant-input-sm']")
 	WebElement data_inputfield;
 	
 	@FindBy(xpath= "//textarea[@type='textArea']")
 	WebElement description_inputfield;
+	
+	@FindBy(xpath= "(//div[@class=' css-13z0ixq'])[1]")
+	WebElement select1_type;
+	@FindBy(xpath= "//div[@id='react-select-2-option-1']")
+	WebElement select1_select;
+	
+	@FindBy(xpath= "(//div[@class=' css-13z0ixq'])[2]")
+	WebElement select2_type;
+	@FindBy(xpath= "//div[@id='react-select-3-option-1']")
+	WebElement select2_select;
+	
+	@FindBy(xpath= "//input[@name='tds']")
+	WebElement TDS_checkbox;
+	
 	
 	@FindBy(xpath= "//span[@aria-label='save']")
 	WebElement save_button;
@@ -55,9 +69,9 @@ public class OccupationPage extends TestBase {
 	//Toggle status - check tick 
 	@FindBy(xpath= "(//input[@type='checkbox'])[2]")
 	WebElement checkeded1_button;
-	@FindBy(xpath= "(//input[@type='checkbox'])[3]")
+	@FindBy(xpath= "(//input[@type='checkbox'])[17]")
 	WebElement checkeded2_button;
-	@FindBy(xpath= "(//input[@type='checkbox'])[4]")
+	@FindBy(xpath= "(//input[@type='checkbox'])[32]")
 	WebElement checkeded3_button;
 	
 	
@@ -84,7 +98,7 @@ public class OccupationPage extends TestBase {
 	WebElement close_button;
 	
 	//Record Already exists
-	@FindBy(xpath= "//span[normalize-space()='Occupation already exists']")
+	@FindBy(xpath= "//span[normalize-space()='Party Type already exists']")
 	WebElement record_exists_text;
 	
 	
@@ -95,7 +109,9 @@ public class OccupationPage extends TestBase {
 	WebElement leftArrow_button;
 	
 	
-	public OccupationPage()
+	
+	
+	public PartyTypePage()
 	{
 		PageFactory.initElements(driver, this);
 	}
@@ -106,7 +122,7 @@ public class OccupationPage extends TestBase {
 		try {
 			//TestUtil.navigate_to_option1(Master_menu,Occupation_menu);
 			Thread.sleep(3000);
-			Occupation_menu.click();
+			PartyType_menu.click();
 		} catch (InterruptedException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -116,7 +132,7 @@ public class OccupationPage extends TestBase {
 	public void Click_on_Record()
 	{
 		try {
-			Thread.sleep(3000);
+			Thread.sleep(2000);
 			plus_record_btn.click();
 		} catch (InterruptedException e) {
 			// TODO Auto-generated catch block
@@ -128,7 +144,29 @@ public class OccupationPage extends TestBase {
 	public void add_data_record()
 	{
 		data_inputfield.sendKeys(Common_No_random);
-		description_inputfield.sendKeys(Common_No_random);
+		
+		try {
+			TestUtil.navigate_to_option1(select1_type,select1_select);			
+		} catch (InterruptedException e1) {
+			// TODO Auto-generated catch block
+			e1.printStackTrace();
+		}
+		try {
+			TestUtil.navigate_to_option1(select2_type,select2_select);			
+		} catch (InterruptedException e1) {
+			// TODO Auto-generated catch block
+			e1.printStackTrace();
+		}
+		TDS_checkbox.click();
+		try {
+			
+			Thread.sleep(3000);
+			description_inputfield.sendKeys(Common_No_random);
+		} catch (InterruptedException e1) {
+			// TODO Auto-generated catch block
+			e1.printStackTrace();
+		}
+		
 		save_button.click();
 		
 		try {
@@ -156,9 +194,9 @@ public class OccupationPage extends TestBase {
 		try {
 			Thread.sleep(3000);
 			data_inputfield.sendKeys(Common_No_random);
-			description_inputfield.sendKeys(Common_No_random);
+			//description_inputfield.sendKeys(Common_No_random);
 			check_button.click();
-			Thread.sleep(3000);
+			Thread.sleep(2000);
 		} catch (InterruptedException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -173,19 +211,22 @@ public class OccupationPage extends TestBase {
 		driver.navigate().refresh();
 		try {
 			Thread.sleep(5000);
+			checkeded1_button.click();
+			Thread.sleep(1000);
+			checkeded2_button.click();
+			Thread.sleep(1000);
+			checkeded3_button.click();
 		} catch (InterruptedException e1) {
 			// TODO Auto-generated catch block
 			e1.printStackTrace();
 		}
-		checkeded1_button.click();
-		checkeded2_button.click();
-		checkeded3_button.click();
+		
 		try {
-			Thread.sleep(3000);
+			Thread.sleep(2000);
 			record_delete_button.click();
 			Thread.sleep(2000);
 			record_delete_yes_button.click();
-			Thread.sleep(3000);
+			Thread.sleep(2000);
 		} catch (InterruptedException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -193,7 +234,7 @@ public class OccupationPage extends TestBase {
 		
 		Assert.assertTrue(toggle_status_msg.isDisplayed());
 		try {
-			Thread.sleep(3000);
+			Thread.sleep(2000);
 		} catch (InterruptedException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -205,7 +246,7 @@ public class OccupationPage extends TestBase {
 	{
 		search_field.sendKeys("TntraTest_NoResultFound");
 		try {
-			Thread.sleep(3000);
+			Thread.sleep(2000);
 		} catch (InterruptedException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -231,14 +272,35 @@ public class OccupationPage extends TestBase {
 	{
 		driver.navigate().refresh();
 		try {
-			Thread.sleep(3000);
+			Thread.sleep(2000);
 		} catch (InterruptedException e1) {
 			// TODO Auto-generated catch block
 			e1.printStackTrace();
 		}
 		Click_on_Record();
 		data_inputfield.sendKeys(Common_No_random);
-		description_inputfield.sendKeys(Common_No_random);
+		//description_inputfield.sendKeys(Common_No_random);
+		try {
+			TestUtil.navigate_to_option1(select1_type,select1_select);			
+		} catch (InterruptedException e1) {
+			// TODO Auto-generated catch block
+			e1.printStackTrace();
+		}
+		try {
+			Thread.sleep(3000);
+			TestUtil.navigate_to_option1(select2_type,select2_select);			
+		} catch (InterruptedException e1) {
+			// TODO Auto-generated catch block
+			e1.printStackTrace();
+		}
+		TDS_checkbox.click();
+		try {
+			Thread.sleep(3000);
+			description_inputfield.sendKeys(Common_No_random);
+		} catch (InterruptedException e1) {
+			// TODO Auto-generated catch block
+			e1.printStackTrace();
+		}
 		save_button.click();
 		
 		try {
@@ -253,49 +315,39 @@ public class OccupationPage extends TestBase {
 	}
 	
 	public void pagination()
-	{driver.navigate().refresh();
-	try {
-		Thread.sleep(2000);
-	} catch (InterruptedException e) {
-		// TODO Auto-generated catch block
-		e.printStackTrace();
+	{
+		driver.navigate().refresh();
+		try {
+			Thread.sleep(2000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		// Click the right arrow button until it is disabled
+        while (rightArrow_button.isEnabled()) {
+        	try {
+        		 ((JavascriptExecutor) driver).executeScript("window.scrollTo(0, document.body.scrollHeight)");
+				Thread.sleep(5000);
+			} catch (InterruptedException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+        	rightArrow_button.click();
+        }
+        System.out.println("Right arrow button is disabled!");
+        
+        // Click the left arrow button until it is disabled
+        while (leftArrow_button.isEnabled()) {
+        	try {
+        		 ((JavascriptExecutor) driver).executeScript("window.scrollTo(0, document.body.scrollHeight)");
+				Thread.sleep(5000);
+			} catch (InterruptedException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+        	leftArrow_button.click();
+        }
+        System.out.println("Left arrow button is disabled!");
+        System.out.println("Pagination functionality is working");
 	}
-	// Click the right arrow button until it is disabled
-	// Click the right arrow button until it is disabled or 5 clicks have been made
-	int countRight = 0;
-	while (rightArrow_button.isEnabled() && countRight < 5) {
-	    try {
-	        ((JavascriptExecutor) driver).executeScript("window.scrollTo(0, document.body.scrollHeight)");
-	        Thread.sleep(5000);
-	    } catch (InterruptedException e) {
-	        e.printStackTrace();
-	    }
-	    rightArrow_button.click();
-	    countRight++;
-	}
-	if (countRight == 5) {
-	    System.out.println("Maximum count of clicks on rightArrow_button reached!");
-	} else {
-	    System.out.println("Right arrow button is disabled!");
-	}
-
-	// Click the left arrow button until it is disabled or 5 clicks have been made
-	int countLeft = 0;
-	while (leftArrow_button.isEnabled() && countLeft < 5) {
-	    try {
-	        ((JavascriptExecutor) driver).executeScript("window.scrollTo(0, document.body.scrollHeight)");
-	        Thread.sleep(5000);
-	    } catch (InterruptedException e) {
-	        e.printStackTrace();
-	    }
-	    leftArrow_button.click();
-	    countLeft++;
-	}
-	if (countLeft == 5) {
-	    System.out.println("Maximum count of clicks on leftArrow_button reached!");
-	} else {
-	    System.out.println("Left arrow button is disabled!");
-	}
-
-}
 }
