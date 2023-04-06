@@ -1,45 +1,133 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="7" passed="7" failed="0" skipped="0">
+<testng-results ignored="0" total="9" passed="8" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-03-29T11:40:24 IST" name="Default suite" finished-at="2023-03-29T11:42:23 IST" duration-ms="118544">
+  <suite started-at="2023-04-04T16:46:41 IST" name="Default suite" finished-at="2023-04-04T16:48:15 IST" duration-ms="94256">
     <groups>
     </groups>
-    <test started-at="2023-03-29T11:40:24 IST" name="Default test" finished-at="2023-03-29T11:42:23 IST" duration-ms="118544">
-      <class name="com.qa.testcases.inwardlist.ConsignmentListPageTest">
-        <test-method is-config="true" signature="setup()[pri:0, instance:com.qa.testcases.inwardlist.ConsignmentListPageTest@25ce9dc4]" started-at="2023-03-29T11:40:24 IST" name="setup" finished-at="2023-03-29T11:40:28 IST" duration-ms="4077" status="PASS">
+    <test started-at="2023-04-04T16:46:41 IST" name="Default test" finished-at="2023-04-04T16:48:15 IST" duration-ms="94256">
+      <class name="com.qa.testcases.masterpages.subpages_5.RegionPageTest">
+        <test-method is-config="true" signature="setup()[pri:0, instance:com.qa.testcases.masterpages.subpages_5.RegionPageTest@54422e18]" started-at="2023-04-04T16:46:41 IST" name="setup" finished-at="2023-04-04T16:46:47 IST" duration-ms="5871" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="Verify_Navigation()[pri:1, instance:com.qa.testcases.inwardlist.ConsignmentListPageTest@25ce9dc4]" started-at="2023-03-29T11:40:28 IST" name="Verify_Navigation" finished-at="2023-03-29T11:40:35 IST" duration-ms="6573" status="PASS">
+        <test-method signature="Verify_Navigation_to_menupage()[pri:1, instance:com.qa.testcases.masterpages.subpages_5.RegionPageTest@54422e18]" started-at="2023-04-04T16:46:47 IST" name="Verify_Navigation_to_menupage" finished-at="2023-04-04T16:46:50 IST" duration-ms="3194" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- Verify_Navigation -->
-        <test-method signature="Verify_inwardbutton_click()[pri:2, instance:com.qa.testcases.inwardlist.ConsignmentListPageTest@25ce9dc4]" started-at="2023-03-29T11:40:35 IST" name="Verify_inwardbutton_click" finished-at="2023-03-29T11:40:35 IST" duration-ms="125" status="PASS">
+        </test-method> <!-- Verify_Navigation_to_menupage -->
+        <test-method signature="Verify_Clicking_on_record_btn()[pri:2, instance:com.qa.testcases.masterpages.subpages_5.RegionPageTest@54422e18]" started-at="2023-04-04T16:46:50 IST" name="Verify_Clicking_on_record_btn" finished-at="2023-04-04T16:46:53 IST" duration-ms="3112" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- Verify_inwardbutton_click -->
-        <test-method signature="Verify_filldata_DocumentDeatils()[pri:3, instance:com.qa.testcases.inwardlist.ConsignmentListPageTest@25ce9dc4]" started-at="2023-03-29T11:40:35 IST" name="Verify_filldata_DocumentDeatils" finished-at="2023-03-29T11:41:10 IST" duration-ms="34644" status="PASS">
+        </test-method> <!-- Verify_Clicking_on_record_btn -->
+        <test-method signature="Verify_Record_Add()[pri:3, instance:com.qa.testcases.masterpages.subpages_5.RegionPageTest@54422e18]" started-at="2023-04-04T16:46:53 IST" name="Verify_Record_Add" finished-at="2023-04-04T16:47:00 IST" duration-ms="6403" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- Verify_filldata_DocumentDeatils -->
-        <test-method signature="Verify_fill_data_KPCertificateDetails()[pri:4, instance:com.qa.testcases.inwardlist.ConsignmentListPageTest@25ce9dc4]" started-at="2023-03-29T11:41:10 IST" name="Verify_fill_data_KPCertificateDetails" finished-at="2023-03-29T11:41:20 IST" duration-ms="10930" status="PASS">
+        </test-method> <!-- Verify_Record_Add -->
+        <test-method signature="Verify_Record_Already_exists()[pri:4, instance:com.qa.testcases.masterpages.subpages_5.RegionPageTest@54422e18]" started-at="2023-04-04T16:47:00 IST" name="Verify_Record_Already_exists" finished-at="2023-04-04T16:47:10 IST" duration-ms="9744" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- Verify_fill_data_KPCertificateDetails -->
-        <test-method signature="Verify_fill_data_BillEntryDetails()[pri:5, instance:com.qa.testcases.inwardlist.ConsignmentListPageTest@25ce9dc4]" started-at="2023-03-29T11:41:21 IST" name="Verify_fill_data_BillEntryDetails" finished-at="2023-03-29T11:41:26 IST" duration-ms="5533" status="PASS">
+        </test-method> <!-- Verify_Record_Already_exists -->
+        <test-method signature="Verify_Validation_with_no_data()[pri:5, instance:com.qa.testcases.masterpages.subpages_5.RegionPageTest@54422e18]" started-at="2023-04-04T16:47:10 IST" name="Verify_Validation_with_no_data" finished-at="2023-04-04T16:47:15 IST" duration-ms="5262" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- Verify_fill_data_BillEntryDetails -->
-        <test-method signature="Verify_fill_data_DocumentLines()[pri:6, instance:com.qa.testcases.inwardlist.ConsignmentListPageTest@25ce9dc4]" started-at="2023-03-29T11:41:26 IST" name="Verify_fill_data_DocumentLines" finished-at="2023-03-29T11:41:30 IST" duration-ms="3841" status="PASS">
+        </test-method> <!-- Verify_Validation_with_no_data -->
+        <test-method signature="Verify_Record_Edited()[pri:6, instance:com.qa.testcases.masterpages.subpages_5.RegionPageTest@54422e18]" started-at="2023-04-04T16:47:15 IST" name="Verify_Record_Edited" finished-at="2023-04-04T16:47:21 IST" duration-ms="6384" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- Verify_fill_data_DocumentLines -->
-        <test-method signature="Verify_fill_data_JangadExpenseDetails()[pri:7, instance:com.qa.testcases.inwardlist.ConsignmentListPageTest@25ce9dc4]" started-at="2023-03-29T11:41:30 IST" name="Verify_fill_data_JangadExpenseDetails" finished-at="2023-03-29T11:42:23 IST" duration-ms="52772" status="PASS">
+        </test-method> <!-- Verify_Record_Edited -->
+        <test-method signature="Verify_Record_ToggleStatus()[pri:7, instance:com.qa.testcases.masterpages.subpages_5.RegionPageTest@54422e18]" started-at="2023-04-04T16:47:21 IST" name="Verify_Record_ToggleStatus" finished-at="2023-04-04T16:47:55 IST" duration-ms="33459" status="FAIL">
+          <exception class="org.openqa.selenium.NoSuchElementException">
+            <message>
+              <![CDATA[no such element: Unable to locate element: {"method":"xpath","selector":"(//input[@type='checkbox'])[2]"}
+  (Session info: chrome=111.0.5563.147)
+For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
+Build info: version: '4.6.0', revision: '79f1c02ae20'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.5'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [75055e916862045460c7ce3cf2dd32d3, findElement {using=xpath, value=(//input[@type='checkbox'])[2]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 111.0.5563.147, chrome: {chromedriverVersion: 111.0.5563.64 (c710e93d5b63..., userDataDir: C:\Users\KUSHAL~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:56301}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:56301/devtoo..., se:cdpVersion: 111.0.5563.147, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 75055e916862045460c7ce3cf2dd32d3]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"(//input[@type='checkbox'])[2]"}
+  (Session info: chrome=111.0.5563.147)
+For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
+Build info: version: '4.6.0', revision: '79f1c02ae20'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.5'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [75055e916862045460c7ce3cf2dd32d3, findElement {using=xpath, value=(//input[@type='checkbox'])[2]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 111.0.5563.147, chrome: {chromedriverVersion: 111.0.5563.64 (c710e93d5b63..., userDataDir: C:\Users\KUSHAL~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:56301}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:56301/devtoo..., se:cdpVersion: 111.0.5563.147, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 75055e916862045460c7ce3cf2dd32d3
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:541)
+at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:162)
+at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:365)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:357)
+at jdk.internal.reflect.GeneratedMethodAccessor2.invoke(Unknown Source)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.openqa.selenium.support.events.EventFiringWebDriver.lambda$new$1(EventFiringWebDriver.java:106)
+at jdk.proxy2/jdk.proxy2.$Proxy14.findElement(Unknown Source)
+at org.openqa.selenium.support.events.EventFiringWebDriver.findElement(EventFiringWebDriver.java:195)
+at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:70)
+at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:39)
+at jdk.proxy2/jdk.proxy2.$Proxy18.click(Unknown Source)
+at com.qa.masterpages.subpages_5.RegionPage.toggle_status(RegionPage.java:180)
+at com.qa.testcases.masterpages.subpages_5.RegionPageTest.Verify_Record_ToggleStatus(RegionPageTest.java:75)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:962)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:806)
+at org.testng.TestRunner.run(TestRunner.java:601)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:433)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:427)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:387)
+at org.testng.SuiteRunner.run(SuiteRunner.java:330)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
+at org.testng.TestNG.runSuites(TestNG.java:1099)
+at org.testng.TestNG.run(TestNG.java:1067)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- Verify_fill_data_JangadExpenseDetails -->
-      </class> <!-- com.qa.testcases.inwardlist.ConsignmentListPageTest -->
+        </test-method> <!-- Verify_Record_ToggleStatus -->
+        <test-method signature="Verify_No_Record_found()[pri:8, instance:com.qa.testcases.masterpages.subpages_5.RegionPageTest@54422e18]" started-at="2023-04-04T16:47:55 IST" name="Verify_No_Record_found" finished-at="2023-04-04T16:47:58 IST" duration-ms="3154" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Verify_No_Record_found -->
+        <test-method signature="Verify_Pagination()[pri:9, instance:com.qa.testcases.masterpages.subpages_5.RegionPageTest@54422e18]" started-at="2023-04-04T16:47:58 IST" name="Verify_Pagination" finished-at="2023-04-04T16:48:15 IST" duration-ms="17619" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Verify_Pagination -->
+      </class> <!-- com.qa.testcases.masterpages.subpages_5.RegionPageTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
