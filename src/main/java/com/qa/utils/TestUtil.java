@@ -12,7 +12,6 @@ import java.util.Random;
 import java.util.Set;
 
 import org.apache.commons.io.FileUtils;
-import org.apache.poi.openxml4j.exceptions.InvalidFormatException;
 import org.apache.poi.ss.usermodel.Sheet;
 import org.apache.poi.ss.usermodel.Workbook;
 import org.apache.poi.ss.usermodel.WorkbookFactory;
@@ -27,6 +26,7 @@ import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.openxml4j.exceptions.InvalidFormatException;
 
 import com.github.javafaker.Faker;
 import com.qa.base.TestBase;
@@ -75,7 +75,7 @@ public class TestUtil extends TestBase {
 		{
 			Actions action = new Actions(driver);
 			action.moveToElement(menu).click().perform();
-			Thread.sleep(3000);
+			Thread.sleep(10000);
 			action.moveToElement(submenu).click().perform();
 			Thread.sleep(2000);
 		}
@@ -262,7 +262,8 @@ public class TestUtil extends TestBase {
 		
 		
 		// It is used for taking data from excel sheets
-		public static Object[][] getTestData(String sheetName) {
+		public static Object[][] getTestData(String sheetName) throws InvalidFormatException
+		{
 			FileInputStream file = null;
 			try {
 				file = new FileInputStream(TESTDATA_SHEET_PATH);
@@ -271,8 +272,6 @@ public class TestUtil extends TestBase {
 			}
 			try {
 				book = WorkbookFactory.create(file);
-			} catch (InvalidFormatException e) {
-				e.printStackTrace();
 			} catch (IOException e) {
 				e.printStackTrace();
 			}
