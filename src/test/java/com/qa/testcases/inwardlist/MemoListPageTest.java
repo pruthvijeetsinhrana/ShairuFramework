@@ -51,18 +51,24 @@ public class MemoListPageTest extends TestBase {
 	{
 		memolistlistpage.fill_data_DocumentDetails();
 		
-		
 	}
-
+	
 	@Test(priority=4)
-	public void  Verify_fill_data_DocumentLines()
+	public void Verify_edit_Record() throws Exception
+	{
+		memolistlistpage.edit_Record();
+	}
+	
+
+	@Test(priority=5)
+	public void  Verify_fill_data_DocumentLines() throws InterruptedException
 	{
 		memolistlistpage.fill_data_DocumentLines();
 		
 	}
 
-	@Test(priority=5)
-	public void  Verify_fill_data_JangadExpenseDetails()
+	@Test(priority=6)
+	public void  Verify_fill_data_JangadExpenseDetails() throws Exception
 	{
 		memolistlistpage.fill_data_JangadExpenseDetails();
 		
@@ -70,35 +76,35 @@ public class MemoListPageTest extends TestBase {
 	
 	
 
-	@Test(priority=6)
+	@Test(priority=7)
 	public void  Verify_ValidateConfirmationRecord() throws InterruptedException
 	{
 		memolistlistpage.ValidateConfirmationRecord();
 		
 	}
 
-	@Test(priority=7)
+	@Test(priority=8)
 	public void  Verify_ValidateDisableFields()
 	{
 		memolistlistpage.ValidateDisableFields();
 		
 	}
 	
-	@Test(priority=8)
+	@Test(priority=9)
 	public void  Verify_ValidateEditFunctionality()
 	{
 		memolistlistpage.ValidateEditFunctionality();
 		
 	}
 	
-	@Test(priority=9)
+	@Test(priority=10)
 	public void  Verify_search_functionality_test()
 	{
 		memolistlistpage.search_functionality_test();
 		
 	}
 	
-	@Test(priority=10)
+	@Test(priority=11)
 	public void  pagination_functionality() throws InterruptedException
 	{
 		memolistlistpage.pagination_functionality();

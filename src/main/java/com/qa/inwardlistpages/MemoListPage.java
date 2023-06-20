@@ -1,5 +1,8 @@
 package com.qa.inwardlistpages;
 
+import java.awt.RenderingHints.Key;
+import java.awt.Robot;
+import java.awt.event.KeyEvent;
 import java.time.Duration;
 import java.util.List;
 
@@ -7,6 +10,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -63,14 +67,14 @@ public class MemoListPage extends TestBase{
 		@FindBy(xpath= "//input[@name='duration']")
 		WebElement Duration_field;
 		
-		@FindBy(xpath= "(//div[contains(@class,'css-13z0ixq')])[2]")
+		@FindBy(xpath= "(//div[contains(@class,'css-gbulqg-control')])[2]")
 		WebElement SenderName;
 		
 		@FindBy(xpath= "(//div[@id='react-select-4-option-0'])[1]")
 		WebElement SenderName_select;
 		
 		
-		@FindBy(xpath= "(//div[@class=' css-13z0ixq'])[3]")
+		@FindBy(xpath= "(//div[@class=' css-gbulqg-control'])[3]")
 		WebElement TransactionType;
 		
 		@FindBy(id= "react-select-5-option-1")
@@ -96,7 +100,7 @@ public class MemoListPage extends TestBase{
 		@FindBy(xpath= "(//input[@type='file'])[1]")
 		WebElement DocumentFile;
 		
-		@FindBy(xpath= "(//div[contains(@class,'css-13z0ixq')])[4]")
+		@FindBy(xpath= "(//div[contains(@class,' css-gbulqg-control')])[4]")
 		WebElement ExchangeType;
 		
 		@FindBy(id= "react-select-6-option-1")
@@ -125,9 +129,19 @@ public class MemoListPage extends TestBase{
 		@FindBy(xpath= "//span[normalize-space()='Inward Document created successfully.']")
 		WebElement success_msg;
 		
+		//Edit from Listing page
+		@FindBy(xpath = "(//div[@class='ant-space-item'])[6]")
+		WebElement edit_Record;
 		
-		@FindBy(xpath= "(//button[@type='button'])[11]")
+		@FindBy(xpath= "(//button[@type='button'])[3]")
 		WebElement row_button1;
+		
+		
+		@FindBy(xpath="(//div[@class='right-side-btn border-none btn-spacing text-right'])[1]/button[1]")
+		WebElement reset_kapan;
+		
+		@FindBy(xpath = "(//input[@type='number'])[12]")
+		WebElement Fetch_Rate;
 
 		
 		//Document line section
@@ -150,16 +164,19 @@ public class MemoListPage extends TestBase{
 		
 		//Jangad Expense Details
 		
-		@FindBy(xpath= "(//button[@type='button'])[13]")
+		@FindBy(xpath= "(//button[@type='button'])[5]")
 		WebElement row_button_Jangad;
+		
+		@FindBy(xpath= "(//div[@class='ant-table-content'])[2]")
+		WebElement Jangad_table;
 		
 		@FindBy(xpath= "(//input[@type='text'])[14]")
 		WebElement JangadNo;
 		
-		@FindBy(xpath= "(//div[contains(@class,'css-13z0ixq')])[6]")
+		@FindBy(xpath= "(//div[contains(@class,' css-gbulqg-control')])[2]")
 		WebElement CourierPartyName;
 		
-		@FindBy(id= "react-select-8-option-1")
+		@FindBy(id= "react-select-13-option-1")
 		WebElement CourierPartyName_select;
 		
 		
@@ -170,48 +187,53 @@ public class MemoListPage extends TestBase{
 		WebElement CourierDocument; 
 		
 		//1
-		@FindBy(xpath= "(//div[contains(@class,' css-1d8n9bt')])[8]")
+		@FindBy(xpath= "(//div[contains(@class,' css-gbulqg-control')])[3]")
 		WebElement Expense1;
 		
-		@FindBy(id= "react-select-9-option-1")
+		@FindBy(id= "react-select-14-option-0")
 		WebElement Expense1_select;
 		
 		@FindBy(xpath= "(//input[@type='number'])[13]")
 		WebElement Expense1_value;
 		
 		//2
-				@FindBy(xpath= "(//div[contains(@class,' css-1d8n9bt')])[9]")
+				@FindBy(xpath= "(//div[contains(@class,' css-gbulqg-control')])[4]")
 				WebElement Expense2;
 				
-				@FindBy(xpath= "(//div[@id='react-select-10-option-0'])[1]")
+				@FindBy(id= "react-select-15-option-0")
 				WebElement Expense2_select;
 				
 				@FindBy(xpath= "(//input[@type='number'])[14]")
 				WebElement Expense2_value;
 				
 				//3
-				@FindBy(xpath= "(//div[contains(@class,' css-1d8n9bt')])[10]")
+				@FindBy(xpath= "(//div[contains(@class,' css-gbulqg-control')])[5]")
 				WebElement Expense3;
 				
-				@FindBy(xpath= "(//div[@id='react-select-11-option-0'])[1]")
+				@FindBy(id= "react-select-16-option-0")
 				WebElement Expense3_select;
 				
 				@FindBy(xpath= "(//input[@type='number'])[15]")
 				WebElement Expense3_value;
 				
 				//4
-				@FindBy(xpath= "(//div[contains(@class,' css-1d8n9bt')])[11]")
+				@FindBy(xpath= "(//div[contains(@class,' css-gbulqg-control')])[6]")
 				WebElement Expense4;
 				
-				@FindBy(xpath= "(//div[@id='react-select-12-option-0'])[1]")
+				@FindBy(id= "react-select-17-option-0")
 				WebElement Expense4_select;
 				
 				@FindBy(xpath= "(//input[@type='number'])[16]")
 				WebElement Expense4_value;
 				
-		@FindBy(xpath= "/html[1]/body[1]/div[1]/div[1]/section[1]/section[1]/main[1]/div[3]/form[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/table[1]/tbody[1]/tr[2]/td[13]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]")
+		@FindBy (xpath = "(//td[@class='ant-table-cell ant-table-cell-fix-right ant-table-cell-fix-right-first'])[2]")
+		WebElement delete_jangad;
+				
+		@FindBy(xpath= "(//div[@class='ant-select-selector'])[2]")
 		WebElement appliedfield;
 		
+		@FindBy(xpath= "(//div[@class='ant-select-selector'])[2]/div/div/div/input")
+		WebElement appliedfield_textfield;
 		
 		@FindBy(xpath= "(//div[@class='ant-select-item-option-content'])[1]")
 		WebElement appliedfield_select;
@@ -371,21 +393,38 @@ public class MemoListPage extends TestBase{
 			
 		}
 		
-		public void fill_data_DocumentLines()
+		public void edit_Record() throws Exception
 		{
+			Thread.sleep(2000);
+			memolist_menu.click();
+			Thread.sleep(2000);
 			
-			WebDriverWait wait = new WebDriverWait(driver,Duration.ofSeconds(20));
+			edit_Record.click();
+			Thread.sleep(3000);
+			
+		}
+		
+		public void fill_data_DocumentLines() throws InterruptedException
+		{
+			((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);",save_button1 );
+			//row_button1.isDisplayed();
+			Thread.sleep(3000);
+			
+			/*WebDriverWait wait = new WebDriverWait(driver,Duration.ofSeconds(20));
 			wait.until(ExpectedConditions.elementToBeClickable(row_button1));
-			
-
-			
+			*/
 			row_button1.click();
 			try {
-				Thread.sleep(2000);
+				Thread.sleep(3000);
 			} catch (InterruptedException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
+			
+			String fetch_rate_value = Fetch_Rate.getText().toString();
+			System.out.println("Fetching auto correct value from Rate field := "+fetch_rate_value);
+			
+			
 			KapanNo.sendKeys(Common_No_random);
 			
 			//Pieces.sendKeys(prop.getProperty("Pieces"));
@@ -411,20 +450,23 @@ public class MemoListPage extends TestBase{
 			
 		}
 		
-		public void fill_data_JangadExpenseDetails()
+		public void fill_data_JangadExpenseDetails() throws Exception
 		{
+			Thread.sleep(5000);
+			
 			TestUtil.scroll_until();
 			
 			WebDriverWait wait = new WebDriverWait(driver,Duration.ofSeconds(20));
 			wait.until(ExpectedConditions.elementToBeClickable(row_button_Jangad));
 			
+			Thread.sleep(2000);
 			
 			row_button_Jangad.click();
 			
-			
+			//Thread.sleep(5000);
 			
 			try {
-				Thread.sleep(5000);
+				Thread.sleep(3000);
 			} catch (InterruptedException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
@@ -432,7 +474,7 @@ public class MemoListPage extends TestBase{
 			
 			
 			JangadNo.sendKeys(Common_No_random);
-			
+			Thread.sleep(5000);
 			
 			try {
 				TestUtil.navigate_to_option1(CourierPartyName,CourierPartyName_select);
@@ -441,39 +483,24 @@ public class MemoListPage extends TestBase{
 				e.printStackTrace();
 			}
 			
-			
+			Thread.sleep(5000);
 			CourierNo.sendKeys(Common_No_random);
 			
 			
 			 TestUtil.upload_file(CourierDocument,Commonpath_pdf);
 			 
+			 Thread.sleep(2000);
 			 
 			 try {
+				 Thread.sleep(2000);
 					TestUtil.navigate_to_option1(Expense1,Expense1_select);
 				} catch (InterruptedException e) {
 					// TODO Auto-generated catch block
 					e.printStackTrace();
 				}
-				
-			
 			 
 				Expense1_value.sendKeys(prop.getProperty("Expense"));
-				
-				appliedfield.click();
-				
-				try {
-					Thread.sleep(2000);
-				} catch (InterruptedException e) {
-					// TODO Auto-generated catch block
-					e.printStackTrace();
-				}
-				
-				try {
-					TestUtil.navigate_to_option1(appliedfield,appliedfield_select);
-				} catch (InterruptedException e) {
-					// TODO Auto-generated catch block
-				e.printStackTrace();
-				}
+				Thread.sleep(2000);
 				
 				try {
 					Thread.sleep(2000);
@@ -483,12 +510,27 @@ public class MemoListPage extends TestBase{
 					e.printStackTrace();
 				}
 				
-					
-				
-				
-			
-			 
 				Expense2_value.sendKeys(prop.getProperty("Expense"));
+				
+				Thread.sleep(3000);
+				/*Robot rb =new Robot();
+				rb.keyPress(KeyEvent.VK_RIGHT);
+				rb.keyRelease(KeyEvent.VK_RIGHT);
+				rb.keyPress(KeyEvent.VK_RIGHT);
+				rb.keyRelease(KeyEvent.VK_RIGHT);
+				rb.keyPress(KeyEvent.VK_RIGHT);
+				rb.keyRelease(KeyEvent.VK_RIGHT);*/
+				//Actions action = new Actions(driver);
+			
+				
+				Expense2_value.sendKeys(Keys.TAB);
+				Expense3_value.click();
+				Expense3_value.sendKeys(Keys.TAB);
+				
+				
+			//	JavascriptExecutor js = (JavascriptExecutor) driver;
+			//	js.executeScript("document.querySelector(scroll).scrollRight=1000");
+
 				
 				try {
 					Thread.sleep(2000);
@@ -498,31 +540,39 @@ public class MemoListPage extends TestBase{
 					e.printStackTrace();
 				}
 				
-			
-			 
+				Thread.sleep(2000);
+				
 				Expense3_value.sendKeys(prop.getProperty("Expense"));
+				Expense3_value.sendKeys(Keys.TAB);
 				
 				try {
-					Thread.sleep(2000);
+					Thread.sleep(5000);
 					TestUtil.navigate_to_option1(Expense4,Expense4_select);
 				} catch (InterruptedException e) {
 					// TODO Auto-generated catch block
 					e.printStackTrace();
 				}
 				
-			
+				Thread.sleep(2000);
 			 
 				Expense4_value.sendKeys(prop.getProperty("Expense"));
+				Expense4_value.sendKeys(Keys.TAB);
 				
-				JavascriptExecutor js = (JavascriptExecutor) driver;
+				Thread.sleep(3000);
+				//appliedfield.click();
+				
+				try {
+					TestUtil.navigate_to_option1(appliedfield,appliedfield_select);
+				} catch (InterruptedException e) {
+					// TODO Auto-generated catch block
+				e.printStackTrace();
+				}
+				
 				//Scroll down till the bottom of the page
+				JavascriptExecutor js = (JavascriptExecutor) driver;
 				js.executeScript("window.scrollBy(0,document.body.scrollHeight)");
-				
-				
-				
-				
-				
-				
+			
+			
 				try {
 					Thread.sleep(3000);
 				} catch (InterruptedException e) {
